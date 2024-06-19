@@ -28,16 +28,18 @@ const Banner = () => {
                     }}
                     fadeEffect={"fade"}
                     className="mySwiper border">
-                    <SwiperSlide><img className='w-full h-[93vh] object-cover' src={imge1} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-full h-[93vh] object-cover' src={imge2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-full h-[93vh] object-cover' src={imge3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-full h-[91vh] md:h-[93vh] object-cover' src={imge3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-full h-[91vh] md:h-[93vh] object-cover' src={imge1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className='w-full h-[91vh] md:h-[93vh] object-cover' src={imge2} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
-            <div className="absolute flex items-center h-full w-full left-0 top-0 bg-gradient-to-r from-[#2b292b] z-10">
-                <div data-aos="fade-up"
-                    data-aos-duration="2000" className="px-10">
-                    <h1 style={{ letterSpacing: "10px" }} className="text-7xl text-white font-bold  ">IDENTITY INCLUSION</h1>
-                    <p className=" text-white mt-7 text-5xl ubuntu_font "> Youth for  <br />A  Diverse and Inclusive Society</p>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                className="absolute flex items-center h-32 md:h-52 w-full left-0 bottom-0 bg-gradient-to-r from-[#2b292b] z-10">
+                <div className="px-2 md:px-10 absolute bottom-0 md:bottom-3">
+                    <h1 style={{ letterSpacing: "10px" }} className=" text-xl md:text-3xl lg:text-7xl text-white font-bold">IDENTITY INCLUSION</h1>
+                    <p className=" text-white mt-2 lg:mt-7 text-lg md:text-2xl  lg:text-5xl ubuntu_font "> Youth for A <br /> Diverse and Inclusive Society</p>
                 </div>
             </div>
         </div>

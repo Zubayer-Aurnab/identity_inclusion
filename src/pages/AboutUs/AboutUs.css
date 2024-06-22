@@ -1,0 +1,21 @@
+.hover-effect-about{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hover-effect-about::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background-color: white;
+    /* Orange color */
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .hover-effect-about:hover::before {
+    width: 100%;
+  }
+  

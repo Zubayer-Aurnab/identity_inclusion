@@ -1,0 +1,37 @@
+import { useState } from "react";
+
+
+// eslint-disable-next-line react/prop-types
+const TeamMembers = ({ name, title, photo, description, }) => {
+    // console.log(description?.length)
+    const [seeMore, setSeeMore] = useState(true)
+    return (
+        <div className=''>
+            <div className=' pt-10 flex items-center gap-4 '>
+                <img src={photo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
+                <div>
+                    <p className='font-bold md:text-xl'>{name}</p>
+                    <p className='md:text-lg text-[#118088] '>{title}</p>
+                </div>
+            </div>
+            {/* divider */}
+            <div className=' py-5'>
+                <div className='h-[1px] bg-slate-300'></div>
+            </div>
+            <div style={{
+                transition: "hight 3s ease-in",
+                height: "auto"
+            }} className='pb-5'>
+                {/* eslint-disable-next-line react/prop-types */}
+                <p
+
+                    // eslint-disable-next-line react/prop-types
+                    className='md:text-xl text-justify text-[#636870] '>{seeMore ? description.slice(0, 500) : description}
+                    <span onClick={() => setSeeMore(!seeMore)} className="text-[#2d8f96] underline"> {seeMore ? "see more" : "see less"}</span>
+                </p>
+            </div>
+        </div>
+    );
+};
+
+export default TeamMembers;

@@ -1,19 +1,13 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/identity inclusion logo.png";
 import "./Nav.css";
-import {
-    Popover,
-    PopoverButton,
-    PopoverPanel,
-    Transition,
-} from "@headlessui/react";
-import { useState } from "react";
 
 const NavBar = () => {
-    const activeClass = "text-[#f97316] font-semibold border-b-2 border-[#f97316]   text-xl ";
+    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088]   text-xl ";
     const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-xl ";
     const [slider, setSlider] = useState(false)
-    console.log(slider)
+    // console.log(slider)
     const handleCheckboxChange = () => {
         setSlider(prev => !prev);
     };
@@ -32,13 +26,18 @@ const NavBar = () => {
                         Home
                     </NavLink>
                     <NavLink
+                        to={`/about`}
+                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                    >
+                        About us
+                    </NavLink>
+                    <NavLink
                         to={`/a`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
-                      Activitiess
+                        Activities
                     </NavLink>
-
-                    <Popover>
+                    {/* <Popover>
                         <PopoverButton className=" text-black z-50 focus:outline-none data-[active]:text-black data-[hover]:text-black data-[focus]:outline-1 data-[focus]:outline-black hover-effect font-semibold text-xl">
                             About Us
                         </PopoverButton>
@@ -89,20 +88,20 @@ const NavBar = () => {
                                 </div>
                             </PopoverPanel>
                         </Transition>
-                    </Popover>
+                    </Popover> */}
 
-                    <NavLink
-                        to={`/team`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        Contact Us
-                    </NavLink>
                     <NavLink
                         to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
                         target="_blank"
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
                         Become a volunteer
+                    </NavLink>
+                    <NavLink
+                        to={`/team`}
+                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                    >
+                        Contact Us
                     </NavLink>
                 </div>
             </div>
@@ -112,7 +111,7 @@ const NavBar = () => {
                     <img className="w-14" src={logo} alt="" />
                 </div>
                 <div onClick={handleCheckboxChange} className="">
-                    <label className="btn btn-circle bg-orange-100 swap swap-rotate">
+                    <label className="btn btn-circle bg-[#b5dbba] swap swap-rotate">
                         {/* this hidden checkbox controls the state */}
                         <input type="checkbox" checked={slider} onChange={handleCheckboxChange} />
 
@@ -127,7 +126,7 @@ const NavBar = () => {
 
                 {slider && (
 
-                    <div style={{ transition: "1s" }} className="absolute top-0 w-[60%] left-0 h-screen  bg-orange-50 shadow-2xl z-[999] flex flex-col p-4 py-3  space-y-3">
+                    <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5  bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
                         <NavLink
                             to={`/`}
                             className={({ isActive }) => (isActive ? activeClass : normalClass)}
@@ -135,67 +134,21 @@ const NavBar = () => {
                         >
                             Home
                         </NavLink>
-
-                        <Popover className=''>
-                            <PopoverButton className="text-black z-50 focus:outline-none data-[active]:text-black data-[hover]:text-black data-[focus]:outline-1 data-[focus]:outline-black hover-effect font-semibold text-xl">
-                                About Us
-                            </PopoverButton>
-                            <Transition
-                                enter="transition ease-out duration-200"
-                                enterFrom="opacity-0 translate-y-1"
-                                enterTo="opacity-100 translate-y-0"
-                                leave="transition ease-in duration-150"
-                                leaveFrom="opacity-100 translate-y-0"
-                                leaveTo="opacity-0 translate-y-1"
-                            >
-                                <PopoverPanel
-                                    anchor="bottom"
-                                    className="divide-y divide-white/5  bg-orange-50 shadow-2xl z-10 mt-5 w-44"
-                                >
-                                    <div className="p-3">
-                                        <a
-                                            className="block rounded-lg py-2 px-3 transition hover-effect text-black font-semibold text-xl"
-                                            href="#"
-                                            onClick={handleCheckboxChange}
-                                        >
-                                          Mission & Vision 
-
-                                        </a>
-                                        <a
-                                            className="block rounded-lg py-2 px-3 transition hover-effect text-black font-semibold text-xl"
-                                            href="#"
-                                            onClick={handleCheckboxChange}
-                                        >
-                                            Values
-                                        </a>
-                                        <a
-                                            className="block rounded-lg py-2 px-3 transition hover-effect text-black font-semibold text-xl"
-                                            href="#"
-                                            onClick={handleCheckboxChange}
-                                        >
-                                            Our Team
-
-                                        </a>
-                                        <a
-                                            className="block rounded-lg py-2 px-3 transition hover-effect text-black font-semibold text-xl"
-                                            href="#"
-                                            onClick={handleCheckboxChange}
-                                        >
-                                           Words from CEO
-
-                                        </a>
-                                    </div>
-                                </PopoverPanel>
-                            </Transition>
-                        </Popover>
-
                         <NavLink
-                            to={`/team`}
+                            to={`/about`}
                             className={({ isActive }) => (isActive ? activeClass : normalClass)}
                             onClick={handleCheckboxChange}
                         >
-                            Our Team
+                            About us
                         </NavLink>
+                        <NavLink
+                            to={`/a`}
+                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                            onClick={handleCheckboxChange}
+                        >
+                            Activities
+                        </NavLink>
+
                         <NavLink
                             to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
                             target="_blank"
@@ -205,11 +158,11 @@ const NavBar = () => {
                             Become a volunteer
                         </NavLink>
                         <NavLink
-                            to={`/donate`}
+                            to={`/team`}
                             className={({ isActive }) => (isActive ? activeClass : normalClass)}
                             onClick={handleCheckboxChange}
                         >
-                            Donate
+                            Contact Us
                         </NavLink>
                     </div>
                 )}

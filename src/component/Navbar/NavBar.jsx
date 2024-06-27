@@ -126,7 +126,7 @@ const NavBar = () => {
 
                 {slider && (
 
-                    <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5  bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
+                    <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5 duration-500 bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
                         <NavLink
                             to={`/`}
                             className={({ isActive }) => (isActive ? activeClass : normalClass)}

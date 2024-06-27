@@ -1,14 +1,13 @@
 import Banner from "../../component/Banner/Banner";
-import Services from "../../component/Services/Services";
+import HomeText from "../../component/HomeText/HomeText";
 
 
 const Home = () => {
     return (
         <div>
             <Banner />
-            <div className="my-10  w-4/5 mx-auto">
-                <Services />
-            </div>
+            <HomeText />
+
         </div>
     );
 };

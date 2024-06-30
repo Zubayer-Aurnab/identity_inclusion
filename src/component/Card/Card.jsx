@@ -1,12 +1,14 @@
 import Button from "../Button/Button";
 
 
-
 // eslint-disable-next-line react/prop-types
 const Card = ({ title, image, description }) => {
+
+
     return (
         <div
-            className="  duration-200 group overflow-hidden relative rounded bg-gradient-to-t my-10 from-black to-[#0d7f88] text-neutral-50 p-4 flex flex-col justify-evenly hover:scale-105"
+
+            className="  duration-200 group overflow-hidden relative rounded bg-gradient-to-t my-10 from-black to-[#0d7f88] text-neutral-50 p-4 flex flex-col justify-evenly hover:scale-105 "
         >
             <div
                 className="absolute blur duration-500 group-hover:blur-none w-72 h-72 rounded-full group-hover:translate-x-12 group-hover:translate-y-12 bg-sky-900 right-1 -bottom-24"

@@ -10,7 +10,7 @@ const Services = () => {
                     Our Services
                 </Title>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-7">
                 <Card image={psycho_social_s} title={"Psycho-Social Support"} description={"Providing direct at-home support services to individuals and families"} />
                 <Card image={psycho_social_s} title={"Advocacy & Awareness"} description={"Addressing and pushing for policy development and implement to ensure social inclusion"} />
                 <Card image={psycho_social_s} title={'Consultancy Building'} description={" conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"} />

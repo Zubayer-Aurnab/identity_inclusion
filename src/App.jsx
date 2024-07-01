@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import Aos from 'aos'
 import { Outlet } from 'react-router-dom';
 import NavBar from './component/Navbar/NavBar';
+import Footer from './component/Footer/Footer';
 
 function App() {
   useEffect(() => {
@@ -12,6 +13,7 @@ function App() {
     <>
       <NavBar />
       <Outlet />
+      <Footer />
     </>
   )
 }

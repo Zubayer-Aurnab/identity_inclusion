@@ -40,12 +40,12 @@ const PictureSlider = () => {
     return (
         <>
             <div data-aos="fade-up" data-aos-duration="2000">
-                <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
+                <div className="my-20  after: px-2 lg:px-0 lg:w-4/5 mx-auto ">
                     <Title>
                         Activities
                     </Title>
                 </div>
-                <div className="my-10 px-2 lg:px-0 lg:w-4/5 mx-auto space-y-5">
+                <div className="mt-10 mb-40 px-2 lg:px-0 lg:w-4/5 mx-auto space-y-5">
                     <Marquee pauseOnHover direction="right" >
                         <img className={imageClass} src={img1} alt="" />
                         <img className={imageClass} src={img2} alt="" />

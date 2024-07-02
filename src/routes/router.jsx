@@ -5,6 +5,7 @@ import {
 import App from "../App";
 import Home from "../pages/Home/Home";
 import AboutUs from "../pages/AboutUs/AboutUs";
+import Psycho_Social_Support from "../pages/Psycho_Social_Support/Psycho_Social_Support";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -13,10 +14,14 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />
-            }, 
+            },
             {
                 path: '/about',
                 element: <AboutUs />
+            },
+            {
+                path: '/psycho-social-support',
+                element: <Psycho_Social_Support />
             }
         ]
     },

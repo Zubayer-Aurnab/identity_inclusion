@@ -1,10 +1,9 @@
-import Title from "../../component/Title/Title";
-import img11 from '../../assets/marquee/img11.jpg'
-import img15 from '../../assets/marquee/img15.jpg'
-import img30 from '../../assets/marquee/img30.png'
-import table from '../../assets/marquee/table.png'
 import Aos from "aos";
 import { useEffect } from "react";
+import img11 from '../../assets/marquee/img11.jpg';
+import img15 from '../../assets/marquee/img15.jpg';
+import img30 from '../../assets/marquee/img30.png';
+import Title from "../../component/Title/Title";
 
 const Psycho_Social_Support = () => {
     useEffect(() => {
@@ -31,7 +30,7 @@ const Psycho_Social_Support = () => {
                 <img className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
 
-            <div data-aos="fade-right" data-aos-duration="1000"  className="mt-10">
+            {/* <div data-aos="fade-right" data-aos-duration="1000"  className="mt-10">
                 <Title>
                     1.
                 </Title>
@@ -66,7 +65,7 @@ const Psycho_Social_Support = () => {
                 <div>
                     <img className="" src={table} alt="" />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

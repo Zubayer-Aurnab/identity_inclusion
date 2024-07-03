@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 // eslint-disable-next-line react/prop-types
-const TeamMembers = ({ name, title, photo, description, }) => {
+const TeamMembers = ({ name, photo, description, }) => {
     // console.log(description?.length)
     const [seeMore, setSeeMore] = useState(true)
     return (
@@ -11,7 +11,7 @@ const TeamMembers = ({ name, title, photo, description, }) => {
                 <img src={photo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
                 <div>
                     <p className='font-bold md:text-xl'>{name}</p>
-                    <p className='md:text-lg text-[#118088] '>{title}</p>
+
                 </div>
             </div>
             {/* divider */}

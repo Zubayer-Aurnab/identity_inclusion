@@ -27,13 +27,13 @@ const Services = () => {
                 />
                 <Card
                     image={consultancy}
-                    title={'Consultancy Building'}
-                    description={" conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"}
+                    title={'Consultancy '}
+                    description={"conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"}
                 />
                 <Card
                     image={capacity}
                     title={'Capacity Building '}
-                    description={"Collaborating with institutions to develop accessible communication devices"}
+                    description={"conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"}
                 />
 
             </div>

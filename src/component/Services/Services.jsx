@@ -1,10 +1,9 @@
+import advocacy from '../../assets/images/servicesPhoto/advocacy_awareness.png';
+import capacity from '../../assets/images/servicesPhoto/psycho_social.png';
+import consultancy from '../../assets/images/servicesPhoto/consultancy.png';
+import psycho_social from '../../assets/images/servicesPhoto/psycho_social.png';
 import Card from "../Card/Card";
 import Title from "../Title/Title";
-import psycho_social_s from '../../assets/images/Psycho-socail-support.png'
-import psycho_social from '../../assets/images/services/psycho_social.png'
-import advocacy from '../../assets/images/services/advocacy_awareness.png'
-import consultancy from '../../assets/images/services/consultancy.png'
-import capacity from '../../assets/images/services/capacity_building.jpg'
 
 const Services = () => {
     return (

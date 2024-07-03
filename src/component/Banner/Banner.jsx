@@ -17,7 +17,7 @@ const Banner = () => {
     }, [])
 
     return (
-        <div className="relative">
+        <div className="relative ">
             <div>
                 <Swiper
                     modules={[Autoplay, EffectFade]}

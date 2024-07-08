@@ -12,8 +12,11 @@ import julian from '../../assets/images/TeamMembers/Julian Francis.jpg'
 import wahid from '../../assets/images/TeamMembers/Dr. Syed Shabab Wahid.jpg'
 import umme from '../../assets/images/TeamMembers/Umme Kawser (2).jpg'
 import dip from '../../assets/images/TeamMembers/Dr M. Tasdik Hassan.jpg'
+import Sudipa from '../../assets/images/TeamMembers/Sudipa Sarkar.jpg'
+import kamrul from '../../assets/images/TeamMembers/Kamrul Hassan.jpg'
 import './AboutUs.css';
 import Title from '../../component/Title/Title';
+import Team from '../../component/Team/Team';
 const AboutUs = () => {
     useEffect(() => {
         Aos.init()
@@ -77,6 +80,7 @@ const AboutUs = () => {
                     <div className=' my-10 md:my-20'>
                         <Title>Advisors</Title>
                     </div>
+                    {/* Advisors */}
                     <div id='our_team' className='grid lg:grid-cols-2 gap-10'>
                         <TeamMembers
                             name={"Julian Francis"}
@@ -101,16 +105,21 @@ const AboutUs = () => {
                         />
                         <TeamMembers
                             name={"Sudipa Sarker"}
-                            // photo={dip}
+                            photo={Sudipa}
                             description='Sudipa Sarker is an educator, researcher, and advisor with over 15 years of experience in teaching, conducting research, and consulting across various industries. She currently serves as a lecturer at the business school of Edinburgh Napier University. In 2006, she was awarded the Prime Minister Gold Medal for her Bachelor of Science in Industrial Production Engineering from the Bangladesh University of Engineering and Technology. Besides Bangladesh, she has pursued studies and professional opportunities in Singapore, Sweden, Italy, Denmark, Finland, and Scotland. At Aarhus University, she received 1.3 million Danish Kronor from Aarhus Universitets Forskningsfond (AUFF) for her research project entitled “Defining and Measuring Supply Chain Competitiveness in Danish Multinational Corporations”. She has also been awarded 70,000 DKK for developing digital materials for a massive open online course (MOOC) on supply chain management. She has worked on multiple European Horizon 2020 projects and led the development of the MOOC titled " Health Emergency Response in Pandemics," which is now live on the Future Learn Platform. In 2023, she received 7500 GBP for her research on Gender Mainstreaming in Logistics and Supply Chain Management from the Chartered Institute of Logistics and Transport, United Kingdom. She has published in multiple peer-reviewed international journals.
                         '
                         />
                         <TeamMembers
                             name={"Kamrul Hassan"}
-                            // photo={dip}
+                            photo={kamrul}
                             description="Kamrul Hassan has been providing advisory supports to Identity Inclusion since August 2023 mainly around research and consulting capacity enhancement. Having 17+ years of learning experience, Kamrul is a self-taught researcher, training facilitator, and mentor in designing viable business models and behavior change strategies. He has a unique blend of project design and management experiences both in corporate environment and in the development sector. He has led numerous projects and research ranging from market system development to gender inclusion. Kamrul has developed a few business models, sustainability roadmap, marketing strategies, behavior change modules, curriculum and training modules for social enterprises, CBA, NGOs and development partners. Having a Bachelor’s in Engineering, Kamrul started his career at the largest telecom in Bangladesh, in 2007 and served the company for more than four years in various capacities. During his tenure there, he has learned mostly negotiation, project design & management, Business Process Reengineering, and financial feasibility analysis. Later, Kamrul joined another technology company (Augere) and led the Deployment team. He learned people management, operations management, vendor management and strategic procurement. After serving the corporate sectors for more than 6 years in different capacities, he shifted his career in the development sector by joining IDE Bangladesh as a Field Team Leader. Kamrul started off as an entrepreneur by co-founding Consiglieri Private Limited in 2014. Since the inception of Consiglieri, Kamrul has been overseeing the Operations, Finance and Knowledge Management. Apart from the day-to-day supervision at Consiglieri, he led facilitation projects, qualitative research, developing modules and facilitating trainings, HCD research, WASH interventions, and strategy formulation assignments. Kamrul is obsessed about knowing new things and asking basic questions that are usually taken for granted. Kamrul also has an MSc in Economics. "
                         />
                     </div>
+                    {/* Team members */}
+                    <div className=' my-10 md:my-20'>
+                        <Title>Team Members</Title>
+                    </div>
+                    <Team />
 
                     {/*Mission & Vision section */}
                     <div id="mission_vision" className='mt-10'>
@@ -121,7 +130,7 @@ const AboutUs = () => {
                                 <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center' >
                                     <div>
                                         <Lottie
-                                            className="w-44 mb-2"
+                                            className="w-40 mb-2"
                                             animationData={mission} />
                                     </div>
                                     <h1 className='text-2xl font-bold '>Mission</h1>
@@ -140,7 +149,7 @@ const AboutUs = () => {
                                 <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center'>
                                     <div>
                                         <Lottie
-                                            className="w-40 mb-2"
+                                            className="w-64 mb-2"
                                             animationData={vision} />
                                     </div>
                                     <h1 className='text-2xl font-bold'>vision</h1>

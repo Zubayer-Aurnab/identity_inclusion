@@ -8,10 +8,9 @@ const TeamMembers = ({ name, photo, description, }) => {
     return (
         <div className=''>
             <div className=' pt-10 flex items-center gap-4 '>
-                <img src={photo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
+                <img src={photo} className='w-32 h-32 md:w-48 md:h-48 object-contain ' alt="" />
                 <div>
-                    <p className='font-bold md:text-xl'>{name}</p>
-
+                    <p className='font-bold md:text-xl '>{name}</p>
                 </div>
             </div>
             {/* divider */}
@@ -24,9 +23,8 @@ const TeamMembers = ({ name, photo, description, }) => {
             }} className='pb-5'>
                 {/* eslint-disable-next-line react/prop-types */}
                 <p
-
                     // eslint-disable-next-line react/prop-types
-                    className='md:text-xl text-justify text-[#636870] '>{seeMore ? description.slice(0, 500) : description}
+                    className='md:text-xl text-justify text-[#636870] '>{seeMore ? description?.slice(0, 500) : description}
                     <span onClick={() => setSeeMore(!seeMore)} className="text-[#2d8f96] underline"> {seeMore ? "see more" : "see less"}</span>
                 </p>
             </div>

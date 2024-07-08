@@ -1,14 +1,10 @@
-import Aos from "aos";
-import { useEffect } from "react";
 import img11 from '../../assets/marquee/img11.jpg';
 import img15 from '../../assets/marquee/img15.jpg';
 import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
 
 const Psycho_Social_Support = () => {
-    useEffect(() => {
-        Aos.init()
-    }, [])
+  
     return (
         <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
             <Title>
@@ -16,11 +12,13 @@ const Psycho_Social_Support = () => {
             </Title>
             <div className="mt-10 text-justify">
                 <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] ">
-                    Identity Inclusion provides direct Psycho-social Support - that is - we address the ongoing psychological and social needs of individuals. It includes all the services a person needs in order to lead a fulfilling and productive lifestyle. Our trained Psycho-social Supporters assist individuals and their families to facilitate their participation in society.
+                    We recruit youth volunteers and train them to provide psychosocial support every year. We build their capacity in counseling skills and taking a right based approach to achieving inclusion. In 2016 we received the award of a small grant from the Edward M. Kennedy Center in Dhaka. With that, Identity Inclusion trained 100 youth psychosocial supporters in 4 major universities in Dhaka, Sylhet, Chittagong, and Khulna. Moreover, we have reached out to over 2000 youths through workshops, training and awareness programs on mental health and emotional hygiene. The trained volunteers are then engaged to provide support to individuals with psychosocial disability. This is done by helping to enhance their capacity to adapt, social interactions and productive lifestyle. This improves not just the lives of the individuals but also their families and community.
+
                 </h1>
                 <br />
                 <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] ">
-                    We have been providing intensive psychosocial support for 5 years to 6 persons, with schizophrenia, cerebral palsy, epilepsy and autism respectively, and their family members have been provided with referrals, advocacy and soft skills development. Our first clients has also been admitted in a school that will address their education and therapy needs.
+                    We organize support groups every month. These are safe confidential spaces for people to come and share their struggles in the presence of mental health professionals. During the Pandemic these support group meetings took place online.
+
                 </h1>
             </div>
             {/* image section */}
@@ -29,43 +27,6 @@ const Psycho_Social_Support = () => {
                 <img className="h-96 object-cover rounded-md" src={img15} alt="Psycho-Social-Support" />
                 <img className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
-
-            {/* <div data-aos="fade-right" data-aos-duration="1000"  className="mt-10">
-                <Title>
-                    1.
-                </Title>
-                <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] mt-10 text-justify">
-                    We organize Support Group Meetings every month since 2015. The  Support group meetings are safe confidential spaces conducted by a  Mental Health professional, where the participants are persons with  psychosocial disabilities, their families and persons seeking referrals.
-
-                </h1>
-            </div>
-            <div data-aos="fade-right" data-aos-duration="1000" className="mt-10">
-                <Title>
-                    2.
-                </Title>
-                <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] mt-10 text-justify">
-                    We have been providing intensive psycho-social support for 5 years to 6  persons, with schizophrenia, cerebral palsy, epilepsy and autism  respectively, and their family members have been provided with  referrals, advocacy and soft skills development. Our first clients has also  been admitted in a school that will address their education and therapy  needs.
-                </h1>
-            </div>
-            <div data-aos="fade-right" data-aos-duration="1000" className="mt-10">
-                <Title>
-                    3.
-                </Title>
-                <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] mt-10 text-justify">
-                    We worked with schools on psycho-social skills and institutions that  work with vulnerable children. We carried out a needs assessment of  the LEEDO Peace home- a home for 50 rescued street children to  understand their psychosocial situation. We then developed a training  for their care takers to provide psychosocial support.
-                </h1>
-            </div>
-            <div data-aos="fade-right" data-aos-duration="1000" className="mt-10 ">
-                <Title>
-                    4.
-                </Title>
-                <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] mt-10 text-justify ">
-                    During the Corona virus pandemic we have joined the Bangladesh  Mental Health Network to provide free online counseling services to  people.
-                </h1>
-                <div>
-                    <img className="" src={table} alt="" />
-                </div>
-            </div> */}
         </div>
     );
 };

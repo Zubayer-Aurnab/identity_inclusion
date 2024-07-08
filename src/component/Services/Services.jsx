@@ -18,22 +18,25 @@ const Services = () => {
                     path={"/psycho-social-support"}
                     image={psycho_social}
                     title={"Psycho-Social Support"}
-                    description={"Providing direct at-home support services to individuals and families"}
+                    description={"Providing direct at-home moral, physical and psychological support to individuals with severe disabilities or mental health conditions and their families."}
                 />
                 <Card
+                    path={'/advocacy'}
                     image={advocacy}
                     title={"Advocacy & Awareness"}
-                    description={"Addressing and pushing for policy development and implement to ensure social inclusion"}
+                    description={" Addressing and promoting policy development and implementation to ensure social inclusion through dialogues, media campaigns, webinars etc"}
                 />
                 <Card
+                    path={"/consultancy"}
                     image={consultancy}
                     title={'Consultancy '}
-                    description={"conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"}
+                    description={"Provide advice and technical support to promote and develop inclusive policies, leadership, infrastructure and programs for corporate, private and development organizations"}
                 />
                 <Card
+                    path={'/capacity'}
                     image={capacity}
                     title={'Capacity Building '}
-                    description={"conducting training and workshops for organizations and individuals on psycho-social disability and support facilitation"}
+                    description={" Conducting training, workshops for organizations and individuals on concepts of mental health, disability inclusion and psychosocial support skills"}
                 />
 
             </div>

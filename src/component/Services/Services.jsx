@@ -1,7 +1,8 @@
-import advocacy from '../../assets/images/servicesPhoto/advocacy_awareness.png';
-import capacity from '../../assets/images/servicesPhoto/psycho_social.png';
-import consultancy from '../../assets/images/servicesPhoto/consultancy.png';
-import psycho_social from '../../assets/images/servicesPhoto/psycho_social.png';
+
+import psycho_social from '../../assets/images/servicesPhoto/psycho_soicial_2.jpg.webp'
+import advocacy from '../../assets/images/servicesPhoto/advocacy_2.jpg'
+import consultancy from '../../assets/images/servicesPhoto/consultancy_2.jpg'
+import capacity from '../../assets/images/servicesPhoto/capacity_2.jpg'
 import Card from "../Card/Card";
 import Title from "../Title/Title";
 

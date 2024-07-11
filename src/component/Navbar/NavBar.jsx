@@ -32,10 +32,16 @@ const NavBar = () => {
                         About us
                     </NavLink>
                     <NavLink
+                        to={`/services`}
+                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                    >
+                        Services
+                    </NavLink>
+                    <NavLink
                         to={`/a`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
-                        Activities
+                        Acknowledgment & Impact
                     </NavLink>
                     {/* <Popover>
                         <PopoverButton className=" text-black z-50 focus:outline-none data-[active]:text-black data-[hover]:text-black data-[focus]:outline-1 data-[focus]:outline-black hover-effect font-semibold text-xl">
@@ -90,13 +96,7 @@ const NavBar = () => {
                         </Transition>
                     </Popover> */}
 
-                    <NavLink
-                        to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
-                        target="_blank"
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        Become a volunteer
-                    </NavLink>
+
                     <NavLink
                         to={`/team`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}

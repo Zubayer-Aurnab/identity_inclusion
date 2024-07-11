@@ -13,7 +13,7 @@ const Team = () => {
                 <img className='w-44 h-44 object-cover  rounded-full  ' src={ceo} alt="" />
                 <div className='mt-4'>
                     <h1 className='text-xl font-semibold'> Shamsin Ahmed</h1>
-                    <p className='text-[#118088] font-semibold tracking-widest text-[12px]'>Founder</p>
+                    <p className='text-[#118088] font-semibold tracking-widest text-[12px]'>CEO & Lead Consultant </p>
                 </div>
             </div>
             <div >

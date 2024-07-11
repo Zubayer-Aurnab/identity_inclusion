@@ -5,8 +5,14 @@ import consultancy from '../../assets/images/servicesPhoto/consultancy_2.jpg'
 import capacity from '../../assets/images/servicesPhoto/capacity_2.jpg'
 import Card from "../Card/Card";
 import Title from "../Title/Title";
-
+import img26 from '../../assets/marquee/img26.jpg'
+import CountUp from 'react-countup';
+import { useEffect } from 'react';
+import Aos from 'aos';
 const Services = () => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
     return (
         <div className="px-2 lg:px-0 lg:w-4/5 mx-auto my-24" >
             <div className="my-10" >
@@ -40,6 +46,47 @@ const Services = () => {
                     description={" Conducting training, workshops for organizations and individuals on concepts of mental health, disability inclusion and psychosocial support skills"}
                 />
 
+            </div>
+            <div className='mt-10'>
+                <div
+                    className="hero lg:min-h-[55vh]"
+                    style={{
+                        backgroundImage: `url(${img26})`,
+                        backgroundAttachment: 'fixed',
+                    }}>
+                    <div className="hero-overlay bg-opacity-65"></div>
+                    <div style={{ textShadow: "2px 2px black" }} className="hero-content  text-[white] ">
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
+                            className=" grid lg:grid-cols-4 gap-20 lg:gap-0 py-10 lg:py-0 text-center">
+                            <div className='flex flex-col items-center '>
+                                <h1 className='text-2xl lg:text-3xl font-semibold '> Trained Psychosocial Supporters</h1>
+                                <div className='text-4xl font-semibold mt-10'>
+                                    <span className='bg-[#5b9ad58f] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={100} />+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                                <h1 className='text-2xl lg:text-3xl font-semibold'> Provide Advocacy to Institutions</h1>
+                                <div className='text-4xl font-semibold mt-10'>
+                                    <span className='bg-[#ed7c319a] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={15} />+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                                <h1 className='text-2xl lg:text-3xl font-semibold'> Consultancy to Institutions</h1>
+                                <div className='text-4xl font-semibold mt-10'>
+                                    <span className='bg-[#ffbf009f] p-2  rounded-lg'> <CountUp enableScrollSpy={true} end={10} />+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                                <h1 className='text-2xl lg:text-3xl font-semibold'> Capacity Building to institutions</h1>
+                                <div className='text-4xl font-semibold mt-10'>
+                                    <span className='bg-[#44c46f9a] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={8} />+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

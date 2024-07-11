@@ -10,11 +10,12 @@ const HomeText = () => {
                     className="hero min-h-[90vh] "
                     style={{
                         backgroundImage: `url(${img14})`,
+                        backgroundAttachment: 'fixed',
                     }}>
-                    <div className="hero-overlay bg-opacity-60"></div>
+                    <div className="hero-overlay bg-opacity-70"></div>
                     <div className="hero-content text-neutral-content ">
                         <div className="">
-                            <q style={{ textShadow: "2px 2px black", letterSpacing: "2px" }} className=" md:text-3xl  font-bold  text-justify  p-1 text-[#FFFFE0]  ">
+                            <q style={{ textShadow: "2px 2px black", letterSpacing: "2px" }} className=" md:text-3xl  font-bold  text-justify text-[#FFFFE0]  ">
                                 <span className="text-6xl">I</span>
                                 dentity Inclusion is a development consulting firm that aims to resolve and
                                 rectify the approach our institutions and society has towards marginalized

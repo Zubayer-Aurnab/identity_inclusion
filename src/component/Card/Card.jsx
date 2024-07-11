@@ -15,7 +15,7 @@ const Card = ({ title, image, description, path }) => {
                 <div className=" ">
                     <img className="h-80 w-full object-cover rounded-xl" src={image ? image : ""} alt="" />
                 </div>
-                <span className="text-2xl font-bold my-5 ">{title}</span>
+                <span className="text-2xl font-bold my-5  ">{title}</span>
                 <p className="my-5 text-lg text-justify">
                     {description}
                 </p>

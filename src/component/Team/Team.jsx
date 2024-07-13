@@ -1,4 +1,4 @@
-import sazzadul from '../../assets/images/Team/Sazzadur Rahman Rafi.jpg'
+// import sazzadul from '../../assets/images/Team/Sazzadur Rahman Rafi.jpg'
 import shamma from '../../assets/images/Team/Psychosocial Skill TrainerShamma.jpg'
 import koly from '../../assets/images/Team/Psychosocial Skill Trainer - Kaniz Koly .jpg'
 import kohinoor from '../../assets/images/Team/Kohinoor Akter Habiba, Management Trainee.jpg'
@@ -16,13 +16,13 @@ const Team = () => {
                     <p className='text-[#118088] font-semibold tracking-widest text-[12px]'>CEO & Lead Consultant </p>
                 </div>
             </div>
-            <div >
+            {/* <div >
                 <img className='w-44 h-44 object-cover  rounded-full  ' src={sazzadul} alt="" />
                 <div className='mt-4'>
                     <h1 className='text-xl font-semibold'> Sazzadur Rahman Rafi</h1>
                     <p className='text-[#118088] font-semibold tracking-widest text-[12px]'>title</p>
                 </div>
-            </div>
+            </div> */}
             <div >
                 <img className='w-44 h-44 object-cover  rounded-full  ' src={shamma} alt="" />
                 <div className='mt-4'>

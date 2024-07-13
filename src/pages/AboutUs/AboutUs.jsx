@@ -31,10 +31,10 @@ const AboutUs = () => {
                 <div className='flex items-center gap-1 text-white mb-2' >
                     <a href='#word_from_ceo' className='hover-effect-about text-xs lg:text-base' >About The Founder</a>
                     <p><FaChevronRight /></p>
-                    <a href='#our_team' className='hover-effect-about text-xs lg:text-base' >Advisors</a>
+                    <a href='#our_team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
                     <p><FaChevronRight /></p>
-                    <a href='#team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
-                    <p><FaChevronRight /></p>
+                    {/* <a href='#team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
+                    <p><FaChevronRight /></p> */}
                     <a href='#mission_vision' className='hover-effect-about text-xs lg:text-base' >Mission & Vision</a>
                 </div>
                 <div data-aos="fade-up"
@@ -79,11 +79,11 @@ const AboutUs = () => {
                         </div>
                     </div>
                     {/* Our Team section */}
-                    <div className=' my-10 md:my-20'>
+                    <div id='our_team' className=' my-10 md:my-20'>
                         <Title>Advisors</Title>
                     </div>
                     {/* Advisors */}
-                    <div id='our_team' className='grid lg:grid-cols-2 gap-10'>
+                    <div className='grid lg:grid-cols-2 gap-10'>
                         <TeamMembers
                             name={"Julian Francis"}
                             photo={julian}

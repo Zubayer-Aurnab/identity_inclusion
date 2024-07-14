@@ -5,7 +5,8 @@ import consultancy from '../../assets/images/servicesPhoto/consultancy_2.jpg'
 import capacity from '../../assets/images/servicesPhoto/capacity_2.jpg'
 import Card from "../Card/Card";
 import Title from "../Title/Title";
-import img26 from '../../assets/marquee/img26.jpg'
+// import img26 from '../../assets/marquee/img26.jpg'
+import img3 from '../../assets/marquee/img3.jpg'
 import CountUp from 'react-countup';
 import { useEffect } from 'react';
 import Aos from 'aos';
@@ -20,7 +21,7 @@ const Services = () => {
                     Our Services
                 </Title>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  md:gap-4">
                 <Card
                     path={"/psycho-social-support"}
                     image={psycho_social}
@@ -51,7 +52,7 @@ const Services = () => {
                 <div
                     className="hero lg:min-h-[55vh]"
                     style={{
-                        backgroundImage: `url(${img26})`,
+                        backgroundImage: `url(${img3})`,
                         backgroundAttachment: 'fixed',
                     }}>
                     <div className="hero-overlay bg-opacity-65"></div>
@@ -59,27 +60,27 @@ const Services = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-duration="2000"
-                            className=" grid lg:grid-cols-4 gap-20 lg:gap-0 py-10 lg:py-0 text-center">
+                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-20 lg:gap-10 py-10 lg:py-0 text-center">
                             <div className='flex flex-col items-center '>
-                                <h1 className='text-2xl lg:text-3xl font-semibold '> Trained Psychosocial Supporters</h1>
+                                <h1 className='text-2xl lg:text-3xl xl:font-semibold '> Trained Psychosocial Supporters</h1>
                                 <div className='text-4xl font-semibold mt-10'>
                                     <span className='bg-[#5b9ad58f] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={100} />+</span>
                                 </div>
                             </div>
                             <div className='flex flex-col items-center'>
-                                <h1 className='text-2xl lg:text-3xl font-semibold'> Provide Advocacy to Institutions</h1>
+                                <h1 className='text-2xl lg:text-3xl xl:font-semibold'> Provide Advocacy to Institutions</h1>
                                 <div className='text-4xl font-semibold mt-10'>
                                     <span className='bg-[#ed7c319a] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={15} />+</span>
                                 </div>
                             </div>
                             <div className='flex flex-col items-center'>
-                                <h1 className='text-2xl lg:text-3xl font-semibold'> Consultancy to Institutions</h1>
+                                <h1 className='text-2xl lg:text-3xl xl:font-semibold'> Provide Consultancy to Institutions</h1>
                                 <div className='text-4xl font-semibold mt-10'>
                                     <span className='bg-[#ffbf009f] p-2  rounded-lg'> <CountUp enableScrollSpy={true} end={10} />+</span>
                                 </div>
                             </div>
                             <div className='flex flex-col items-center'>
-                                <h1 className='text-2xl lg:text-3xl font-semibold'> Capacity Building to institutions</h1>
+                                <h1 className='text-2xl lg:text-3xl xl:last:font-semibold'> Capacity Building to institutions</h1>
                                 <div className='text-4xl font-semibold mt-10'>
                                     <span className='bg-[#44c46f9a] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={8} />+</span>
                                 </div>

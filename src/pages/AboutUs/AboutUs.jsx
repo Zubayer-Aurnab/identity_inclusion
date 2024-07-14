@@ -13,7 +13,7 @@ import wahid from '../../assets/images/TeamMembers/Dr. Syed Shabab Wahid.jpg'
 import umme from '../../assets/images/TeamMembers/Umme Kawser (2).jpg'
 import dip from '../../assets/images/TeamMembers/Dr M. Tasdik Hassan.jpg'
 import Sudipa from '../../assets/images/TeamMembers/Sudipa Sarkar.jpg'
-import kamrul from '../../assets/images/TeamMembers/Kamrul Hassan.jpg'
+import kamrul from '../../assets/images/TeamMembers/Kamrul Hassan (1).jpg'
 import './AboutUs.css';
 import Title from '../../component/Title/Title';
 import Team from '../../component/Team/Team';

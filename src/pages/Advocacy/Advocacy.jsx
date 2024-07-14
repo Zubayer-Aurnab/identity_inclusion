@@ -5,7 +5,7 @@ import img25 from '../../assets/marquee/img25.jpg'
 
 const Advocacy = () => {
     return (
-        <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
+        <div className="my-20 lg:mb-40 px-2 lg:px-0 lg:w-4/5 mx-auto ">
             <Title>
                 Advocacy & Awareness
             </Title>
@@ -20,7 +20,7 @@ const Advocacy = () => {
                 </h1> */}
             </div>
             {/* image section */}
-            <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10   mt-10">
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
                 <img className="h-96 object-cover rounded-md" src={img3} alt="Psycho-Social-Support" />
                 <img className="h-96 object-cover rounded-md" src={img10} alt="Psycho-Social-Support" />
                 <img className="h-96 object-cover rounded-md" src={img25} alt="Psycho-Social-Support" />

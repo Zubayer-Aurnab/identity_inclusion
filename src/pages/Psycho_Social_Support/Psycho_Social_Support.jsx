@@ -4,9 +4,9 @@ import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
 
 const Psycho_Social_Support = () => {
-  
+
     return (
-        <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
+        <div className="my-20 lg:mb-40  px-2 lg:px-0 lg:w-4/5 mx-auto ">
             <Title>
                 Psycho-Social-Support
             </Title>
@@ -22,9 +22,9 @@ const Psycho_Social_Support = () => {
                 </h1>
             </div>
             {/* image section */}
-            <div className="flex flex-col lg:flex-row  gap-5 lg:gap-0 justify-between  mt-10">
+            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
                 <img className="h-96 object-cover rounded-md" src={img11} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md" src={img15} alt="Psycho-Social-Support" />
+                <img className="h-96 object-cover rounded-md lg:w-full" src={img15} alt="Psycho-Social-Support" />
                 <img className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
         </div>

@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/identity inclusion logo.png";
 import "./Nav.css";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
     const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088]   text-xl ";
     const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-xl ";
+    const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
     const [slider, setSlider] = useState(false)
     // console.log(slider)
     const handleCheckboxChange = () => {
@@ -31,12 +33,35 @@ const NavBar = () => {
                     >
                         About us
                     </NavLink>
-                    <NavLink
-                        to={`/services`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                    <Link
+                        // to={`/services`}
+                        className={'font-semibold hover-effect border-b-2 border-transparent text-xl relative group transition-all '}
                     >
-                        Services
-                    </NavLink>
+                        <p className="flex items-center">
+                            Services <MdOutlineKeyboardArrowDown className="text-2xl mt-1 group-hover:rotate-180 transition-all" />
+                        </p>
+                        {/* dropdown */}
+                        <div className="absolute mt-  w-72 hidden  bg-[#ffffe0] shadow-2xl transition-transform group-hover:flex flex-col gap-2 z-30 p-4">
+                            <Link to={"/psycho-social-support"} className={dropDown}>
+                                Psycho-Social Support
+                            </Link>
+                            <Link to={"/psycho-social-support"} className={dropDown}>
+                                Support Group Meeting
+                            </Link>
+                            <Link to={"/advocacy"} className={dropDown}>
+                                Advocacy & Awareness
+                            </Link>
+                            <Link to={"/consultancy"} className={dropDown}>
+                                Consultancy
+                            </Link>
+                            <Link to={"/capacity"} className={dropDown}>
+                                Capacity Building
+                            </Link>
+
+                        </div>
+
+
+                    </Link>
                     <NavLink
                         to={`/a`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
@@ -104,9 +129,9 @@ const NavBar = () => {
                         Contact Us
                     </NavLink>
                 </div>
-            </div>
+            </div >
             {/* for small devices*/}
-            <div className="bg-white relative px-5 flex lg:hidden justify-between items-center py-1">
+            <div div className="bg-white relative px-5 flex lg:hidden justify-between items-center py-1" >
                 <div >
                     <img className="w-14" src={logo} alt="" />
                 </div>
@@ -124,51 +149,53 @@ const NavBar = () => {
                     </label>
                 </div>
 
-                {slider && (
+                {
+                    slider && (
 
-                    <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5 duration-500 bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
-                        <NavLink
-                            to={`/`}
-                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                            onClick={handleCheckboxChange}
-                        >
-                            Home
-                        </NavLink>
-                        <NavLink
-                            to={`/about`}
-                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                            onClick={handleCheckboxChange}
-                        >
-                            About us
-                        </NavLink>
-                        <NavLink
-                            to={`/a`}
-                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                            onClick={handleCheckboxChange}
-                        >
-                            Activities
-                        </NavLink>
+                        <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5 duration-500 bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
+                            <NavLink
+                                to={`/`}
+                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                                onClick={handleCheckboxChange}
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                to={`/about`}
+                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                                onClick={handleCheckboxChange}
+                            >
+                                About us
+                            </NavLink>
+                            <NavLink
+                                to={`/a`}
+                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                                onClick={handleCheckboxChange}
+                            >
+                                Activities
+                            </NavLink>
 
-                        <NavLink
-                            to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
-                            target="_blank"
-                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                            onClick={handleCheckboxChange}
-                        >
-                            Become a volunteer
-                        </NavLink>
-                        <NavLink
-                            to={`/team`}
-                            className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                            onClick={handleCheckboxChange}
-                        >
-                            Contact Us
-                        </NavLink>
-                    </div>
-                )}
+                            <NavLink
+                                to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
+                                target="_blank"
+                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                                onClick={handleCheckboxChange}
+                            >
+                                Become a volunteer
+                            </NavLink>
+                            <NavLink
+                                to={`/team`}
+                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
+                                onClick={handleCheckboxChange}
+                            >
+                                Contact Us
+                            </NavLink>
+                        </div>
+                    )
+                }
 
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 

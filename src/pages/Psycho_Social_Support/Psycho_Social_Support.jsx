@@ -8,7 +8,7 @@ const Psycho_Social_Support = () => {
     return (
         <div className="my-20 lg:mb-40  px-2 lg:px-0 lg:w-4/5 mx-auto ">
             <Title>
-                Psycho-Social-Support
+                Psycho-Social Support
             </Title>
             <div className="mt-10 text-justify">
                 <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] ">

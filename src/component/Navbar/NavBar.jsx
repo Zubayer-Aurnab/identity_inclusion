@@ -38,10 +38,10 @@ const NavBar = () => {
                         className={'font-semibold hover-effect border-b-2 border-transparent text-xl relative group transition-all '}
                     >
                         <p className="flex items-center">
-                            Services <MdOutlineKeyboardArrowDown className="text-2xl mt-1 group-hover:rotate-180 transition-all" />
+                            Services <MdOutlineKeyboardArrowDown className="text-2xl mt-1  group-hover:rotate-180 transition-all" />
                         </p>
                         {/* dropdown */}
-                        <div className="absolute mt-  w-72 hidden  bg-[#ffffe0] shadow-2xl transition-transform group-hover:flex flex-col gap-2 z-30 p-4">
+                        <div className="absolute   w-72 hidden  bg-[#ffffe0] shadow-2xl transition-transform group-hover:flex flex-col gap-2 z-30 p-4">
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
@@ -63,67 +63,14 @@ const NavBar = () => {
 
                     </Link>
                     <NavLink
-                        to={`/a`}
+                        to={`/acknowledgment-impact`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
                         Acknowledgment & Impact
                     </NavLink>
-                    {/* <Popover>
-                        <PopoverButton className=" text-black z-50 focus:outline-none data-[active]:text-black data-[hover]:text-black data-[focus]:outline-1 data-[focus]:outline-black hover-effect font-semibold text-xl">
-                            About Us
-                        </PopoverButton>
-                        <Transition
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1"
-                        >
-                            <PopoverPanel
-                                anchor="bottom"
-                                className="divide-y divide-white/5  bg-orange-50  shadow-2xl z-10 mt-5 w-60 "
-                            >
-                                <div className="p-3">
-                                    <a
-                                        className="block rounded-lg py-2 px-3 transition  hover-effect text-black font-semibold text-xl "
-                                        href="/about"
-                                    >
-                                        Identity Inclusion
-                                    </a>
-                                    <a
-                                        className="block rounded-lg py-2 px-3 transition  hover-effect text-black font-semibold text-xl "
-                                        href="/about#word_from_ceo"
-                                    >
-                                        Words from CEO
-                                    </a>
-                                    <a
-                                        className="block rounded-lg py-2 px-3 transition  hover-effect text-black font-semibold text-xl"
-                                        href="#"
-                                    >
-                                         Mission & Vision
-                                     
-                                    </a>
-                                    <a
-                                        className="block rounded-lg py-2 px-3 transition  hover-effect text-black font-semibold text-xl"
-                                        href="#"
-                                    >
-                                        Our Team
-                                    </a>
-                                    <a
-                                        className="block rounded-lg py-2 px-3 transition  hover-effect text-black font-semibold text-xl"
-                                        href="#"
-                                    >
-                                         Values
-                                    </a>
-                                </div>
-                            </PopoverPanel>
-                        </Transition>
-                    </Popover> */}
-
 
                     <NavLink
-                        to={`/team`}
+                        to={`/contact`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
                         Contact Us
@@ -131,7 +78,7 @@ const NavBar = () => {
                 </div>
             </div >
             {/* for small devices*/}
-            <div div className="bg-white relative px-5 flex lg:hidden justify-between items-center py-1" >
+            <div className="bg-white relative px-5 flex lg:hidden justify-between items-center py-1" >
                 <div >
                     <img className="w-14" src={logo} alt="" />
                 </div>

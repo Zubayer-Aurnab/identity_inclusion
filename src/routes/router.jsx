@@ -9,6 +9,7 @@ import Psycho_Social_Support from "../pages/Psycho_Social_Support/Psycho_Social_
 import Advocacy from "../pages/Advocacy/Advocacy";
 import Consultancy from "../pages/Consultancy/Consultancy";
 import Capacity from "../pages/Capacity/Capacity";
+import UnderDev from "../component/underDev/UnderDev";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -22,6 +23,15 @@ export const router = createBrowserRouter([
                 path: '/about',
                 element: <AboutUs />
             },
+            {
+                path: "/acknowledgment-impact",
+                element: <UnderDev />
+            },
+            {
+                path: "/contact",
+                element: <UnderDev />
+            },
+            // services
             {
                 path: '/psycho-social-support',
                 element: <Psycho_Social_Support />

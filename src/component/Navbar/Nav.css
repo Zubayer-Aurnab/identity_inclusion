@@ -26,3 +26,21 @@
   /* padding: 10px 20px 20px 20px !important; */
 
 }
+
+.menu {
+  transform: translate(-4rem);
+  /* margin-top: 10px; */
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
+.drop:hover {
+  .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-2rem);
+  }
+}

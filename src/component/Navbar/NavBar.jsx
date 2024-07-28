@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/identity inclusion logo.png";
 import "./Nav.css";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+// import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
     const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088]   text-xl ";
+    const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg  text-xl  ";
     const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-xl ";
     const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
     const [slider, setSlider] = useState(false)
     // console.log(slider)
+    useEffect(() => {
+        if (slider) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [slider]);
     const handleCheckboxChange = () => {
         setSlider(prev => !prev);
     };
@@ -33,15 +41,13 @@ const NavBar = () => {
                     >
                         About us
                     </NavLink>
-                    <Link
-                        // to={`/services`}
-                        className={'font-semibold hover-effect border-b-2 border-transparent text-xl relative group transition-all '}
+
+                    <NavLink
+
+                        className={'font-semibold  border-b-2 border-transparent text-xl relative drop '}
                     >
-                        <p className="flex items-center">
-                            Services <MdOutlineKeyboardArrowDown className="text-2xl mt-1  group-hover:rotate-180 transition-all" />
-                        </p>
-                        {/* dropdown */}
-                        <div className="absolute   w-72 hidden  bg-[#ffffe0] shadow-2xl transition-transform group-hover:flex flex-col gap-2 z-30 p-4">
+                        Services
+                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu">
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
@@ -59,9 +65,8 @@ const NavBar = () => {
                             </Link>
 
                         </div>
+                    </NavLink>
 
-
-                    </Link>
                     <NavLink
                         to={`/acknowledgment-impact`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
@@ -96,50 +101,67 @@ const NavBar = () => {
                     </label>
                 </div>
 
-                {
-                    slider && (
 
-                        <div className="absolute top-0 w-[60%] left-0 h-screen  pt-5 duration-500 bg-[#c0e1bd] shadow-2xl z-[999] flex flex-col p-4 py-3   space-y-3">
-                            <NavLink
-                                to={`/`}
-                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                                onClick={handleCheckboxChange}
-                            >
-                                Home
-                            </NavLink>
-                            <NavLink
-                                to={`/about`}
-                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                                onClick={handleCheckboxChange}
-                            >
-                                About us
-                            </NavLink>
-                            <NavLink
-                                to={`/a`}
-                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                                onClick={handleCheckboxChange}
-                            >
-                                Activities
-                            </NavLink>
 
-                            <NavLink
-                                to={`https://docs.google.com/forms/d/e/1FAIpQLSfOjFK7-_wj3Kd76JOHuHGri2DvIUR5OYT1kKRuVcFF8pEbYA/viewform`}
-                                target="_blank"
-                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                                onClick={handleCheckboxChange}
-                            >
-                                Become a volunteer
-                            </NavLink>
-                            <NavLink
-                                to={`/team`}
-                                className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                                onClick={handleCheckboxChange}
-                            >
-                                Contact Us
-                            </NavLink>
+                <div className={`absolute float-end top-0   ${slider ? "left-0" : "-left-96"}  w-[80%]  h-screen  pt-5 duration-500 bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88] shadow-2xl z-[999] flex flex-col p-4 py-3    space-y-5`}>
+                    <NavLink
+                        to={`/`}
+                        className={mobileClass}
+                        onClick={handleCheckboxChange}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        to={`/about`}
+                        className={mobileClass}
+                        onClick={handleCheckboxChange}
+                    >
+                        About us
+                    </NavLink>
+
+                    <NavLink
+
+                        className={mobileClass}
+
+                    >
+                        Services
+                        <div className="absolute  w-72  bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu">
+                            <Link to={"/psycho-social-support"} className={dropDown}>
+                                Psycho-Social Support
+                            </Link>
+                            <Link to={"/psycho-social-support"} className={dropDown}>
+                                Support Group Meeting
+                            </Link>
+                            <Link to={"/advocacy"} className={dropDown}>
+                                Advocacy & Awareness
+                            </Link>
+                            <Link to={"/consultancy"} className={dropDown}>
+                                Consultancy
+                            </Link>
+                            <Link to={"/capacity"} className={dropDown}>
+                                Capacity Building
+                            </Link>
+
                         </div>
-                    )
-                }
+                    </NavLink>
+
+                    <NavLink
+                        to={`/acknowledgment-impact`}
+                        className={mobileClass}
+                        onClick={handleCheckboxChange}
+                    >
+                        Acknowledgment & Impact
+                    </NavLink>
+
+                    <NavLink
+                        to={`/contact`}
+                        className={mobileClass}
+                        onClick={handleCheckboxChange}
+                    >
+                        Contact Us
+                    </NavLink>
+                </div>
+
 
             </div >
         </div >

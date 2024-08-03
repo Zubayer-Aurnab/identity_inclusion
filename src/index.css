@@ -4,4 +4,6 @@
 
 .no-scroll {
     overflow: hidden;
+    position: fixed;
+    inset: 0;
 }

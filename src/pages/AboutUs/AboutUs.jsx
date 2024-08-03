@@ -47,7 +47,7 @@ const AboutUs = () => {
                     {/* Identity Section section */}
                     <div>
                         <div className=' pt-20 flex items-center gap-4 '>
-                            <img src={logo} className='w-48 h-48 rounded-full object-cover' alt="" />
+                            <img loading="lazy" src={logo} className='w-48 h-48 rounded-full object-cover' alt="" />
                         </div>
                         {/* divider */}
                         <div className=' py-5'>
@@ -60,7 +60,7 @@ const AboutUs = () => {
                     {/* ceo section */}
                     <div id="word_from_ceo">
                         <div className=' pt-10 flex items-center gap-4 '>
-                            <img src={ceo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
+                            <img loading="lazy" src={ceo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
                             <div>
                                 <p className='font-bold md:text-xl'>Shamsin Ahmed</p>
                                 <p className='md:text-lg text-[#118088] '>Founder of Identity Inclusion</p>

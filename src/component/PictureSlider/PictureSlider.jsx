@@ -47,37 +47,37 @@ const PictureSlider = () => {
                 </div>
                 <div className="mt-10 mb-40 px-2 lg:px-0 lg:w-4/5 mx-auto space-y-5">
                     <Marquee pauseOnHover direction="right" >
-                        <img className={imageClass} src={img1} alt="" />
-                        <img className={imageClass} src={img2} alt="" />
-                        <img className={imageClass} src={img3} alt="" />
-                        <img className={imageClass} src={img4} alt="" />
-                        <img className={imageClass} src={img5} alt="" />
-                        <img className={imageClass} src={img6} alt="" />
-                        <img className={imageClass} src={img7} alt="" />
-                        <img className={imageClass} src={img8} alt="" />
-                        <img className={imageClass} src={img9} alt="" />
-                        <img className={imageClass} src={img10} alt="" />
-                        <img className={imageClass} src={img11} alt="" />
-                        <img className={imageClass} src={img12} alt="" />
-                        <img className={imageClass} src={img13} alt="" />
-                        <img className={imageClass} src={img14} alt="" />
-                        <img className={imageClass} src={img15} alt="" />
+                        <img loading="lazy" className={imageClass} src={img1} alt="" />
+                        <img loading="lazy" className={imageClass} src={img2} alt="" />
+                        <img loading="lazy" className={imageClass} src={img3} alt="" />
+                        <img loading="lazy" className={imageClass} src={img4} alt="" />
+                        <img loading="lazy" className={imageClass} src={img5} alt="" />
+                        <img loading="lazy" className={imageClass} src={img6} alt="" />
+                        <img loading="lazy" className={imageClass} src={img7} alt="" />
+                        <img loading="lazy" className={imageClass} src={img8} alt="" />
+                        <img loading="lazy" className={imageClass} src={img9} alt="" />
+                        <img loading="lazy" className={imageClass} src={img10} alt="" />
+                        <img loading="lazy" className={imageClass} src={img11} alt="" />
+                        <img loading="lazy" className={imageClass} src={img12} alt="" />
+                        <img loading="lazy" className={imageClass} src={img13} alt="" />
+                        <img loading="lazy" className={imageClass} src={img14} alt="" />
+                        <img loading="lazy" className={imageClass} src={img15} alt="" />
                     </Marquee>
                     <Marquee pauseOnHover direction="left" >
-                        <img className={imageClass} src={img16} alt="" />
-                        <img className={imageClass} src={img17} alt="" />
-                        <img className={imageClass} src={img18} alt="" />
-                        <img className={imageClass} src={img19} alt="" />
-                        <img className={imageClass} src={img20} alt="" />
-                        <img className={imageClass} src={img21} alt="" />
-                        <img className={imageClass} src={img22} alt="" />
-                        <img className={imageClass} src={img23} alt="" />
-                        <img className={imageClass} src={img24} alt="" />
-                        <img className={imageClass} src={img25} alt="" />
-                        <img className={imageClass} src={img26} alt="" />
-                        <img className={imageClass} src={img27} alt="" />
-                        <img className={imageClass} src={img28} alt="" />
-                        <img className={imageClass} src={img29} alt="" />
+                        <img loading="lazy" className={imageClass} src={img16} alt="" />
+                        <img loading="lazy" className={imageClass} src={img17} alt="" />
+                        <img loading="lazy" className={imageClass} src={img18} alt="" />
+                        <img loading="lazy" className={imageClass} src={img19} alt="" />
+                        <img loading="lazy" className={imageClass} src={img20} alt="" />
+                        <img loading="lazy" className={imageClass} src={img21} alt="" />
+                        <img loading="lazy" className={imageClass} src={img22} alt="" />
+                        <img loading="lazy" className={imageClass} src={img23} alt="" />
+                        <img loading="lazy" className={imageClass} src={img24} alt="" />
+                        <img loading="lazy" className={imageClass} src={img25} alt="" />
+                        <img loading="lazy" className={imageClass} src={img26} alt="" />
+                        <img loading="lazy" className={imageClass} src={img27} alt="" />
+                        <img loading="lazy" className={imageClass} src={img28} alt="" />
+                        <img loading="lazy" className={imageClass} src={img29} alt="" />
                     </Marquee>
                 </div>
             </div>

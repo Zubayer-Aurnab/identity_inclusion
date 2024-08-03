@@ -18,9 +18,9 @@ const Capacity = () => {
             </div>
             {/* image section */}
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
-                <img className="h-96 object-cover rounded-md w-full" src={img18} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md w-full" src={img24} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md w-full" src={img27} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img18} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img24} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img27} alt="Psycho-Social-Support" />
             </div>
         </div>
     );

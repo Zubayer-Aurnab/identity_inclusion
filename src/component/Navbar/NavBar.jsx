@@ -103,7 +103,7 @@ const NavBar = () => {
 
 
 
-                <div className={`absolute float-end top-0   ${slider ? "left-0" : "-left-96"}  w-[80%]  h-screen  pt-5 duration-500 bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88] shadow-2xl z-[999] flex flex-col p-4 py-3    space-y-5`}>
+                <div className={`absolute float-end top-0   ${slider ? "left-0" : "-left-[700px]"}  w-[80%] md:w-[40%]  h-screen  pt-5 duration-500 bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88] shadow-2xl z-[999] flex flex-col p-4 py-3    space-y-5`}>
                     <NavLink
                         to={`/`}
                         className={mobileClass}

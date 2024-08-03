@@ -28,9 +28,9 @@ const Banner = () => {
                     }}
                     fadeEffect={"fade"}
                     className="mySwiper ">
-                    <SwiperSlide><img className='w-full h-[40vh]  lg:h-[91vh] md:h-[93vh]  object-contain  md:object-contain' src={banner} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-full h-[40vh] lg:h-[91vh] md:h-[93vh] object-contain md:object-cover' src={imge3} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className='w-full h-[40vh] lg:h-[91vh] md:h-[93vh] object-contain md:object-cover ' src={imge1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img loading="lazy"  className='w-full h-[40vh]  lg:h-[91vh] md:h-[93vh]  object-contain  md:object-contain' src={banner} alt="" /></SwiperSlide>
+                    <SwiperSlide><img loading="lazy" className='w-full h-[40vh] lg:h-[91vh] md:h-[93vh] object-cover md:object-cover' src={imge3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img loading="lazy" className='w-full h-[40vh] lg:h-[91vh] md:h-[93vh] object-cover md:object-cover ' src={imge1} alt="" /></SwiperSlide>
                     {/* <SwiperSlide><img className='w-full h-[91vh] md:h-[93vh] object-cover' src={imge2} alt="" /></SwiperSlide> */}
                 </Swiper>
             </div>

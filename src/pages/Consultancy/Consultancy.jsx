@@ -20,9 +20,9 @@ const Consultancy = () => {
             </div>
             {/* image section */}
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
-                <img className="h-96 object-cover rounded-md" src={img6} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md" src={img14} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md" src={img23} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md" src={img6} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md" src={img14} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md" src={img23} alt="Psycho-Social-Support" />
             </div>
         </div>
     );

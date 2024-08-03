@@ -8,7 +8,7 @@ const TeamMembers = ({ name, photo, description, }) => {
     return (
         <div className=''>
             <div className=' pt-10 flex items-center gap-4 '>
-                <img src={photo} className='w-32 h-32 md:w-48 md:h-48 object-contain ' alt="" />
+                <img loading="lazy" src={photo} className='w-32 h-32 md:w-48 md:h-48 object-contain ' alt="" />
                 <div>
                     <p className='font-bold md:text-xl '>{name}</p>
                 </div>

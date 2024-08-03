@@ -13,7 +13,7 @@ const Card = ({ title, image, description, path }) => {
 
             <div className="z-10 flex flex-col justify-evenly items-center w-full h-full">
                 <div className=" ">
-                    <img className="h-80 w-full object-cover rounded-xl" src={image ? image : ""} alt="" />
+                    <img loading="lazy" className="h-80 w-full object-cover rounded-xl" src={image ? image : ""} alt="" />
                 </div>
                 <span className="text-2xl font-bold my-5  ">{title}</span>
                 <p className="my-5 text-lg text-justify">

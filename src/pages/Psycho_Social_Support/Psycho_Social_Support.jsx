@@ -23,9 +23,9 @@ const Psycho_Social_Support = () => {
             </div>
             {/* image section */}
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
-                <img className="h-96 object-cover rounded-md" src={img11} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md lg:w-full" src={img15} alt="Psycho-Social-Support" />
-                <img className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md" src={img11} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md lg:w-full" src={img15} alt="Psycho-Social-Support" />
+                <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
         </div>
     );

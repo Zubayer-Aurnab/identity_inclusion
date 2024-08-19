@@ -17,25 +17,25 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  useEffect(() => {
-    const handleLoad = () => {
-      // Assuming Loader component renders the loading spinner directly
-      document.getElementById('loader').style.display = 'none';
-    };
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     // Assuming Loader component renders the loading spinner directly
+  //     document.getElementById('loader').style.display = 'none';
+  //   };
 
-    window.addEventListener('load', handleLoad);
+  //   window.addEventListener('load', handleLoad);
 
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('load', handleLoad);
-    };
-  }, []);
+  //   // Cleanup event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('load', handleLoad);
+  //   };
+  // }, []);
 
   return (
     <>
-      <div id="loader">
+      {/* <div id="loader">
         <Loader />
-      </div>
+      </div> */}
       <NavBar />
       <Outlet />
       <Footer />

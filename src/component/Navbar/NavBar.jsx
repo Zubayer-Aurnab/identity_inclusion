@@ -5,9 +5,10 @@ import "./Nav.css";
 // import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
-    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088]   text-xl ";
+    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088] text-lg font-[Roboto] ";
+    const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-lg font-[Roboto] ";
+
     const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg  text-xl  ";
-    const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-xl ";
     const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
     const [slider, setSlider] = useState(false)
     // console.log(slider)
@@ -24,7 +25,7 @@ const NavBar = () => {
     return (
         <div>
             {/* for large devices */}
-            <div className=" hidden lg:flex px-10 justify-evenly items-center ">
+            <div className=" hidden lg:flex px-20 justify-between items-center ">
                 <div className=" ">
                     <img className="w-20" src={logo} alt="" />
                 </div>
@@ -47,7 +48,7 @@ const NavBar = () => {
                         className={'font-semibold  border-b-2 border-transparent text-xl relative drop '}
                     >
                         Services
-                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu">
+                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-[Roboto]">
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>

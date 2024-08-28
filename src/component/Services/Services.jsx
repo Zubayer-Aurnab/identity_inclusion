@@ -15,8 +15,8 @@ const Services = () => {
         Aos.init()
     }, [])
     return (
-        <div className="px-2 lg:px-0 lg:w-4/5 mx-auto my-24" >
-            <div className="my-10" >
+        <div className="px-2 lg:px-0 lg:w-4/5 mx-auto " >
+            <div className="my-4" >
                 <Title>
                     Our Services
                 </Title>
@@ -48,21 +48,21 @@ const Services = () => {
                 />
 
             </div>
-            <div className='mt-10'>
-                <div
+            <div className='mt-4'>
+                {/* <div
                     className="hero lg:min-h-[55vh]"
                     style={{
                         backgroundImage: `url(${img3})`,
                         backgroundAttachment: 'fixed',
                     }}>
                     <div className="hero-overlay bg-opacity-65"></div>
-                    <div style={{ textShadow: "2px 2px black" }} className="hero-content  text-[white] ">
+                    <div style={{ textShadow: "2px 2px black" }} className="hero-content  text-[white] border ">
                         <div
                             data-aos="fade-up"
                             data-aos-duration="2000"
-                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-20 lg:gap-10 py-10 lg:py-0 text-center">
+                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-20 lg:gap-10 py-10 lg:py-0 text-center font-[]  ">
                             <div className='flex flex-col items-center '>
-                                <h1 className='text-2xl lg:text-3xl xl:font-semibold '> Trained Psychosocial Supporters</h1>
+                                <h1 className='text-2xl lg:text-3xl  '> Trained Psychosocial Supporters</h1>
                                 <div className='text-4xl font-semibold mt-10'>
                                     <span className='bg-[#5b9ad58f] p-2 rounded-lg'> <CountUp enableScrollSpy={true} end={100} />+</span>
                                 </div>
@@ -86,6 +86,62 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div> */}
+                <div
+
+                    style={{
+                        position: 'relative',  // Ensure the overlay is positioned correctly
+                        backgroundImage: `url(${img3})`,
+                        backgroundAttachment: 'fixed',
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        // height: '55vh',  // Adjust height as needed
+                        overflow: 'hidden'  // Ensure no overflow from child elements
+                    }}
+                    className='relative h-[80vh] lg:h-[55vh] mt-10'  // Apply height and relative positioning
+                >
+                    <div
+                        style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            right: 0,
+                            bottom: 0,
+                            background: 'rgba(0, 0, 0, 0.5)'  // Dark overlay with opacity
+                        }}
+                    />
+                    <div style={{ position: 'relative', zIndex: 1, padding: "", color: "white" }} className=' lg:mt-10 xl:mt-40'>
+                        <div
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
+                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-6  xl:gap-0  py-10 lg:py-0 text-center font-[Roboto]   ">
+                            <div className='flex flex-col    '>
+                                <h1 className='text-2xl lg:text-3xl  '> Trained Psychosocial Supporters</h1>
+                                <div className='text-3xl font-semibold mt-10 '>
+                                    <span className='bg-[#5b9ad58f] p-2 rounded-lg'> 100+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col   '>
+                                <h1 className='text-2xl lg:text-3xl '> Provide Advocacy to Institutions</h1>
+                                <div className='text-3xl font-semibold mt-10'>
+                                    <span className='bg-[#ed7c319a] p-2 rounded-lg'> 15+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col   '>
+                                <h1 className='text-2xl lg:text-3xl '> Provide Consultancy to Institutions</h1>
+                                <div className='text-3xl font-semibold mt-10'>
+                                    <span className='bg-[#ffbf009f] p-2  rounded-lg'> 10+</span>
+                                </div>
+                            </div>
+                            <div className='flex flex-col   '>
+                                <h1 className='text-2xl lg:text-3xl '> Capacity Building to institutions</h1>
+                                <div className='text-3xl font-semibold mt-10'>
+                                    <span className='bg-[#44c46f9a] p-2 rounded-lg'> 8+</span>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

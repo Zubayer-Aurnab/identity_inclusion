@@ -27,20 +27,32 @@
 
 }
 
-.menu {
+/* .menu {
   transform: translate(-4rem);
-  /* margin-top: 10px; */
+  margin-top: 10px;
   opacity: 0;
   visibility: hidden;
   transition-property: opacity, transform;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-}
+} */
 
-.drop:hover {
+/* .drop:hover {
   .menu {
     opacity: 1;
     visibility: visible;
     transform: translate(-2rem);
   }
+} */
+.menu {
+  transform: translate(-4rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.drop:hover .menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-2rem);
 }

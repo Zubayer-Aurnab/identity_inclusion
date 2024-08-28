@@ -27,15 +27,15 @@ const AboutUs = () => {
             <div className="h-[45vh] bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88]"></div>
 
             <div className="relative bottom-64 px-5 lg:px-0 lg:w-[60%] mx-auto ">
-                <h1 className='text-2xl md:text-3xl lg:text-6xl  text-white font-semibold mb-7'>ABOUT IDENTITY INCLUSION</h1>
-                <div className='flex items-center gap-1 text-white mb-2' >
+                <h1 className='text-2xl md:text-3xl lg:text-6xl  text-white font-medium mb-7 font-[Roboto]'>About Identity Inclusion</h1>
+                <div className='flex items-center gap-1 text-white mb-2 font-[Ubuntu]' >
+                    <a href='#mission_vision' className='hover-effect-about text-xs lg:text-base' >Mission & Vision</a>
+                    <p><FaChevronRight /></p>
                     <a href='#word_from_ceo' className='hover-effect-about text-xs lg:text-base' >About The Founder</a>
                     <p><FaChevronRight /></p>
                     <a href='#our_team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
-                    <p><FaChevronRight /></p>
-                    {/* <a href='#team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
-                    <p><FaChevronRight /></p> */}
-                    <a href='#mission_vision' className='hover-effect-about text-xs lg:text-base' >Mission & Vision</a>
+
+
                 </div>
                 <div data-aos="fade-up"
                     data-aos-duration="2000"
@@ -54,7 +54,64 @@ const AboutUs = () => {
                             <div className='h-[1px] bg-slate-300'></div>
                         </div>
                         <div className='pb-5'>
-                            <p className='md:text-xl text-justify text-[#636870] '>Identity Inclusion is a development consulting firm that aims to resolve and rectify the approach our institutions and society has towards the marginalized communities. Identity Inclusion started as a project with an aim to helping people with psychosocial disability. Due to mental health stigma stemming from a significant knowledge gap about people with disabilities, they suffer from societal and institutional exclusion. Identity Inclusion helps address and remove the exclusionary practices of institution towards marginalized communities through assessments, awareness raising, capacity building and advocating policy developments. </p>
+                            <p className='md:text-xl text-justify text-[#636870] font-[Ubuntu] '>Identity Inclusion is a development consulting firm that aims to resolve and rectify the approach our institutions and society has towards the marginalized communities. Identity Inclusion started as a project with an aim to helping people with psychosocial disability. Due to mental health stigma stemming from a significant knowledge gap about people with disabilities, they suffer from societal and institutional exclusion. Identity Inclusion helps address and remove the exclusionary practices of institution towards marginalized communities through assessments, awareness raising, capacity building and advocating policy developments. </p>
+                        </div>
+                    </div>
+                    {/*Mission & Vision section */}
+                    <div id="mission_vision" className='mt-'>
+                        <div className='py-5 '>
+                            {/* mission */}
+                            <div data-aos="fade-up"
+                                data-aos-duration="1000" className='mt-10'>
+                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center' >
+                                    <div>
+                                        <Lottie
+                                            className="w-40 mb-2"
+                                            animationData={mission} />
+                                    </div>
+                                    <h1 className='text-2xl font-bold font-[Roboto] '>Mission</h1>
+                                    <p className='text-xl  text-[#636870] font-[Ubuntu]'>
+
+                                        Enable the full potential of excluded individuals by promoting best practices for inclusion through youth leadership and institutional change.
+
+                                    </p>
+                                </div>
+                            </div>
+                            {/* vision */}
+                            <div
+                                className='mt-10'
+                                data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center'>
+                                    <div>
+                                        <Lottie
+                                            className="w-64 mb-2"
+                                            animationData={vision} />
+                                    </div>
+                                    <h1 className='text-2xl font-bold font-[Roboto]'>vision</h1>
+                                    <p className='text-xl  text-[#636870] font-[Ubuntu]'>
+                                        To create inclusive societies that realize the full potential of excluded individuals through institutional and systemic change.
+
+                                    </p>
+                                </div>
+                            </div>
+                            {/* values */}
+                            <div
+                                className='mt-10'
+                                data-aos="fade-up"
+                                data-aos-duration="1000">
+                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center'>
+                                    <div>
+                                        <Lottie
+                                            className="w-40 mb-2"
+                                            animationData={values} />
+                                    </div>
+                                    <h1 className='text-2xl font-bold mb-2 font-[Roboto]'>Values</h1>
+                                    <p className='text-xl font-bold  text-[#636870] font-[Ubuntu]'>
+                                        Inclusion, Integrity, Dignity.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     {/* ceo section */}
@@ -62,8 +119,8 @@ const AboutUs = () => {
                         <div className=' pt-10 flex items-center gap-4 '>
                             <img loading="lazy" src={ceo} className='w-32 h-32 md:w-48 md:h-48 rounded-full object-cover' alt="" />
                             <div>
-                                <p className='font-bold md:text-xl'>Shamsin Ahmed</p>
-                                <p className='md:text-lg text-[#118088] '>Founder of Identity Inclusion</p>
+                                <p className='font-bold md:text-xl font-[Roboto]'>Shamsin Ahmed</p>
+                                <p className='md:text-lg text-[#118088] font-[Ubuntu] '>Founder of Identity Inclusion</p>
                             </div>
                         </div>
                         {/* divider */}
@@ -71,7 +128,11 @@ const AboutUs = () => {
                             <div className='h-[1px] bg-slate-300'></div>
                         </div>
                         <div className='pb-5'>
-                            <p className='md:text-xl text-justify text-[#636870]'>Shamsin Ahmed founded Identity Inclusion to identify the needs of people with psychosocial disabilities and break the barriers that affect their capacity to participate in the community, in 2015. Over the years, the organization has evolved under her vision to facilitate diverse support systems that address the social determinants of mental health.
+                            <p
+                                style={{
+                                    wordSpacing: "0.2rem"
+                                }}
+                                className='md:text-xl text-justify text-[#636870]   font-[Ubuntu]'>Shamsin Ahmed founded Identity Inclusion to identify the needs of people with psychosocial disabilities and break the barriers that affect their capacity to participate in the community, in 2015. Over the years, the organization has evolved under her vision to facilitate diverse support systems that address the social determinants of mental health.
                                 Having watched her elder sister being excluded from schools due to her epilepsy and schizophrenia, Shamsin realized that exclusion is both a cause and a consequence of poor mental health. To that end, Identity Inclusion employs a novel strategy to combat stigma by engaging and supporting families, training individuals, particularly the youth with the necessary skills, lobbying for institutional changes, and focusing on developing a more inclusive society.
                                 In the early days, Shamsin spent all her savings on running the organization as there was no funds for mental health. In 2018, Shamsin started working as a disability inclusion consultant, which set the cornerstone for Identity Inclusion towards becoming a consultancy firm and also influencing institutional changes.
                                 Shamsin trained in Leadership in Mental Health System development under the James P. Grant School of Public health under BRAC University and also completed her MSc. in Global Mental Health and Society from the University of Edinburgh in Scotland, UK. She has received many accolades as a development practitioner and for her work in promoting community mental health she is also an Acumen Fellow and Chevening Scholar.She received ‘bti and The Daily Star;  ‘Stellar Woman’ award in the Development category for her work in addressing disability and mental health through the development sector.
@@ -83,7 +144,7 @@ const AboutUs = () => {
                         <Title>Advisors</Title>
                     </div>
                     {/* Advisors */}
-                    <div className='grid lg:grid-cols-2 gap-10'>
+                    <div className='grid lg:grid-cols-2 gap-5'>
                         <TeamMembers
                             name={"Julian Francis"}
                             photo={julian}
@@ -118,67 +179,11 @@ const AboutUs = () => {
                         />
                     </div>
                     {/* Team members */}
-                    <div id='team' className=' my-10 md:my-20'>
+                    <div id='team' className=' my-4 md:my-20'>
                         <Title>Team Members</Title>
                     </div>
-                    <Team />
-
-                    {/*Mission & Vision section */}
-                    <div id="mission_vision" className='mt-10'>
-                        <div className='py-5 '>
-                            {/* mission */}
-                            <div data-aos="fade-up"
-                                data-aos-duration="1000" className='mt-10'>
-                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center' >
-                                    <div>
-                                        <Lottie
-                                            className="w-40 mb-2"
-                                            animationData={mission} />
-                                    </div>
-                                    <h1 className='text-2xl font-bold '>Mission</h1>
-                                    <p className='text-xl  text-[#636870]'>
-
-                                        Enable the full potential of excluded individuals by promoting best practices for inclusion through youth leadership and institutional change.
-
-                                    </p>
-                                </div>
-                            </div>
-                            {/* vision */}
-                            <div
-                                className='mt-10'
-                                data-aos="fade-up"
-                                data-aos-duration="1000">
-                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center'>
-                                    <div>
-                                        <Lottie
-                                            className="w-64 mb-2"
-                                            animationData={vision} />
-                                    </div>
-                                    <h1 className='text-2xl font-bold'>vision</h1>
-                                    <p className='text-xl  text-[#636870]'>
-                                        To create inclusive societies that realize the full potential of excluded individuals through institutional and systemic change.
-
-                                    </p>
-                                </div>
-                            </div>
-                            {/* values */}
-                            <div
-                                className='mt-10'
-                                data-aos="fade-up"
-                                data-aos-duration="1000">
-                                <div className='flex flex-col p-2 border-4 border-[#118088] rounded-lg justify-center items-center text-center'>
-                                    <div>
-                                        <Lottie
-                                            className="w-40 mb-2"
-                                            animationData={values} />
-                                    </div>
-                                    <h1 className='text-2xl font-bold mb-2'>Values</h1>
-                                    <p className='text-xl font-bold  text-[#636870]'>
-                                        Inclusion, Integrity, Dignity.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div className='pb-10'>
+                        <Team />
                     </div>
                 </div>
             </div>

@@ -7,7 +7,6 @@ import "./Nav.css";
 const NavBar = () => {
     const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088] text-lg font-[Roboto] ";
     const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-lg font-[Roboto] ";
-
     const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg  text-xl  ";
     const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
     const [slider, setSlider] = useState(false)
@@ -45,7 +44,7 @@ const NavBar = () => {
 
                     <NavLink
 
-                        className={'font-semibold  border-b-2 border-transparent text-xl relative drop '}
+                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-[Roboto] '}
                     >
                         Services
                         <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-[Roboto]">

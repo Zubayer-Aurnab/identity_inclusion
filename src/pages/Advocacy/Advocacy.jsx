@@ -9,8 +9,8 @@ const Advocacy = () => {
             <Title>
                 Advocacy & Awareness
             </Title>
-            <div className="mt-10 text-justify">
-                <h1 className=" text-xl lg:text-2xl font-semibold tracking-wider text-[#666b73] ">
+            <div className="mt-10 text-justify font-[Ubuntu]">
+                <h1 className=" text-xl lg:text-xl font-medium tracking-wider text-[#666b73] ">
                     Besides providing curated mental health support to different segments of the countrys population, Identity Inclusion continuously facilitates support and catalyzes conversations across various institutions in the country. The young population of our country being the most vulnerable to mental health conditions; understanding the complexity of this issue, Identity Inclusion has undertaken several initiatives to create awareness about mental health in educational institutions across the country. We have facilitated online campaigns by and for the youth on Suicide prevention. We have organized workshops and awareness sessions in various institutions, including schools, universities, INGOs, and government and social organizations. We organized community mobilization ❲parents, doctors, advocates and employers❳. We generated dialogues on breaking mental health stigma and promoting social inclusion of persons with psychosocial disabilities with workshops on Psychosocial Disability and Mental Health Awareness on World Mental Health Day and International Day of Persons with Disabilities.
 
                 </h1>

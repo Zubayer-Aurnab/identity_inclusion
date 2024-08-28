@@ -39,8 +39,8 @@ const Banner = () => {
                 data-aos-duration="2000"
                 className="absolute flex items-center h-20 md:h-44 w-full left-0 bottom-[1px] lg:bottom-0 bg-gradient-to-r from-[#2b292b] z-10">
                 <div className="px-2 md:px-10 absolute bottom-0 md:bottom-6">
-                    <h1 style={{ letterSpacing: "10px" }} className=" text-base md:text-3xl lg:text-7xl text-[#FFFFE0] font-bold font-[Roboto]">IDENTITY INCLUSION</h1>
-                    <p className=" text-[#FFFFE0] mt-2 lg:mt-7 text-base  md:text-2xl  lg:text-5xl font-[Ubuntu]"> Youth for A  Diverse and Inclusive Society</p>
+                    <h1 style={{ letterSpacing: "10px" }} className=" text-base md:text-3xl lg:text-6xl text-[#FFFFE0] font-bold font-[Roboto]">IDENTITY INCLUSION</h1>
+                    <p className=" text-[#FFFFE0] mt-2 lg:mt-7 text-base  md:text-2xl  lg:text-4xl font-[Ubuntu]"> Youth for A  Diverse and Inclusive Society</p>
                 </div>
             </div>
         </div>

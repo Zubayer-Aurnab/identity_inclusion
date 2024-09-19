@@ -2,6 +2,9 @@ import Title from "../../component/Title/Title";
 import img3 from '../../assets/marquee/img3.jpg'
 import img10 from '../../assets/marquee/img10.jpg'
 import img25 from '../../assets/marquee/img25.jpg'
+import second from '../../assets/brochures/second.png'
+import secondPdf from '../../assets/brochures/second.pdf'
+import Button from "../../component/Button/Button";
 
 const Advocacy = () => {
     return (
@@ -24,6 +27,16 @@ const Advocacy = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img3} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img10} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img25} alt="Psycho-Social-Support" />
+            </div>
+            <div>
+                <img src={second} className=' mt-10' alt="" />
+                <div className=' flex justify-center mt-10'>
+                    <a href={secondPdf} download={'first.pdf'} className='w-1/2 flex justify-center '>
+                        <Button >
+                            Download
+                        </Button>
+                    </a>
+                </div>
             </div>
         </div>
     );

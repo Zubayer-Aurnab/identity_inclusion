@@ -2,6 +2,9 @@ import img11 from '../../assets/marquee/img11.jpg';
 import img15 from '../../assets/marquee/img15.jpg';
 import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
+import first from '../../assets/brochures/first.png'
+import Button from '../../component/Button/Button';
+import firstPdf from '../../assets/brochures/first.pdf'
 
 const Psycho_Social_Support = () => {
 
@@ -26,6 +29,16 @@ const Psycho_Social_Support = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img11} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md lg:w-full" src={img15} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
+            </div>
+            <div>
+                <img src={first} className=' mt-10' alt="" />
+                <div className=' flex justify-center mt-10'>
+                    <a href={firstPdf} download={'first.pdf'} className='w-1/2 flex justify-center '>
+                        <Button >
+                            Download
+                        </Button>
+                    </a>
+                </div>
             </div>
         </div>
     );

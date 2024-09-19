@@ -71,7 +71,7 @@ const NavBar = () => {
                         to={`/acknowledgment-impact`}
                         className={({ isActive }) => (isActive ? activeClass : normalClass)}
                     >
-                        Acknowledgment & Impact
+                        Impact
                     </NavLink>
 
                     <NavLink
@@ -150,7 +150,7 @@ const NavBar = () => {
                         className={mobileClass}
                         onClick={handleCheckboxChange}
                     >
-                        Acknowledgment & Impact
+                        Impact
                     </NavLink>
 
                     <NavLink

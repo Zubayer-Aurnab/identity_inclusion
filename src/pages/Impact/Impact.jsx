@@ -1,8 +1,23 @@
 import React, { useEffect } from 'react';
-import img1 from '../../assets/images/daily-star-acknowledgement-of-founder.png'
 import img2 from '../../assets/images/award.jpeg'
 import img3 from '../../assets/marquee/img29.jpg'
 import Aos from 'aos';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
+
+// import required modules
+import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from 'swiper/modules';
+import imp1 from '../../assets/impact/brac.jpg'
+import imp2 from '../../assets/impact/Practical-Action.jpg'
+import imp3 from '../../assets/impact/UCEP.png'
+import "swiper/css";
+import Title from '../../component/Title/Title';
 const Impact = () => {
     useEffect(() => {
         Aos.init()
@@ -42,6 +57,30 @@ const Impact = () => {
                         <img src={img3} className='h-[70%]' alt="" />
                     </div>
                 </div>
+            </div>
+            <div className='mt-32 mb-20 '>
+                <Title >Our Work, In Their Words</Title>
+            </div>
+            <div className='mb-24 lg:mb-40' >
+                <Swiper
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
+                    cssMode={true}
+                    navigation={true}
+                    pagination={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide><img loading="lazy" className='w-full   lg:h-[91vh] md:h-[93vh]  object-contain  md:object-contain' src={imp1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img loading="lazy" className='w-full  lg:h-[91vh] md:h-[93vh] object-cover md:object-contain' src={imp2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img loading="lazy" className='w-full  lg:h-[91vh] md:h-[93vh] object-cover md:object-contain' src={imp3} alt="" /></SwiperSlide>
+
+                </Swiper>
+
             </div>
         </div>
     );

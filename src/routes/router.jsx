@@ -10,6 +10,7 @@ import Advocacy from "../pages/Advocacy/Advocacy";
 import Consultancy from "../pages/Consultancy/Consultancy";
 import Capacity from "../pages/Capacity/Capacity";
 import UnderDev from "../component/underDev/UnderDev";
+import Impact from "../pages/Impact/Impact";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -25,12 +26,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: "/acknowledgment-impact",
-                element: <UnderDev />
+                element: <Impact />
             },
             {
                 path: "/contact",
                 element: <UnderDev />
             },
+
             // services
             {
                 path: '/psycho-social-support',

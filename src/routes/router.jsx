@@ -11,6 +11,7 @@ import Consultancy from "../pages/Consultancy/Consultancy";
 import Capacity from "../pages/Capacity/Capacity";
 import UnderDev from "../component/underDev/UnderDev";
 import Impact from "../pages/Impact/Impact";
+import Support__Group_Meeting from "../pages/Support_Group_Meeting/Support__Group_Meeting";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
             {
                 path: '/psycho-social-support',
                 element: <Psycho_Social_Support />
+            },
+            {
+                path: '/support-group-metting',
+                element: <Support__Group_Meeting />
             },
             {
                 path: '/advocacy',

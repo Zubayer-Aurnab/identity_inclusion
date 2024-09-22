@@ -51,7 +51,7 @@ const NavBar = () => {
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
-                            <Link to={"/psycho-social-support"} className={dropDown}>
+                            <Link to={"/support-group-metting"} className={dropDown}>
                                 Support Group Meeting
                             </Link>
                             <Link to={"/advocacy"} className={dropDown}>

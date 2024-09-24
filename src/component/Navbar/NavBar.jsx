@@ -121,24 +121,23 @@ const NavBar = () => {
 
                     <NavLink
 
-                        className={mobileClass}
-
+                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-[Roboto] text-[#118088]  bg-white px-2 py-2 rounded-lg    '}
                     >
                         Services
-                        <div className="absolute  w-72  bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu">
-                            <Link to={"/psycho-social-support"} className={dropDown}>
+                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-[Roboto]">
+                            <Link  onClick={handleCheckboxChange} to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
-                            <Link to={"/psycho-social-support"} className={dropDown}>
+                            <Link  onClick={handleCheckboxChange} to={"/support-group-metting"} className={dropDown}>
                                 Support Group Meeting
                             </Link>
-                            <Link to={"/advocacy"} className={dropDown}>
+                            <Link   onClick={handleCheckboxChange} to={"/advocacy"} className={dropDown}>
                                 Advocacy & Awareness
                             </Link>
-                            <Link to={"/consultancy"} className={dropDown}>
+                            <Link  onClick={handleCheckboxChange} to={"/consultancy"} className={dropDown}>
                                 Consultancy
                             </Link>
-                            <Link to={"/capacity"} className={dropDown}>
+                            <Link  onClick={handleCheckboxChange} to={"/capacity"} className={dropDown}>
                                 Capacity Building
                             </Link>
 

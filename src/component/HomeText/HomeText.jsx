@@ -15,9 +15,8 @@ const HomeText = () => {
                     <div className="hero-overlay bg-opacity-70"></div>
                     <div className="hero-content text-neutral-content font-[Ubuntu] ">
                         <div className="">
-                            <q
-
-                                style={{ textShadow: "2px 2px black", letterSpacing: "2px" }} className=" md:text-3xl  font-bold  text-justify text-[#FFFFE0]  ">
+                            <p
+                                style={{ textShadow: "2px 2px black", letterSpacing: "2px" }} className=" md:text-3xl  font-bold  text-justify text-white  ">
                                 <span className="text-6xl">I</span>
                                 dentity Inclusion is a development consulting firm that aims to resolve and
                                 rectify the approach our institutions and society has towards marginalized
@@ -31,7 +30,7 @@ const HomeText = () => {
                                 institution towards marginalized communities through assessments,
                                 awareness raising, capacity building and advocating policy developments in
                                 order to bring institutional and systemic change in our society.
-                            </q>
+                            </p>
                             <div className="mt-10 flex gap-5 lg:gap-10 ">
                                 <Link target="_blank" to={"https://drive.google.com/file/d/15KOwwRroT5jSrIjrbL16oLwH0IVTsEzJ/view?usp=sharing"}>
                                     <Button >

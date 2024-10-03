@@ -52,7 +52,7 @@ const AboutUs = () => {
                             <div className='h-[1px] bg-slate-300'></div>
                         </div>
                         <div className='pb-5'>
-                            <p className='md:text-xl text-justify text-[#636870] font-[Ubuntu] '>Identity Inclusion is a development consulting firm that aims to resolve and rectify the approach our institutions and society has towards the marginalized communities. Identity Inclusion started as a project with an aim to helping people with psychosocial disability. Due to mental health stigma stemming from a significant knowledge gap about people with disabilities, they suffer from societal and institutional exclusion. Identity Inclusion helps address and remove the exclusionary practices of institution towards marginalized communities through assessments, awareness raising, capacity building and advocating policy developments. </p>
+                            <p className='md:text-xl text-justify  font-[Ubuntu] '>Identity Inclusion is a development consulting firm that aims to resolve and rectify the approach our institutions and society has towards the marginalized communities. Identity Inclusion started as a project with an aim to helping people with psychosocial disability. Due to mental health stigma stemming from a significant knowledge gap about people with disabilities, they suffer from societal and institutional exclusion. Identity Inclusion helps address and remove the exclusionary practices of institution towards marginalized communities through assessments, awareness raising, capacity building and advocating policy developments. </p>
                         </div>
                     </div>
                     {/*Mission & Vision section */}
@@ -68,7 +68,7 @@ const AboutUs = () => {
                                             animationData={mission} />
                                     </div>
                                     <h1 className='text-2xl font-bold font-[Roboto] '>Mission</h1>
-                                    <p className='text-xl  text-[#636870] font-[Ubuntu]'>
+                                    <p className='text-xl   font-[Ubuntu]'>
 
                                         Enable the full potential of excluded individuals by promoting best practices for inclusion through youth leadership and institutional change.
 
@@ -86,8 +86,8 @@ const AboutUs = () => {
                                             className="w-64 mb-2"
                                             animationData={vision} />
                                     </div>
-                                    <h1 className='text-2xl font-bold font-[Roboto]'>vision</h1>
-                                    <p className='text-xl  text-[#636870] font-[Ubuntu]'>
+                                    <h1 className='text-2xl font-bold font-[Roboto]'>Vision</h1>
+                                    <p className='text-xl   font-[Ubuntu]'>
                                         To create inclusive societies that realize the full potential of excluded individuals through institutional and systemic change.
 
                                     </p>
@@ -105,7 +105,7 @@ const AboutUs = () => {
                                             animationData={values} />
                                     </div>
                                     <h1 className='text-2xl font-bold mb-2 font-[Roboto]'>Values</h1>
-                                    <p className='text-xl font-bold  text-[#636870] font-[Ubuntu]'>
+                                    <p className='text-xl font-bold   font-[Ubuntu]'>
                                         Inclusion, Integrity, Dignity.
                                     </p>
                                 </div>
@@ -130,7 +130,7 @@ const AboutUs = () => {
                                 style={{
                                     wordSpacing: "0.2rem"
                                 }}
-                                className='md:text-xl text-justify text-[#636870]   font-[Ubuntu]'>Shamsin Ahmed founded Identity Inclusion to identify the needs of people with psychosocial disabilities and break the barriers that affect their capacity to participate in the community, in 2015. Over the years, the organization has evolved under her vision to facilitate diverse support systems that address the social determinants of mental health.
+                                className='md:text-xl text-justify    font-[Ubuntu]'>Shamsin Ahmed founded Identity Inclusion to identify the needs of people with psychosocial disabilities and break the barriers that affect their capacity to participate in the community, in 2015. Over the years, the organization has evolved under her vision to facilitate diverse support systems that address the social determinants of mental health.
                                 Having watched her elder sister being excluded from schools due to her epilepsy and schizophrenia, Shamsin realized that exclusion is both a cause and a consequence of poor mental health. To that end, Identity Inclusion employs a novel strategy to combat stigma by engaging and supporting families, training individuals, particularly the youth with the necessary skills, lobbying for institutional changes, and focusing on developing a more inclusive society.
                                 In the early days, Shamsin spent all her savings on running the organization as there was no funds for mental health. In 2018, Shamsin started working as a disability inclusion consultant, which set the cornerstone for Identity Inclusion towards becoming a consultancy firm and also influencing institutional changes.
                                 Shamsin trained in Leadership in Mental Health System development under the James P. Grant School of Public health under BRAC University and also completed her MSc. in Global Mental Health and Society from the University of Edinburgh in Scotland, UK. She has received many accolades as a development practitioner and for her work in promoting community mental health she is also an Acumen Fellow and Chevening Scholar.She received ‘bti and The Daily Star;  ‘Stellar Woman’ award in the Development category for her work in addressing disability and mental health through the development sector.

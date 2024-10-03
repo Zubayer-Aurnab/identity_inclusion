@@ -27,7 +27,7 @@ const TeamMembers = ({ name, photo, description, }) => {
                         wordSpacing: "0.2rem"
                     }}
                     // eslint-disable-next-line react/prop-types
-                    className='md:text-xl text-justify text-[#636870] font-[Ubuntu]'>{seeMore ? description?.slice(0, 500) : description}
+                    className='md:text-xl text-justify  font-[Ubuntu]'>{seeMore ? description?.slice(0, 500) : description}
                     <span onClick={() => setSeeMore(!seeMore)} className="text-[#2d8f96] underline"> {seeMore ? "see more" : "see less"}</span>
                 </p>
             </div>

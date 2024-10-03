@@ -115,27 +115,27 @@ const Services = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-duration="2000"
-                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-6  xl:gap-0  py-10 lg:py-0 text-center font-[Roboto]   ">
-                            <div className='flex flex-col    '>
+                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-6  xl:gap-0  py-10 lg:py-0 text-center place-items-center font-[Roboto]   ">
+                            <div className='flex flex-col     '>
                                 <h1 className='text-2xl lg:text-3xl  '> Trained Psychosocial Supporters</h1>
                                 <div className='text-3xl font-semibold mt-10 '>
                                     <span className='bg-[#5b9ad58f] p-2 rounded-lg'> 100+</span>
                                 </div>
                             </div>
-                            <div className='flex flex-col   '>
-                                <h1 className='text-2xl lg:text-3xl '> Provide Advocacy to Institutions</h1>
+                            <div className='flex flex-col    '>
+                                <h1 className='text-2xl lg:text-3xl '> Provided Advocacy </h1>
                                 <div className='text-3xl font-semibold mt-10'>
                                     <span className='bg-[#ed7c319a] p-2 rounded-lg'> 15+</span>
                                 </div>
                             </div>
-                            <div className='flex flex-col   '>
-                                <h1 className='text-2xl lg:text-3xl '> Provide Consultancy to Institutions</h1>
+                            <div className='flex flex-col    '>
+                                <h1 className='text-2xl lg:text-3xl '> Provide Consultancy Of Institutions</h1>
                                 <div className='text-3xl font-semibold mt-10'>
                                     <span className='bg-[#ffbf009f] p-2  rounded-lg'> 10+</span>
                                 </div>
                             </div>
-                            <div className='flex flex-col   '>
-                                <h1 className='text-2xl lg:text-3xl '> Capacity Building to institutions</h1>
+                            <div className='flex flex-col    '>
+                                <h1 className='text-2xl lg:text-3xl '> Capacity Building </h1>
                                 <div className='text-3xl font-semibold mt-10'>
                                     <span className='bg-[#44c46f9a] p-2 rounded-lg'> 8+</span>
                                 </div>

@@ -14,8 +14,8 @@ const Psycho_Social_Support = () => {
                 Psycho-Social Support
             </Title>
             <div className="mt-10 text-justify font-[Ubuntu]">
-                <h1 className=" text-xl lg:text-xl font-medium tracking-wider text-[#666b73] ">
-                At Identity Inclusion, we work to break the stigma that isolates people with disabilities by providing psychosocial support and standing up for their equal rights. People with psychosocial disabilities are often treated unfairly and left out of everyday activities. We believe they deserve the same chances and access to opportunities as everyone else. To help with this, we train young people from different educational backgrounds, giving them the skills to support these marginalized groups. We aim to create a society where everyone, no matter their abilities, can live with respect and be included.
+                <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
+                    At Identity Inclusion, we work to break the stigma that isolates people with disabilities by providing psychosocial support and standing up for their equal rights. People with psychosocial disabilities are often treated unfairly and left out of everyday activities. We believe they deserve the same chances and access to opportunities as everyone else. To help with this, we train young people from different educational backgrounds, giving them the skills to support these marginalized groups. We aim to create a society where everyone, no matter their abilities, can live with respect and be included.
 
                 </h1>
                 <br />
@@ -31,14 +31,9 @@ const Psycho_Social_Support = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
             <div>
-                <img src={first} className=' mt-10' alt="" />
-                <div className=' flex justify-center mt-10'>
-                    <a href={firstPdf} download={'first.pdf'} className='w-1/2 flex justify-center '>
-                        <Button >
-                            Download
-                        </Button>
-                    </a>
-                </div>
+                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 ">
+                    For more information  <a href={firstPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
+                </h1>
             </div>
         </div>
     );

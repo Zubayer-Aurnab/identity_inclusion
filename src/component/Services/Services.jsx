@@ -129,13 +129,13 @@ const Services = () => {
                                 </div>
                             </div>
                             <div className='flex flex-col    '>
-                                <h1 className='text-2xl lg:text-3xl '> Provide Consultancy Of Institutions</h1>
+                                <h1 className='text-2xl lg:text-3xl '> Provide Consultancy To Institutions</h1>
                                 <div className='text-3xl font-semibold mt-10'>
                                     <span className='bg-[#ffbf009f] p-2  rounded-lg'> 10+</span>
                                 </div>
                             </div>
                             <div className='flex flex-col    '>
-                                <h1 className='text-2xl lg:text-3xl '> Capacity Building </h1>
+                                <h1 className='text-2xl lg:text-3xl '> Capacity Building of Organizations </h1>
                                 <div className='text-3xl font-semibold mt-10'>
                                     <span className='bg-[#44c46f9a] p-2 rounded-lg'> 8+</span>
                                 </div>

@@ -2,6 +2,7 @@ import Title from "../../component/Title/Title";
 import img18 from '../../assets/marquee/img18.jpg'
 import img24 from '../../assets/marquee/img24.jpg'
 import img27 from '../../assets/marquee/img27.jpg'
+import secondPdf from '../../assets/brochures/second.pdf'
 const Capacity = () => {
     return (
         <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
@@ -21,6 +22,11 @@ const Capacity = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img18} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img24} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md w-full" src={img27} alt="Psycho-Social-Support" />
+            </div>
+            <div>
+                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 ">
+                    For more information  <a href={secondPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
+                </h1>
             </div>
         </div>
     );

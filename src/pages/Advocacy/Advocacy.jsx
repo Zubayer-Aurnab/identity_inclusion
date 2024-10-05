@@ -28,16 +28,7 @@ const Advocacy = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img10} alt="Psycho-Social-Support" />
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img25} alt="Psycho-Social-Support" />
             </div>
-            <div>
-                <img src={second} className=' mt-10 ' alt="" />
-                <div className=' flex justify-center mt-10'>
-                    <a href={secondPdf} download={'first.pdf'} className='w-1/2 flex justify-center '>
-                        <Button >
-                            Download
-                        </Button>
-                    </a>
-                </div>
-            </div>
+         
         </div>
     );
 };

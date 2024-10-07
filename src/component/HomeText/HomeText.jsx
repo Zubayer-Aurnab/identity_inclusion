@@ -13,7 +13,7 @@ const HomeText = () => {
                         backgroundAttachment: 'fixed',
                     }}>
                     <div className="hero-overlay bg-opacity-70"></div>
-                    <div className="hero-content text-neutral-content font-[Ubuntu] ">
+                    <div className="hero-content text-neutral-content font-[Open+Sans] ">
                         <div className="">
                             <p
                                 style={{ textShadow: "2px 2px black", letterSpacing: "2px" }} className=" md:text-3xl  font-bold  text-justify text-white  ">

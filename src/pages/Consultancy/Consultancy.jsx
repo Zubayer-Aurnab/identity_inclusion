@@ -9,7 +9,7 @@ const Consultancy = () => {
             <Title>
                 Consultancy
             </Title>
-            <div className="mt-10 text-justify font-[Ubuntu]">
+            <div className="mt-10 text-justify font-text">
                 <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
                     Systemic and social injustices greatly influence rising mental health conditions and exacerbate disability in countries like Bangladesh. Exclusion is both a cause and consequence of bad mental health hence Identity Inclusion helps address and remove the exclusionary practices of institutions towards marginalized communities through assessments, awareness raising, capacity building and advocating policy developments in order to bring institutional and systemic change in our society. We provide technical support and guidance to development organizations, NGOs, Government and Corporate organizations and Educational and youth-based organizations to become disability and mental health inclusive.  As there is a dearth of funds for mental health interventions the revenues from the consultation services are used to run operational costs for mental health services.
                 </h1>

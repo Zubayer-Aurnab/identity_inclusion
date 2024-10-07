@@ -115,7 +115,7 @@ const Services = () => {
                         <div
                             data-aos="fade-up"
                             data-aos-duration="2000"
-                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-6  xl:gap-0  py-10 lg:py-0 text-center place-items-center font-[Roboto]   ">
+                            className=" grid lg:grid-cols-2 xl:grid-cols-4 gap-6  xl:gap-0  py-10 lg:py-0 text-center place-items-center font-header">
                             <div className='flex flex-col     '>
                                 <h1 className='text-2xl lg:text-3xl  '> Trained Psychosocial Supporters</h1>
                                 <div className='text-3xl font-semibold mt-10 '>

@@ -10,7 +10,7 @@ import { ImLocation } from "react-icons/im";
 
 const Footer = () => {
     return (
-        <div className="font-[Roboto]">
+        <div className="font-header">
             <svg xmlns="http://www.w3.org/2000/svg" className="lg:mt-[-200px]" viewBox="0 0 1440 220">
                 <path fill="#128289" fillOpacity="1" d="M0,192L80,181.3C160,171,320,149,480,154.7C640,160,800,192,960,192C1120,192,1280,160,1360,144L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
             </svg>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row justify-evenly flex-1 space-y-10 lg:space-y-0">
                         {/* socials */}
                         <div>
-                            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wider underline">Socials</h1>
+                            <h1 className="text-2xl font-semibold text-white mb-4 tracking-wider  underline">Socials</h1>
                             <div className="space-y-2">
                                 <Link className="flex  items-center gap-1 text-xl text-white hover:underline " target="_blank" to={"https://www.facebook.com/identityinclusion"}><TiSocialFacebook color="white" size={30} />Facebook</Link>
                                 <Link className="flex  items-center gap-1 text-xl text-white hover:underline " target="_blank" to={"https://www.linkedin.com/company/identity-inclusion/"}><TiSocialLinkedin color="white" size={30} />LinkedIn</Link>

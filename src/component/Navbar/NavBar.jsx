@@ -5,9 +5,9 @@ import "./Nav.css";
 // import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
-    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088] text-lg font-[Roboto] ";
-    const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-lg font-[Roboto] ";
-    const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg  text-xl  ";
+    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088] text-lg font-header ";
+    const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-lg font-header ";
+    const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg font-header  text-xl  ";
     const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
     const [slider, setSlider] = useState(false)
     // console.log(slider)
@@ -44,10 +44,10 @@ const NavBar = () => {
 
                     <NavLink
 
-                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-[Roboto] '}
+                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-header '}
                     >
                         Services
-                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-[Roboto]">
+                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header">
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
@@ -121,10 +121,10 @@ const NavBar = () => {
 
                     <NavLink
 
-                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-[Roboto] text-[#118088]  bg-white px-2 py-2 rounded-lg    '}
+                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-hea  text-[#118088]  bg-white px-2 py-2 rounded-lg  font-header   '}
                     >
                         Services
-                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-[Roboto]">
+                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header">
                             <Link  onClick={handleCheckboxChange} to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>

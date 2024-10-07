@@ -8,7 +8,7 @@ const Support__Group_Meeting = () => {
                 <Title>
                     Support Group Meeting
                 </Title>
-                <div className="mt-10 text-justify font-[Ubuntu]">
+                <div className="mt-10 text-justify font-text">
                     <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
                         Support Group meeting is a safe space to express your inner feelings with peopel like you and a mental health professional
 

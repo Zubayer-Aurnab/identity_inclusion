@@ -14,8 +14,8 @@ const Card = ({ title, image, description, path }) => {
                         alt=""
                     />
                 </div>
-                <span className="text-2xl font-bold my-5 font-[Roboto]">{title}</span>
-                <p className="my-5 text-lg text-justify font-[Ubuntu]">{description}</p>
+                <span className="text-2xl font-bold my-5 font-header">{title}</span>
+                <p className="my-5 text-lg text-justify font-text">{description}</p>
                 <Link to={path} className="w-full ">
                     <Button>Learn More</Button>
                 </Link>

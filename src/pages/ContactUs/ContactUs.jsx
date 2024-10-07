@@ -13,7 +13,7 @@ const ContactUs = () => {
         <div>
             <div className="h-[45vh] bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88]"></div>
             <div className="relative bottom-64 px-5 lg:px-0 lg:w-[60%] mx-auto ">
-                <h1 className='text-3xl md:text-3xl lg:text-6xl  text-white font-medium mb-7 font-[Roboto]'>Contact Us</h1>
+                <h1 className='text-3xl md:text-3xl lg:text-6xl  text-white font-medium mb-7 font-header'>Contact Us</h1>
                 <div
                     data-aos="fade-up"
                     data-aos-duration="2000"

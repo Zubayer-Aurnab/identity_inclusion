@@ -13,7 +13,7 @@ const Psycho_Social_Support = () => {
             <Title>
                 Psycho-Social Support
             </Title>
-            <div className="mt-10 text-justify font-[Ubuntu]">
+            <div className="mt-10 text-justify font-text">
                 <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
                     At Identity Inclusion, we work to break the stigma that isolates people with disabilities by providing psychosocial support and standing up for their equal rights. People with psychosocial disabilities are often treated unfairly and left out of everyday activities. We believe they deserve the same chances and access to opportunities as everyone else. To help with this, we train young people from different educational backgrounds, giving them the skills to support these marginalized groups. We aim to create a society where everyone, no matter their abilities, can live with respect and be included.
 
@@ -31,7 +31,7 @@ const Psycho_Social_Support = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
             <div>
-                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 ">
+                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 font-text ">
                     For more information  <a href={firstPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
                 </h1>
             </div>

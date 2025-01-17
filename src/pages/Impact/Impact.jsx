@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+
+import { useEffect } from 'react';
 import img2 from '../../assets/images/award.jpeg'
 import img3 from '../../assets/marquee/img29.jpg'
 import Aos from 'aos';
@@ -29,7 +30,7 @@ const Impact = () => {
                     <div data-aos="fade-right" data-aos-duration="2000" className='pr-0 lg:pr-4 mb-10 lg:mb-0'>
                         <h1 className='text-xl lg:text-2xl xl:text-3xl font-header text-[#118088]'>First woman to receive the Stellar Women 2023 award
                         </h1>
-                        <p className='font-text  xl:text-xl text-[#666b73] mt-5 lg:mt-0 xl:mt-5 text-justify'>
+                        <p className='font-text  xl:text-xl text-black mt-5 lg:mt-0 xl:mt-5 text-justify'>
                             Our CEO, Shamsin Ahmed, became the first woman to receive the Stellar Women 2023 award in Bangladesh in recognition of her contributions to the development sector, specifically for her work in advocating for institutional policies and practices to make them disability inclusive. She received this prestigious award from BTI-The Daily Star, which honors women who have impacted society and contributed to nation-building.
                         </p>
                     </div>
@@ -46,7 +47,8 @@ const Impact = () => {
                     <div data-aos="fade-left" data-aos-duration="2000" className='mb-10 lg:mb-0 lg:pl-4'>
                         <h1 className=' text-xl lg:text-2xl xl:text-3xl font-header text-[#118088]'>BRAC Urban Innovation Challenge in 2016
                         </h1>
-                        <p className='font-text xl:text-xl text-[#666b73] mt-5 lg:mt-0 xl:mt-5 text-justify'>
+                        <p className='font-text xl:text-xl text-black mt-5 lg:mt-0 xl:mt-5 text-justify'>
+                            {/*  eslint-disable-next-line react/no-unescaped-entities */}
                             Identity Inclusion was specially recognized for its Psychosocial Support (PSS) project at the BRAC Urban Innovation Challenge. This acknowledgment came from the late city mayor Annisul Haque, who appreciated the organization's efforts in addressing urban challenges, particularly in promoting mental health support and inclusivity for marginalized groups. -
                         </p>
                     </div>

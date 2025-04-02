@@ -1,10 +1,9 @@
+import firstPdf from '../../assets/brochures/first.pdf';
 import img11 from '../../assets/marquee/img11.jpg';
 import img15 from '../../assets/marquee/img15.jpg';
 import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
-import first from '../../assets/brochures/first.png'
-import Button from '../../component/Button/Button';
-import firstPdf from '../../assets/brochures/first.pdf'
+import Supporters from './Components/Supporters';
 
 const Psycho_Social_Support = () => {
 
@@ -34,6 +33,7 @@ const Psycho_Social_Support = () => {
                 <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 font-text ">
                     For more information  <a href={firstPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
                 </h1>
+                <Supporters />
             </div>
         </div>
     );

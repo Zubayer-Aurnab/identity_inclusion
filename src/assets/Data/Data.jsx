@@ -13,7 +13,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://images.unsplash.com/photo-1584680587391-9e7deae1c0e1" // Unsplash photo
+        photo: "/src/assets/images/ceo.png" // Unsplash photo
     },
     {
         timestamp: "12/22/2024 17:56:32",
@@ -29,7 +29,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://images.unsplash.com/photo-1508052387673-e16e9379751b" // Unsplash photo
+        photo: "/src/assets/images/ceo.png" // Unsplash photo
     },
     {
         timestamp: "12/22/2024 18:27:05",
@@ -45,7 +45,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://images.unsplash.com/photo-1570129477492-45c003edd2f3" // Unsplash photo
+        photo: "/src/assets/images/ceo.png" // Unsplash photo
     },
     {
         timestamp: "12/22/2024 18:37:19",
@@ -61,7 +61,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://images.unsplash.com/photo-1581262160299-2e540ed1c502" // Unsplash photo
+        photo: "/src/assets/images/ceo.png"// Unsplash photo
     },
     {
         timestamp: "12/22/2024 18:54:05",
@@ -77,7 +77,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://images.unsplash.com/photo-1556740738-4e3e0d9f7b44" // Unsplash photo
+        photo: "/src/assets/images/ceo.png" // Unsplash photo
     },
     {
         timestamp: "1/5/2025 14:53:44",
@@ -93,6 +93,6 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "https://fakeimg.pl/350x200/?text=World&font=lobster" // Unsplash photo
+        photo: "/src/assets/images/ceo.png" // Unsplash photo
     }
 ];

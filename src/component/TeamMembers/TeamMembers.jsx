@@ -13,10 +13,7 @@ const TeamMembers = ({ name, photo, description, }) => {
                     <p className='font-bold md:text-xl font-[Roboto] '>{name}</p>
                 </div>
             </div>
-            {/* divider */}
-            <div className=' py-5'>
-                <div className='h-[1px] bg-slate-300'></div>
-            </div>
+
             <div style={{
                 transition: "hight 3s ease-in",
                 height: "auto"

@@ -13,7 +13,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Najiya Najmin.jpg"
+        photo: "../images/supporters/Najiya Najmin.jpg"
     },
     {
         timestamp: "12/22/2024 17:56:32",

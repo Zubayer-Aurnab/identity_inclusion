@@ -5,7 +5,7 @@ const Supporters = () => {
     const users = SupportersData;
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 py-6">
             {users.map((user, index) => (
                 <div
                     key={index}
@@ -15,10 +15,9 @@ const Supporters = () => {
                         <img
                             src={user.photo}
                             alt={user.fullName}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                         />
                     </div>
-
                     <div className="p-5 space-y-3">
                         <div className="flex justify-between  items-center">
                             <h2 className="text-xl font-bold text-gray-900 line-clamp-1">{user.fullName}</h2>
@@ -57,7 +56,6 @@ const Supporters = () => {
                             </div>
                         </div>
 
-
                         <div className="  pb-10 ">
                             {user.trainings && user.trainings !== false && (
                                 <div className=" bg-green-100 text-green-800 flex items-center px-2 rounded-md">
@@ -70,8 +68,6 @@ const Supporters = () => {
                                 </div>
                             )}
                         </div>
-
-
                         <div className="pt-3  border-gray-100 absolute bottom-3">
                             {/* <p className="text-xs text-gray-500 italic">{user.consent.join(" ")}</p> */}
                             <Link to={'https://forms.gle/1ducFV1HnXvGExJj6'} target="blank">

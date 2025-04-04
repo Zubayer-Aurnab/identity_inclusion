@@ -1,4 +1,4 @@
-import firstPdf from '../../assets/brochures/first.pdf';
+
 import img11 from '../../assets/marquee/img11.jpg';
 import img15 from '../../assets/marquee/img15.jpg';
 import img30 from '../../assets/marquee/img30.png';
@@ -30,9 +30,11 @@ const Psycho_Social_Support = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
             <div>
-                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 font-text ">
-                    For more information  <a href={firstPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
-                </h1>
+                <div className='my-10'>
+                    <Title>
+                        Our Supporters
+                    </Title>
+                </div>
                 <Supporters />
             </div>
         </div>

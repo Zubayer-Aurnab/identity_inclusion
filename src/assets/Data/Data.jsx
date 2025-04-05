@@ -7,45 +7,45 @@ export const SupportersData = [
         phone: "01731251592",
         bloodGroup: "AB+",
         gender: "Female",
-        qualification: "Ms in psychology, University of Dhaka",
-        trainings: null,
+        qualification: "M.Sc in Psychology, University of Dhaka.",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Najiya Najmin.jpg"
+        photo: "/supporters/Najiya Najmin.jpg"
     },
     {
         timestamp: "12/22/2024 17:56:32",
         email: "jamiulpranto218@gmail.com",
         fullName: "Jamiul Islam",
-        address: "623 Shaheenbag, Dhaka 1215",
+        address: " Shaheenbag, Dhaka 1215",
         phone: "01721356010",
         bloodGroup: "O+",
         gender: "Male",
-        qualification: "Bsc in psychology from Dhaka University",
-        trainings: null,
+        qualification: "B.Sc in Psychology, Dhaka University",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/jamiul islam.jpg"
+        photo: "/supporters/jamiul islam.jpg"
     },
     {
         timestamp: "12/22/2024 18:27:05",
         email: "sagarahmed1551@gmail.com",
         fullName: "Mynuddin Ahmed Sagor",
-        address: "House: 10, Word: 8, Block: A, Eidgah Masjid Road, Khilbarirtek",
+        address: " Khilbarirtek  , Dhaka",
         phone: "01537623167",
         bloodGroup: "A+",
         gender: "Male",
         qualification: "Department of Psychology, Jagannath University",
-        trainings: null,
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Mainuddin Sagar Ahmed.jpg"
+        photo: "/supporters/Mainuddin Sagar Ahmed.jpg"
     },
     {
         timestamp: "12/22/2024 18:37:19",
@@ -56,28 +56,28 @@ export const SupportersData = [
         bloodGroup: "B+",
         gender: "Male",
         qualification: "B.Sc in Psychology (3rd Year), University of Dhaka",
-        trainings: "PFA, Inclusive Leadership, Completed Disability Workshop",
+        trainings: "PFA, Inclusive Leadership, Completed Disability Workshop, Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Rafid Rahman.jpg"
+        photo: "/supporters/Rafid Rahman.jpg"
     },
     {
         timestamp: "12/22/2024 18:54:05",
         email: "masudranabsmrstu35@gmail.com",
         fullName: "Md. Masud Rana",
-        address: "734/35 Amir place, west Nakhalpara, Tajgoan",
+        address: "West Nakhalpara, Tajgoan",
         phone: "01996882593",
         bloodGroup: "B +",
         gender: "Male",
-        qualification: "MS in counseling psychology",
-        trainings: null,
+        qualification: "M.Sc in Counseling Psychology",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Masud Rana.jpg"
+        photo: "/supporters/masud rana.jpg"
     },
     {
         timestamp: "12/22/2024 19:07:14",
@@ -87,45 +87,45 @@ export const SupportersData = [
         phone: "01793019182",
         bloodGroup: "O+",
         gender: "Female",
-        qualification: "Psychology department in Tejgoan College",
-        trainings: "I had one from identity inclusion",
+        qualification: "Department  Of Psychology,Tejgoan College",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Sadaka Sifat Shose.png"
+        photo: "/supporters/Sadaka Sifat Shose.png"
     },
     {
         timestamp: "12/22/2024 20:22:46",
         email: "shuhaelashourin@gmail.com",
         fullName: "Shuhaela Tabassum",
-        address: "Mirpur 1216,Sec-6,Block-C",
+        address: "Mirpur, Dhaka",
         phone: "01996902553",
         bloodGroup: "A+",
         gender: "Female",
-        qualification: "4th year in Psychology(BS) University Of Dhaka",
-        trainings: "Psychological First Aid (PFA)",
+        qualification: "Department  Of Psychology(4th Year) University Of Dhaka",
+        trainings: "Psychological First Aid (PFA), Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Shuhaela Tabassum.jpg"
+        photo: "/supporters/Shuhaela Tabassum.jpg"
     },
     {
         timestamp: "12/22/2024 21:22:03",
         email: "atikmoshaddek2001@gmail.com",
         fullName: "Atik Moshaddek",
-        address: "Muktijoddha Ziaur Rahman Hall",
+        address: "Ziaur Rahman Hall, University of Dhaka",
         phone: "01773590483",
         bloodGroup: "Ab(+)",
         gender: "Male",
-        qualification: "3rd year, Department of Psychology, University Of Dhaka",
-        trainings: null,
+        qualification: "Department  Of Psychology(3rd Year) University Of Dhaka",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Atik Moshaddek.png"
+        photo: "/supporters/Atik Moshaddek.png"
     },
     {
         timestamp: "12/23/2024 10:02:04",
@@ -135,29 +135,29 @@ export const SupportersData = [
         phone: "01307997640",
         bloodGroup: "O+",
         gender: "Female",
-        qualification: "Ms in psychology, University of Dhaka",
-        trainings: null,
+        qualification: "M.Sc in psychology, University of Dhaka",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Sumaya Akter.jpg"
+        photo: "/supporters/Sumaya Akter.jpg"
     },
     {
         timestamp: "12/23/2024 13:09:02",
         email: "tamannayasmeen1991@gmail.com",
         fullName: "Tamanna Yasmeen",
-        address: "165, Sky View Park City. Shantinagar. Dhaka-1217.",
+        address: "Shantinagar. Dhaka",
         phone: "01783664161",
         bloodGroup: "B+",
         gender: "Female",
         qualification: "Master of Professional Counselling from Monash University",
-        trainings: "Certified Basic to Advanced CBT Training, Certified DBT Skills Training, Certified NLP Practitioner Training, Certified Clinical Mental Health Training",
+        trainings: "Certified Basic to Advanced CBT Training, Certified DBT Skills Training, Certified NLP Practitioner Training, Certified Clinical Mental Health Training, Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Tamanna Yasmeen.jpg"
+        photo: "/supporters/Tamanna Yasmeen.jpg"
     },
     {
         timestamp: "12/23/2024 21:43:14",
@@ -172,54 +172,54 @@ export const SupportersData = [
         consent: [
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/saad abdullah.jpg"
+        photo: "/supporters/saad abdullah.jpg"
     },
     {
         timestamp: "12/24/2024 10:11:53",
         email: "536jibon@gmail.com",
         fullName: "Md Fakir Hossain",
-        address: "House no 07 , Lane no 20 , Benarosi polli , Mirpur 10 .",
+        address: "Mirpur 10 . Dhaka",
         phone: "01753289269",
         bloodGroup: "A+",
         gender: "Male",
         qualification: "Department of Psychology in National university (Tejgaon college)",
-        trainings: "PSS, PFA , BASIC Communication , TOT , MHPSS",
+        trainings: "PSS, PFA , BASIC Communication , TOT , MHPSS , Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Fakir hossain Jibon.jpg"
+        photo: "/supporters/Fakir hossain Jibon.jpg"
     },
     {
         timestamp: "1/5/2025 14:50:29",
         email: "dr.afroditimoushin@gmail.com",
-        fullName: "MOUSHIN AFRODITI",
-        address: "10/C DILU ROAD MOGHBAZAR",
+        fullName: "Moushin Afroditi ",
+        address: " Mogbazar . Dhaka",
         phone: "01682393206",
         bloodGroup: "A+",
         gender: "Female",
         qualification: "MBBS",
-        trainings: "Identity Inclusion",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Moushin Afroditi.jpeg"
+        photo: "/supporters/Moushin Afroditi.jpeg"
     },
     {
         timestamp: "1/5/2025 14:53:44",
         email: "rafikaislam7002@gmail.com",
         fullName: "Most. Rafika Islam Ritu",
-        address: "Azimpure 20-Floor Government employee's colony",
+        address: "Azimpure. Dhaka",
         phone: "01861438144",
         bloodGroup: "O+",
         gender: "Female",
         qualification: "Honours",
-        trainings: "Psycho-social support",
+        trainings: "Psychosocial Support Skill Training",
         consent: [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/src/assets/images/supporters/Rafika Islam.png"
+        photo: "/supporters/Rafika Islam.png"
     }
 ];

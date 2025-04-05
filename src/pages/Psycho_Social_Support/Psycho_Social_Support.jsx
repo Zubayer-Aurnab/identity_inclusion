@@ -30,9 +30,9 @@ const Psycho_Social_Support = () => {
                 <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
             </div>
             <div>
-                <div className='my-10'>
+                <div className='my-16'>
                     <Title>
-                        Our Supporters
+                        Our Psycho-Social Supporters
                     </Title>
                 </div>
                 <Supporters />

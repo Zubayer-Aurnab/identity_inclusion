@@ -188,23 +188,7 @@ export const SupportersData = [
             "I agree to display my name, photo, and profile on the website.",
             "I agree to provide online psychosocial support as listed on the website."
         ],
-        photo: "/supporters/Fakir hossain Jibon.jpg"
-    },
-    {
-        timestamp: "1/5/2025 14:50:29",
-        email: "dr.afroditimoushin@gmail.com",
-        fullName: "Moushin Afroditi ",
-        address: " Mogbazar . Dhaka",
-        phone: "01682393206",
-        bloodGroup: "A+",
-        gender: "Female",
-        qualification: "MBBS",
-        trainings: "Psychosocial Support Skill Training",
-        consent: [
-            "I agree to display my name, photo, and profile on the website.",
-            "I agree to provide online psychosocial support as listed on the website."
-        ],
-        photo: "/supporters/Moushin Afroditi.jpeg"
+        photo: "/supporters/Fakir hossain Jibon.jpeg"
     },
     {
         timestamp: "1/5/2025 14:53:44",
@@ -221,5 +205,21 @@ export const SupportersData = [
             "I agree to provide online psychosocial support as listed on the website."
         ],
         photo: "/supporters/Rafika Islam.png"
+    },
+    {
+        timestamp: "1/5/2025 14:53:44",
+        email: "rafikaislam7002@gmail.com",
+        fullName: "Najah Hasan Ruha",
+        address: "Dhanmondi, Dhaka.",
+        phone: " 01713637339",
+        bloodGroup: "A+",
+        gender: "Female",
+        qualification: "Department of Science (MUFY), Monash University",
+        trainings: "Psychosocial Support Skill Training | Psychological First Aid (PFA).",
+        consent: [
+            "I agree to display my name, photo, and profile on the website.",
+            "I agree to provide online psychosocial support as listed on the website."
+        ],
+        photo: "/supporters/Najah Hasan.jpg"
     }
 ];

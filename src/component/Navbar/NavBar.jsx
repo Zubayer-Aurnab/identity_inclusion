@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/identity inclusion logo.png";
 import "./Nav.css";
+import Button from "../Button/Button";
 // import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const NavBar = () => {
@@ -80,6 +81,15 @@ const NavBar = () => {
                     >
                         Contact Us
                     </NavLink>
+                    <NavLink
+                        target="_blank"
+                        to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}
+                        className={({ isActive }) => (isActive ? "" : "")}
+                    >
+                        <Button small>
+                            Get Involved.
+                        </Button>
+                    </NavLink>
                 </div>
             </div >
             {/* for small devices*/}
@@ -125,19 +135,19 @@ const NavBar = () => {
                     >
                         Services
                         <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header">
-                            <Link  onClick={handleCheckboxChange} to={"/psycho-social-support"} className={dropDown}>
+                            <Link onClick={handleCheckboxChange} to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>
-                            <Link  onClick={handleCheckboxChange} to={"/support-group-metting"} className={dropDown}>
+                            <Link onClick={handleCheckboxChange} to={"/support-group-metting"} className={dropDown}>
                                 Support Group Meeting
                             </Link>
-                            <Link   onClick={handleCheckboxChange} to={"/advocacy"} className={dropDown}>
+                            <Link onClick={handleCheckboxChange} to={"/advocacy"} className={dropDown}>
                                 Advocacy & Awareness
                             </Link>
-                            <Link  onClick={handleCheckboxChange} to={"/consultancy"} className={dropDown}>
+                            <Link onClick={handleCheckboxChange} to={"/consultancy"} className={dropDown}>
                                 Consultancy
                             </Link>
-                            <Link  onClick={handleCheckboxChange} to={"/capacity"} className={dropDown}>
+                            <Link onClick={handleCheckboxChange} to={"/capacity"} className={dropDown}>
                                 Capacity Building
                             </Link>
 
@@ -158,6 +168,15 @@ const NavBar = () => {
                         onClick={handleCheckboxChange}
                     >
                         Contact Us
+                    </NavLink>
+                    <NavLink
+                        target="_blank"
+                        to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}
+                        className={({ isActive }) => (isActive ? "w-full" : " ")}
+                    >
+                        <Button small>
+                            Get Involved
+                        </Button>
                     </NavLink>
                 </div>
 

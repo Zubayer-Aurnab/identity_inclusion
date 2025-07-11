@@ -74,13 +74,6 @@ const NavBar = () => {
                     >
                         Impact
                     </NavLink>
-
-                    <NavLink
-                        to={`/contact`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        Contact Us
-                    </NavLink>
                     <NavLink
                         target="_blank"
                         to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}
@@ -162,13 +155,6 @@ const NavBar = () => {
                         Impact
                     </NavLink>
 
-                    <NavLink
-                        to={`/contact`}
-                        className={mobileClass}
-                        onClick={handleCheckboxChange}
-                    >
-                        Contact Us
-                    </NavLink>
                     <NavLink
                         target="_blank"
                         to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}

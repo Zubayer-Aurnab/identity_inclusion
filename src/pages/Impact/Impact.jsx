@@ -52,6 +52,7 @@ const Impact = () => {
                             Identity Inclusion was specially recognized for its Psychosocial Support (PSS) project at the BRAC Urban Innovation Challenge. This acknowledgment came from the late city mayor Annisul Haque, who appreciated the organization's efforts in addressing urban challenges, particularly in promoting mental health support and inclusivity for marginalized groups. -
                         </p>
                     </div>
+                    
                 </div>
                 <div className='flex-1'>
                     <div>

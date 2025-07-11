@@ -48,7 +48,7 @@ const NavBar = () => {
                         className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-header '}
                     >
                         Services
-                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header">
+                        <div className="absolute  w-max  bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header rounded-md">
                             <Link to={"/psycho-social-support"} className={dropDown}>
                                 Psycho-Social Support
                             </Link>

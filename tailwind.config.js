@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'header':  "Noto Serif Georgian",
-        'text':  "Open Sans"
+        'header': "Montserrat",
+        'text': "Nunito Sans"
       }
     },
   },

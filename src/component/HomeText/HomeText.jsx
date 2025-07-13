@@ -15,7 +15,7 @@ const HomeText = () => {
                     <img src={img2} alt="" className="rounded-lg col-span-2 h-[20vh] md:h-[30vh] object-cover w-full " />
                 </div>
 
-                <div className=" flex-1   flex-row  md:flex-col justify-center items-start md:p-4 bg-white ">
+                <div className=" flex-1   flex-row  md:flex-col justify-center items-center md:p-4 bg-white ">
 
                     <p className="text-lg md:text-2xl text-black leading-relaxed mb-8 font-header ">
                         <span className="text-4xl">I</span>

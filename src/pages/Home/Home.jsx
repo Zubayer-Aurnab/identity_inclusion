@@ -3,8 +3,8 @@ import Banner from "../../component/Banner/Banner";
 import HomeText from "../../component/HomeText/HomeText";
 
 import Aos from "aos";
-import PictureSlider from "../../component/PictureSlider/PictureSlider";
 import Services from "../../component/Services/Services";
+import RecentActivities from "../../component/RecentActivities/RecentActivities";
 
 // import Loader from "../../component/Loader/Loader";
 
@@ -16,14 +16,14 @@ const Home = () => {
         Aos.init()
     }, [])
     return (
-        <div>
+        <div >
             {/* <Loader /> */}
             <Banner />
-            <HomeText />
-            <div data-aos="fade-up" data-aos-duration="2000">
+            <div className="w-full px-4 lg:w-4/5 mx-auto">
+                <HomeText />
                 <Services />
+                <RecentActivities />
             </div>
-            <PictureSlider />
 
         </div>
     );

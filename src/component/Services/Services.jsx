@@ -12,13 +12,15 @@ const Services = () => {
         Aos.init()
     }, [])
     return (
-        <div className="px-2 lg:px-0 lg:w-4/5 mx-auto " >
+        <div className=" mx-auto " >
             <div className="my-4" >
                 <Title>
                     Our Services
                 </Title>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  md:gap-4 mt-20">
+            <div
+                data-aos="fade-up" data-aos-duration="2000"
+                className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4  md:gap-4 mt-20">
                 <Card
                     path={"/psycho-social-support"}
                     image={psycho_social}

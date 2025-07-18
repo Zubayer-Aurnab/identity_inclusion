@@ -7,10 +7,17 @@ export default {
         'header': "Montserrat",
         'text': "Nunito Sans"
       }
+      ,
+      colors: {
+        "bg": "#f4f4f2"
+      }
     },
   },
   // eslint-disable-next-line no-undef
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/aspect-ratio")
+  ],
 };
 // theme 1 = #C0E1BD
 // theme 2 = #0E8553

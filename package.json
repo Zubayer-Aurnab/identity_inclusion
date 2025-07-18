@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.0.4",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "aos": "^2.3.4",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",

@@ -5,6 +5,8 @@ import HomeText from "../../component/HomeText/HomeText";
 import Aos from "aos";
 import Services from "../../component/Services/Services";
 import RecentActivities from "../../component/RecentActivities/RecentActivities";
+import Loader from "../../component/Loader/Loader";
+import UpCommingEvents from "../../component/UpCommingEvents/UpCommingEvents";
 
 // import Loader from "../../component/Loader/Loader";
 
@@ -23,6 +25,7 @@ const Home = () => {
                 <HomeText />
                 <Services />
                 <RecentActivities />
+                <UpCommingEvents />
             </div>
 
         </div>

@@ -6,7 +6,7 @@ import img3 from '../../assets/marquee/img29.jpg'
 import './text.css'
 const HomeText = () => {
     return (
-        <div className="px-2 lg:px-0 md:my-32">
+        <div className="px-2 lg:px-0 md:my-">
             <div className=" mx-auto text-justify mt-4 py-10 rounded-md flex flex-col-reverse lg:flex-row gap-6">
 
                 {/* Images Grid */}

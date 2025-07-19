@@ -46,7 +46,7 @@ const UpCommingEvents = () => {
                                 alt=""
                             />
                             <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-orange-500 transition-all duration-300">
-                                <h1 className="font-text font-semibold text-sm md:text-lg mb-4">
+                                <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
                                     {[
                                         "Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.",
                                         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil fugiat. Enim qui vel iusto assumenda similique, exercitationem excepturi porro?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil",

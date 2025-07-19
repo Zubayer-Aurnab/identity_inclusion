@@ -48,6 +48,53 @@ const Services = () => {
 
             </div>
 
+
+            <div class="bg-gradient-to-br from-[#e4eaff] to-[#d0f4ff] py-20 my-20">
+                <div class="max-w-7xl mx-auto px-6 text-center">
+                    <h2 class="text-2xl md:text-4xl font-bold  mb-12 font-header "> ✨Impact Highlights</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+
+                        <div
+                            data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+                            class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                            <div class="text-5xl font-bold text-blue-600 font-header">100+</div>
+                            <p class="mt-3 text-gray-700 font-medium">Psychosocial Supporters Trained</p>
+                        </div>
+
+
+                        <div
+                            data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="200"
+                            class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                            <div class="text-5xl font-bold font-header text-orange-500">15+</div>
+                            <p class="mt-3 text-gray-700 font-medium">Advocacy Provided</p>
+                        </div>
+
+
+                        <div
+                            data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="300"
+                            class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                            <div class="text-5xl font-bold text-yellow-500 font-header">10+</div>
+                            <p class="mt-3 text-gray-700 font-medium">Institutional Consultancies</p>
+                        </div>
+
+
+                        <div
+                            data-aos="fade-up" data-aos-duration="1000"
+                            data-aos-delay="400"
+                            class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
+                            <div class="text-5xl font-bold text-green-600 font-header">8+</div>
+                            <p class="mt-3 text-gray-700 font-medium">Organizations Empowered</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     );
 };

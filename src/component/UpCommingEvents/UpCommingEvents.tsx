@@ -28,7 +28,7 @@ const UpCommingEvents = () => {
                 slidesPerView={1}
                 loop={true}
                 autoplay={{ delay: 5000 }}
-                pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
+                pagination={{ clickable: true, el: '.custom-swiper-pagination-2' }}
                 breakpoints={{
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },

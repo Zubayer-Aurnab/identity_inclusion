@@ -31,6 +31,7 @@
     background-color: #118097;
     opacity: 1;
 }
+
 .custom-swiper-pagination-2 .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
@@ -41,7 +42,7 @@
 }
 
 .custom-swiper-pagination-2 .swiper-pagination-bullet-active {
-    background-color: #118097;
+    background-color: #f97316;
     opacity: 1;
 }
 

@@ -28,7 +28,7 @@ const UpCommingEvents = () => {
                 slidesPerView={1}
                 loop={true}
                 autoplay={{ delay: 5000 }}
-                pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
+                pagination={{ clickable: true, el: '.custom-swiper-pagination-2' }}
                 breakpoints={{
                     640: { slidesPerView: 1 },
                     768: { slidesPerView: 2 },
@@ -46,7 +46,7 @@ const UpCommingEvents = () => {
                                 alt=""
                             />
                             <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-orange-500 transition-all duration-300">
-                                <h1 className="font-text font-semibold text-sm md:text-lg mb-4">
+                                <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
                                     {[
                                         "Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.",
                                         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil fugiat. Enim qui vel iusto assumenda similique, exercitationem excepturi porro?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil",

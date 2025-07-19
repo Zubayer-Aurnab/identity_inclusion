@@ -9,7 +9,9 @@ export default {
       }
       ,
       colors: {
-        "bg": "#f4f4f2"
+        "bg": "#f4f4f2",
+        "theme": "#118088",
+        "theme-light": "#d4f1f7",
       }
     },
   },

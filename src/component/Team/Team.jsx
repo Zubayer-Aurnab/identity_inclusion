@@ -46,49 +46,34 @@ const Team = () => {
         },
     ];
 
-    const [openIndexes, setOpenIndexes] = useState([]);
-
-    const toggleDescription = (index) => {
-        setOpenIndexes((prev) => {
-            if (prev.includes(index)) {
-                return prev.filter((i) => i !== index); // Hide description
-            } else {
-                return [...prev, index]; // Show description
-            }
-        });
-    };
 
     return (
         <div className="grid lg:grid-cols-3 justify-center gap-10">
             {teamMembers.map((member, index) => (
-                <div key={index} className="flex flex-col items-center">
+                <div
+                    key={index}
+                    className=" bg-white  border-gray-200 transition-all duration-300 border rounded-xl p-2"
+                >
+                    {/* Image */}
                     <img
                         loading="lazy"
-                        className="w-44 h-44 object-cover rounded-full"
                         src={member.image}
                         alt={member.name}
+                        className="h-[30vh] object-contain rounded-md "
                     />
-                    <div className="mt-4 text-center">
-                        <h1 className="text-xl font-semibold font-[Roboto]">{member.name}</h1>
-                        <p className="text-[#118088] font-semibold tracking-widest text-[13px] font-[Ubuntu]">
+
+                    {/* Content */}
+                    <div className="text-left ">
+                        <h1 className="text-xl font-bold font-headers text-gray-800">{member.name}</h1>
+                        <p className="text-[#118088] font-semibold text-[13px] font-text">
                             {member.title}
                         </p>
-                        <button
-                            onClick={() => toggleDescription(index)}
-                            className="mt-2 text-sm text-white bg-[#118088] px-4 py-1 rounded-md hover:bg-[#0e706e] transition"
-                        >
-                            {openIndexes.includes(index) ? 'Hide Details' : 'Show Details'}
-                        </button>
-                        <div
-                            className={`transition-all duration-500 ease-in-out overflow-hidden ${openIndexes.includes(index) ? 'max-h-[400px]' : 'max-h-0'
-                                }`}
-                        >
-                            <p className="mt-4 text-justify font-medium tracking-widest text-[13px] font-[Ubuntu]">
-                                {member.description}
-                            </p>
-                        </div>
+                        <p className="text-[13px] tracking-wide font-text text-gray-700">
+                            {member.description}
+                        </p>
                     </div>
                 </div>
+
             ))}
         </div>
     );

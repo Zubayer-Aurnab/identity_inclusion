@@ -12,66 +12,70 @@ const Team = () => {
             name: 'Shamsin Ahmed',
             title: 'CEO & Lead Consultant',
             image: ceo,
-            description: `Shamsin Ahmed leads Identity Inclusion with a passion for fostering inclusive practices in psychosocial support and societal development.`,
+            description: `Shamsin Ahmed leads Identity Inclusion, focusing on inclusive psychosocial support and societal development.`,
         },
         {
             name: 'Arefeen Ahmed',
             title: 'Disability Inclusion Consultant',
             image: arefeen,
-            description: `Arefeen brings extensive experience in disability inclusion, inclusive communications, knowledge management, disaster management, and marketing. With over a decade in marketing and social research, she has held key roles such as Communications and Public Private Partnership Manager, Deputy Manager Response, and Senior Researcher at organizations like RTI International, BRAC, WaterAid Bangladesh, and ADEC Australia. Currently, she is a disability inclusion consultant at Identity Inclusion.`,
+            description: `Arefeen has extensive experience in disability inclusion and marketing. She has worked with organizations like RTI International, BRAC, and WaterAid Bangladesh.`,
         },
         {
             name: 'Farah Tabassum Shamma',
             title: 'Psychosocial Skill Trainer',
             image: shamma,
-            description: `Shamma has been involved with Identity Inclusion as a Psychosocial Supporter and Skills Trainer since 2016. She received Training of Trainers on Psychosocial Support and Communication Skills, training university students, community volunteers, and various private organizations. She supported children with psychosocial disabilities and facilitated support group meetings. After earning her MS in Clinical Psychology, she worked as an MHPSS Officer at Handicap International, continuing her involvement with Identity Inclusion as a Mental Health Professional. She is currently a Psychologist and an M.Phil Researcher at the Department of Clinical Psychology, University of Dhaka`,
+            description: `Shamma has been a Psychosocial Supporter and Trainer at Identity Inclusion since 2016. She holds a MS in Clinical Psychology and works as an M.Phil Researcher at the University of Dhaka.`,
         },
         {
             name: 'Kaniz Koly',
             title: 'Psychosocial Skill Trainer',
             image: koly,
-            description: `Kaniz Fatema is an Industrial and Organizational Psychologist and Counselor. She has been working as a Trainer of Psycho-social Skills and self-care for the last 8 years with Identity Inclusion. She has facilitated many trainings Including Psychosocial Skills training to Bangladesh Police, Barguna, graduate students of Shahjalal University of Science and Technology. Kaniz is also trained in Psycho-traumatology, HR Counselling, Mindfulness, Mental Health First Aid and Transactional Analysis. She completed her bachelor’s degree in psychology and master’s in industrial and organizational psychology from the University of Dhaka. She is a certified NLP Master Practitioner and EMDR Level 1 therapist.`,
+            description: `Kaniz Fatema is an Industrial and Organizational Psychologist with 8 years of experience in psychosocial skills training and counseling.`,
         },
         {
             name: 'Amar Bikash Chakma',
             title: 'Management Trainee',
             image: bikash,
-            description: `Amar Bikash Chakma has a Master’s degree in Social Work and is dedicated to societal development and mental health, and extensive experience in research, societal development, and operational management. Amar oversees Identity Inclusion’s psychosocial support programs, which provide vital mental health assistance to marginalized communities. With a strong commitment to fostering inclusivity, he manages the organization's operational and financial aspects, ensuring seamless program execution and sustainable growth.`,
+            description: `Amar Bikash Chakma holds a Master’s degree in Social Work and manages operational and financial aspects of psychosocial support programs at Identity Inclusion.`,
         },
         {
             name: 'Kohinoor Akter',
             title: 'Management Trainee',
             image: kohinoor,
-            description: `Kohinoor Akter is a skilled mental health professional with a Master's in Psychology and extensive experience in psychosocial support. Trained in suicide prevention practices and Cognitive Behavior Therapy, Kohinoor began her journey as a volunteer, providing psychosocial support to individuals with mental health challenges. Now, as a Psychosocial Support Skills Trainer, she trains current volunteers and stakeholders, including school teachers, to equip them with essential skills for supporting mental well-being in their communities. `,
+            description: `Kohinoor Akter is a skilled mental health professional with a Master's in Psychology and trains volunteers and stakeholders in psychosocial support skills.`,
         },
     ];
 
 
-    return (
-        <div className="grid lg:grid-cols-3 justify-center gap-10">
-            {teamMembers.map((member, index) => (
-                <div
-                    key={index}
-                    className=" bg-white  border-gray-200 transition-all duration-300 border rounded-xl p-2"
-                >
-                    {/* Image */}
-                    <img
-                        loading="lazy"
-                        src={member.image}
-                        alt={member.name}
-                        className="h-[30vh] object-contain rounded-md "
-                    />
 
-                    {/* Content */}
-                    <div className="text-left ">
-                        <h1 className="text-xl font-bold font-headers text-gray-800">{member.name}</h1>
-                        <p className="text-[#118088] font-semibold text-[13px] font-text">
-                            {member.title}
-                        </p>
-                        <p className="text-[13px] tracking-wide font-text text-gray-700">
-                            {member.description}
-                        </p>
+    return (
+        <div id='our_team' className="grid lg:grid-cols-3  justify-center gap-10 ">
+            {teamMembers.map((member, index) => (
+                <div className='rounded-lg'>
+                    <div
+                        key={index}
+                        className=" transition-all duration-300  rounded-xl p-2  items-end gap-4 "
+                    >
+                        {/* Image */}
+                        <img
+                            loading="lazy"
+                            src={member.image}
+                            alt={member.name}
+                            className="h-36 w-32 md:h-60 md:w-36 object-cover rounded-md"
+                        />
+
+                        {/* Content */}
+                        <div className="text-left ">
+                            <h1 className="text-xl font-bold font-headers text-gray-800">{member.name}</h1>
+                            <p className="text-[#118088] font-semibold text-[13px] font-text">
+                                {member.title}
+                            </p>
+
+                        </div>
                     </div>
+                    <p className="text-[16px] font-semibold  font-text p-2">
+                        {member.description}
+                    </p>
                 </div>
 
             ))}

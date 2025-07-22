@@ -1,11 +1,11 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img2 from '../../assets/marquee/img2.jpg';
-import img23 from '../../assets/marquee/img23.jpg';
-import img24 from '../../assets/marquee/img24.jpg';
-import img25 from '../../assets/marquee/img25.jpg';
-import img26 from '../../assets/marquee/img26.jpg';
+import img2 from '../../assets/marquee/img16.jpg';
+import img23 from '../../assets/marquee/img17.jpg';
+import img24 from '../../assets/marquee/img14.jpg';
+import img25 from '../../assets/marquee/img18.jpg';
+import img26 from '../../assets/marquee/img19.jpg';
 import Title from "../Title/Title";
 
 import 'swiper/css';

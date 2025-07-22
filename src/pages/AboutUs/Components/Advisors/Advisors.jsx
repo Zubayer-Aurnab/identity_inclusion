@@ -50,11 +50,11 @@ const Advisors = () => {
 
     return (
         <>
-            <div id='our_team' className=' my-10 md:my-20'>
+            <div id='advisor' className=' my-10 md:my-20'>
                 <Title>Advisors</Title>
             </div>
             {/* Advisors */}
-            <div className='grid lg:grid-cols-2 gap-5'>
+            <div className='grid lg:grid-cols-2 gap-5  pb-10'>
 
                 {
                     teamData.map((people, i) => (

@@ -2,6 +2,9 @@ import Title from "../../component/Title/Title";
 import img6 from '../../assets/marquee/img6.jpg'
 import img14 from '../../assets/marquee/img14.jpg'
 import img23 from '../../assets/marquee/img23.jpg'
+import { SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Consultancy = () => {
     return (
@@ -19,10 +22,46 @@ const Consultancy = () => {
                 </h1>
             </div>
             {/* image section */}
-            <div className="border gap-10  mt-10">
-                <img loading="lazy" className=" w-full object-cover rounded-md" src={img6} alt="Psycho-Social-Support" />
+            <div className="gap-10 mt-10">
+                {/* <img loading="lazy" className=" w-full h-[60vh] object-cover rounded-md" src={img14} alt="Psycho-Social-Support" /> */}
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{ delay: 5000 }}
+                    pagination={{ clickable: true, el: '.custom-swiper-pagination-2' }}
+                    breakpoints={{
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 1 },
+                        1024: { slidesPerView: 1 },
+                        1280: { slidesPerView: 1 },
+                    }}
+                    className="py-6"
+                >
+                    {[1, 2, 3,].map((_, i) => (
+                        <SwiperSlide key={i} className="h-full flex">
+                            <div className=" group transition-all duration-300  w-full flex flex-col justify-between min-h-00px]  rounded p-0">
+                                <img loading="lazy" className=" w-full h-[60vh] object-cover rounded-md" src={[img6, img14, img23][i]} alt="Psycho-Social-Support" />
+                                <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent ">
+                                    <h1 className="font-text font-semibold text-xs md:text-sm mb-4">
+                                        {[
+                                            "Lorem ipsum dolor sit amet, consectetu  adsfasf  asdfasf  adfadf  ",
+                                            "Lorem ipsum dolor sit amet, consectetur tur adipisicing elit. Minus, nihil",
+                                            "Lorem ipsum do?",
+                                            "lor sit amet, consectetur adip?",
+                                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ?",
+                                            "asdasds"
+                                        ][i]}
+                                    </h1>
 
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
+            <div className="custom-swiper-pagination-2  text-center  space-x-2 "></div>
         </div>
     );
 };

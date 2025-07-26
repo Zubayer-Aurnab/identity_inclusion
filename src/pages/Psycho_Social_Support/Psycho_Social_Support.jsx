@@ -3,6 +3,7 @@ import img11 from '../../assets/marquee/img11.jpg';
 import img15 from '../../assets/marquee/img15.jpg';
 import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
+import PsychoSoialSupportSlider from './Components/PsychoSoialSupportSlider';
 import Supporters from './Components/Supporters';
 
 const Psycho_Social_Support = () => {
@@ -18,17 +19,10 @@ const Psycho_Social_Support = () => {
 
                 </h1>
                 <br />
-                {/* <h1 className=" text-xl lg:text-xl font-medium tracking-wider text-[#666b73] ">
-                    We organize support groups every month. These are safe confidential spaces for people to come and share their struggles in the presence of mental health professionals. During the Pandemic these support group meetings took place online.
 
-                </h1> */}
             </div>
-            {/* image section */}
-            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
-                <img loading="lazy" className="h-96 object-cover rounded-md" src={img11} alt="Psycho-Social-Support" />
-                <img loading="lazy" className="h-96 object-cover rounded-md lg:w-full" src={img15} alt="Psycho-Social-Support" />
-                <img loading="lazy" className="h-96 object-cover rounded-md" src={img30} alt="Psycho-Social-Support" />
-            </div>
+            {/* image slider */}
+            <PsychoSoialSupportSlider/>
             <div>
                 <div className='my-16'>
                     <Title>

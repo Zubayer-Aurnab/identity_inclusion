@@ -1,23 +1,21 @@
 
-import { useEffect } from 'react';
-import img2 from '../../assets/images/award.jpeg'
-import img3 from '../../assets/marquee/img29.jpg'
 import Aos from 'aos';
+import { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import img2 from '../../assets/images/award.jpeg';
+import img3 from '../../assets/marquee/img29.jpg';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-
-
 // import required modules
-import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
-import imp1 from '../../assets/impact/brac.jpg'
-import imp2 from '../../assets/impact/Practical-Action.jpg'
-import imp3 from '../../assets/impact/UCEP.png'
 import "swiper/css";
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import imp1 from '../../assets/impact/brac.jpg';
+import imp2 from '../../assets/impact/Practical-Action.jpg';
+import imp3 from '../../assets/impact/UCEP.png';
 import Title from '../../component/Title/Title';
 const Impact = () => {
     useEffect(() => {
@@ -52,7 +50,7 @@ const Impact = () => {
                             Identity Inclusion was specially recognized for its Psychosocial Support (PSS) project at the BRAC Urban Innovation Challenge. This acknowledgment came from the late city mayor Annisul Haque, who appreciated the organization's efforts in addressing urban challenges, particularly in promoting mental health support and inclusivity for marginalized groups. -
                         </p>
                     </div>
-                    
+
                 </div>
                 <div className='flex-1'>
                     <div>
@@ -66,20 +64,27 @@ const Impact = () => {
             </div>
             <div className='mb-24 lg:mb-40' >
                 <Swiper
-                    cssMode={true}
-                    navigation={true}
-                    pagination={true}
-                    mousewheel={true}
-                    keyboard={true}
-                    modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                    className="mySwiper"
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{ delay: 5000 }}
+                    pagination={{ clickable: true, el: '.custom-swiper-pagination-2' }}
+                    breakpoints={{
+                        640: { slidesPerView: 1 },
+                        768: { slidesPerView: 1 },
+                        1024: { slidesPerView: 2 },
+                        1280: { slidesPerView: 2 },
+                    }}
+                    className="py-6"
                 >
-                    <SwiperSlide><img loading="lazy" className='w-full   lg:h-[91vh] md:h-[93vh]  object-contain  md:object-contain' src={imp1} alt="" /></SwiperSlide>
-                    <SwiperSlide><img loading="lazy" className='w-full  lg:h-[91vh] md:h-[93vh] object-cover md:object-contain' src={imp2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img loading="lazy" className='w-full  lg:h-[91vh] md:h-[93vh] object-cover md:object-contain' src={imp3} alt="" /></SwiperSlide>
-
+                    {[1, 2, 3,].map((_, i) => (
+                        <SwiperSlide key={i} className="h-full flex">
+                            <img loading="lazy" className='w-full   lg:h-[91vh] md:h-[50vh]  object-contain  md:object-contain  border' src={[imp1, imp2, imp3][i]} alt="" />
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
-
+                <div className="custom-swiper-pagination-2 pt-6 text-center  space-x-2 "></div>
             </div>
         </div>
     );

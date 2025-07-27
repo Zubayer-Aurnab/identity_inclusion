@@ -64,8 +64,8 @@ const Capacity = () => {
 
 
             <div>
-                <h1 className=" text-xl lg:text-xl font-medium tracking-wider mt-8 font-text ">
-                    For more information  <a href={secondPdf} download={'first.pdf'} className='underline text-[#128289]'>Click here</a>
+                <h1 className=" text-sm lg:text-sm font-medium tracking-wider mt-8 font-text ">
+                    For more information  <a href={secondPdf} download={'first.pdf'} className=' text-theme bg-theme-light  px-2 rounded-lg text-sm  font-semibold'>click here</a>
                 </h1>
             </div>
         </div>

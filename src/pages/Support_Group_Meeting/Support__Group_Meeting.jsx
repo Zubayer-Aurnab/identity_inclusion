@@ -1,6 +1,6 @@
-import React from 'react';
+import qr from '../../assets/brochures/qr.jpeg';
 import Title from '../../component/Title/Title';
-import qr from '../../assets/brochures/qr.jpeg'
+import SupportGroupMeeting from '../../assets/images/servicesPhoto/support-group-meeting.jpg'
 const Support__Group_Meeting = () => {
     return (
         <div>
@@ -8,6 +8,9 @@ const Support__Group_Meeting = () => {
                 <Title>
                     Support Group Meeting
                 </Title>
+                <div className='mt-10'>
+                    <img loading="lazy" className=" w-full h-[70vh]  rounded-md object-contain" src={SupportGroupMeeting} alt="Psycho-Social-Support" />
+                </div>
                 <div className="mt-10 text-justify font-text">
                     <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
                         Support Group meeting is a safe space to express your inner feelings with peopel like you and a mental health professional
@@ -24,24 +27,13 @@ const Support__Group_Meeting = () => {
                     </h1>
                     <br />
                     <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">
-                        To join our next support meeting, scan the QR code below or <a target='_blank' className='text-blue-600 underline' href="https://docs.google.com/forms/d/e/1FAIpQLSeFa58U-vQ32iUo8Ho9aDySO9b5of3A_xfki4tMwBzT-6gCRQ/viewform">click here</a>.
+                        To join our next support meeting, scan the QR code below or <a target='_blank' className=' text-theme bg-theme-light  px-2 rounded-lg text-xl  font-semibold' href="https://docs.google.com/forms/d/e/1FAIpQLSeFa58U-vQ32iUo8Ho9aDySO9b5of3A_xfki4tMwBzT-6gCRQ/viewform">click here.</a>
                     </h1>
                 </div>
                 {/* image section */}
                 <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10  mt-10">
                     <img loading="lazy" className="h-72 object-cover rounded-md" src={qr} alt="Psycho-Social-Support" />
-
                 </div>
-                {/* <div>
-                    <img src={first} className=' mt-10' alt="" />
-                    <div className=' flex justify-center mt-10'>
-                        <a href={firstPdf} download={'first.pdf'} className='w-1/2 flex justify-center '>
-                            <Button >
-                                Download
-                            </Button>
-                        </a>
-                    </div>
-                </div> */}
             </div>
         </div>
     );

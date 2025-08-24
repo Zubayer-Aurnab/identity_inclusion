@@ -24,8 +24,8 @@ const Home = () => {
             <div className="w-full px-4 lg:w-4/5 mx-auto">
                 <HomeText />
                 <Services />
-                <RecentActivities />
-                <UpCommingEvents />
+                {/* <RecentActivities />
+                <UpCommingEvents /> */}
             </div>
 
         </div>

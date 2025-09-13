@@ -1,38 +1,36 @@
-import Aos from "aos";
-import { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import { Autoplay, Navigation, Pagination, Zoom } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import Title from "../Title/Title";
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { useRecentActivitiesQuery } from "../../Redux/Apis/recentActivitiesApi";
+import { useUpcomingEventsQuery } from "../../Redux/Apis/upcomingEventsApi";
 import dayjs from "dayjs";
-const RecentActivities = () => {
-    const { data, isLoading } = useRecentActivitiesQuery({})
-    const RecentActivities = data?.data || []
-    useEffect(() => {
-        Aos.init()
-    }, [])
+
+const UpCommingEvents = () => {
+    const imageClass = "h-64 w-full object-contain lg lg:h-64 mx-3"
+    const { data, isLoading } = useUpcomingEventsQuery({})
+    const UpcomingEvents = data?.data || []
     return (
         <>
             {
-                isLoading ? "" :
+                (isLoading || UpcomingEvents.length > 0) ? "" :
                     <div className="mb-10 " >
                         <div className="my-20 ">
                             <Title>
-                                Recents Activities
+                                Upcoming Events
                             </Title>
                         </div>
-
                         <Swiper
                             modules={[Navigation, Pagination, Autoplay]}
                             spaceBetween={20}
                             slidesPerView={1}
                             loop={true}
                             autoplay={{ delay: 5000 }}
-                            pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
+                            pagination={{ clickable: true, el: '.custom-swiper-pagination-2' }}
                             breakpoints={{
                                 640: { slidesPerView: 1 },
                                 768: { slidesPerView: 2 },
@@ -41,30 +39,28 @@ const RecentActivities = () => {
                             }}
                             className="py-6"
                         >
-                            {RecentActivities?.map((activiti, i) => (
+                            {UpcomingEvents?.map((events, i) => (
                                 <SwiperSlide key={i} className="h-full flex">
-                                    <div className="bg-bg group transition-all duration-300 hover:bg-[#edfcff] w-full flex flex-col justify-between min-h-[500px] shadow-md rounded p-0">
+                                    <div className="bg-bg group transition-all duration-300 hover:bg-[#faf1dc] w-full flex flex-col justify-between min-h-[500px] shadow-md rounded p-0">
                                         <img
                                             className="h-52 w-full object-cover "
-                                            src={activiti?.image}
+                                            src={events?.image}
                                             alt=""
                                         />
-                                        <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-[#118097] transition-all duration-300">
+                                        <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-orange-500 transition-all duration-300">
                                             <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
-                                                {activiti?.image_text}
+                                                {events?.image_text}
                                             </h1>
                                             <div className="flex items-center justify-between mt-auto pt-4">
                                                 <p className="text-xs font-bold text-header">
-                                                    {
-                                                        dayjs(activiti?.date).format("DD MMM YYYY")
+                                                    {dayjs(events?.date).format("DD MMM YYYY")
                                                     }
                                                 </p>
-
                                                 {
-                                                    activiti?.link && (
+                                                    events?.link && (
                                                         <a
                                                             target="_blank"
-                                                            href={activiti?.link}
+                                                            href={events?.link}
                                                             className="p-2 rounded-full cursor-pointer"
                                                             style={{
                                                                 color: "#118097",
@@ -76,7 +72,6 @@ const RecentActivities = () => {
                                                         </a>
                                                     )
                                                 }
-
                                             </div>
                                         </div>
                                     </div>
@@ -84,12 +79,11 @@ const RecentActivities = () => {
                             ))}
                         </Swiper>
                         {/* Custom Pagination Outside Cards */}
-                        <div className="custom-swiper-pagination mt-6 text-center"></div>
+                        <div className="custom-swiper-pagination-2 mt-6 text-center "></div>
                     </div>
             }
-
         </>
     );
 };
 
-export default RecentActivities;
+export default UpCommingEvents;

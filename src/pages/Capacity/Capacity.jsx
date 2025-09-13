@@ -45,12 +45,7 @@ const Capacity = () => {
                                 <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-orange-500 transition-all duration-300">
                                     <h1 className="font-text font-semibold text-xs md:text-sm mb-4">
                                         {[
-                                            "Lorem ipsum dolor sit amet,   asdfasf  adfadf  ",
-                                            "Lorem ipsum dolor sit amet,r tur adipisicing ehil",
-                                            "Lorem ipsum do?",
-                                            "lor sit amet, consectetur adip?",
-                                            "Lorem ipsum dolor sit amet, co adipisicing elit. ?",
-                                            "asdasds"
+                                            
                                         ][i]}
                                     </h1>
 

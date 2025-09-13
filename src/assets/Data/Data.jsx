@@ -80,22 +80,6 @@ export const SupportersData = [
         photo: "/supporters/masud rana.jpg"
     },
     {
-        timestamp: "12/22/2024 19:07:14",
-        email: "sadakasifatshose@gmail.com",
-        fullName: "Sadaka Sifat Shose",
-        address: "Farmgate, Dhaka",
-        phone: "01793019182",
-        bloodGroup: "O+",
-        gender: "Female",
-        qualification: "Department  Of Psychology,Tejgoan College",
-        trainings: "Psychosocial Support Skill Training",
-        consent: [
-            "I agree to display my name, photo, and profile on the website.",
-            "I agree to provide online psychosocial support as listed on the website."
-        ],
-        photo: "/supporters/Sadaka Sifat Shose.png"
-    },
-    {
         timestamp: "12/22/2024 20:22:46",
         email: "shuhaelashourin@gmail.com",
         fullName: "Shuhaela Tabassum",
@@ -110,22 +94,6 @@ export const SupportersData = [
             "I agree to provide online psychosocial support as listed on the website."
         ],
         photo: "/supporters/Shuhaela Tabassum.jpg"
-    },
-    {
-        timestamp: "12/22/2024 21:22:03",
-        email: "atikmoshaddek2001@gmail.com",
-        fullName: "Atik Moshaddek",
-        address: "Ziaur Rahman Hall, University of Dhaka",
-        phone: "01773590483",
-        bloodGroup: "Ab(+)",
-        gender: "Male",
-        qualification: "Department  Of Psychology(3rd Year) University Of Dhaka",
-        trainings: "Psychosocial Support Skill Training",
-        consent: [
-            "I agree to display my name, photo, and profile on the website.",
-            "I agree to provide online psychosocial support as listed on the website."
-        ],
-        photo: "/supporters/Atik Moshaddek.png"
     },
     {
         timestamp: "12/23/2024 10:02:04",

@@ -1,82 +1,47 @@
-import { useState } from 'react';
-import shamma from '../../assets/images/Team/Psychosocial Skill TrainerShamma.jpg';
-import koly from '../../assets/images/Team/Psychosocial Skill Trainer - Kaniz Koly .jpg';
-import kohinoor from '../../assets/images/Team/Kohinoor Akter Habiba, Management Trainee.jpg';
-import arefeen from '../../assets/images/Team/Disability Inclusion Consultant Arefeen Ahmed .jpg';
-import bikash from '../../assets/images/Team/Amar Bikash Chakma, Management Trainee.jpg';
-import ceo from '../../assets/images/ceo.png';
+import { useTeamMembersQuery } from '../../Redux/Apis/teamMembersApi';
 
 const Team = () => {
-    const teamMembers = [
-        {
-            name: 'Shamsin Ahmed',
-            title: 'CEO & Lead Consultant',
-            image: ceo,
-            description: `Shamsin Ahmed leads Identity Inclusion, focusing on inclusive psychosocial support and societal development.`,
-        },
-        {
-            name: 'Arefeen Ahmed',
-            title: 'Disability Inclusion Consultant',
-            image: arefeen,
-            description: `Arefeen has extensive experience in disability inclusion and marketing. She has worked with organizations like RTI International, BRAC, and WaterAid Bangladesh.`,
-        },
-        {
-            name: 'Farah Tabassum Shamma',
-            title: 'Psychosocial Skill Trainer',
-            image: shamma,
-            description: `Shamma has been a Psychosocial Supporter and Trainer at Identity Inclusion since 2016. She holds a MS in Clinical Psychology and works as an M.Phil Researcher at the University of Dhaka.`,
-        },
-        {
-            name: 'Kaniz Koly',
-            title: 'Psychosocial Skill Trainer',
-            image: koly,
-            description: `Kaniz Fatema is an Industrial and Organizational Psychologist with 8 years of experience in psychosocial skills training and counseling.`,
-        },
-        {
-            name: 'Amar Bikash Chakma',
-            title: 'Management Trainee',
-            image: bikash,
-            description: `Amar Bikash Chakma holds a Master’s degree in Social Work and manages operational and financial aspects of psychosocial support programs at Identity Inclusion.`,
-        },
-        {
-            name: 'Kohinoor Akter',
-            title: 'Management Trainee',
-            image: kohinoor,
-            description: `Kohinoor Akter is a skilled mental health professional with a Master's in Psychology and trains volunteers and stakeholders in psychosocial support skills.`,
-        },
-    ];
-
-
+    const { data } = useTeamMembersQuery({});
+    const TeamMembersData = data?.data || [];
 
     return (
         <div id='our_team' className="grid lg:grid-cols-3  justify-center gap-10 ">
-            {teamMembers.map((member, index) => (
-                <div className='rounded-lg'>
-                    <div
-                        key={index}
-                        className=" transition-all duration-300  rounded-xl p-2  items-end gap-4 "
-                    >
-                        {/* Image */}
+            {TeamMembersData?.map((member, index) => (
+                <div key={index} className="relative group bg-white/70 backdrop-blur-xl border border-gray-200 rounded-t-xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_12px_40px_rgb(0,0,0,0.15)] transition-all duration-500 p-5">
+                    {/* Image */}
+                    <div className="flex justify-center">
                         <img
-                            loading="lazy"
                             src={member.image}
                             alt={member.name}
-                            className="h-36 w-32 md:h-60 md:w-36 object-cover rounded-md"
+                            className="size-44 object-contain  "
                         />
-
-                        {/* Content */}
-                        <div className="text-left ">
-                            <h1 className="text-xl font-bold font-headers text-gray-800">{member.name}</h1>
-                            <p className="text-[#118088] font-semibold text-[13px] font-text">
-                                {member.title}
-                            </p>
-
-                        </div>
                     </div>
-                    <p className="text-[16px] font-semibold  font-text p-2">
-                        {member.description}
-                    </p>
+
+                    {/* Content */}
+                    <div className="text-center mt-4">
+                        <h1 className="text-2xl font-semibold text-gray-900 group-hover:text-[#118088] transition-colors duration-300">
+                            {member.name}
+                        </h1>
+
+                        <p className="text-sm font-medium text-gray-500 tracking-wide mt-1">
+                            {member.title}
+                        </p>
+
+                        <p className="text-gray-600 text-[15px] leading-relaxed mt-3">
+                            {member.description}
+                        </p>
+                    </div>
+
+                    {/* Accent Gradient Line */}
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] 
+                    bg-gradient-to-r from-[#118088] via-[#34d3c5] to-[#118088]
+                    opacity-0 translate-y-2 
+                    group-hover:opacity-100 group-hover:translate-y-0
+                    transition-all duration-500 ease-out rounded-b-3xl">
+                    </div>
+
                 </div>
+
 
             ))}
         </div>

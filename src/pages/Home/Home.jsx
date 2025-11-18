@@ -7,7 +7,6 @@ import Services from "../../component/Services/Services";
 import RecentActivities from "../../component/RecentActivities/RecentActivities";
 import UpCommingEvents from "../../component/UpCommingEvents/UpCommingEvents";
 
-// import Loader from "../../component/Loader/Loader";
 
 
 

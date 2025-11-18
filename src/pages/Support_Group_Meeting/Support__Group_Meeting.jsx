@@ -1,6 +1,6 @@
 import qr from '../../assets/brochures/qr.jpeg';
 import Title from '../../component/Title/Title';
-import SupportGroupMeeting from '../../assets/images/servicesPhoto/support-group-meeting.jpg'
+import image_support_group from '../../../public/supporters/support_group_meeting.png';
 const Support__Group_Meeting = () => {
     return (
         <div>
@@ -9,7 +9,7 @@ const Support__Group_Meeting = () => {
                     Support Group Meeting
                 </Title>
                 <div className='mt-10'>
-                    <img loading="lazy" className=" w-full h-[70vh]  rounded-md object-contain" src={SupportGroupMeeting} alt="Psycho-Social-Support" />
+                    <img loading="lazy" className=" w-full h-[70vh]  rounded-md object-contain" src={image_support_group} alt="Psycho-Social-Support" />
                 </div>
                 <div className="mt-10 text-justify font-text">
                     <h1 className=" text-xl lg:text-xl font-medium tracking-wider  ">

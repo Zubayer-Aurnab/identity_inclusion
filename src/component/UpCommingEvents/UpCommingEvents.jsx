@@ -17,7 +17,7 @@ const UpCommingEvents = () => {
     return (
         <>
             {
-                (isLoading || UpcomingEvents.length > 0) ? "" :
+                (isLoading ) ? "" :
                     <div className="mb-10 " >
                         <div className="my-20 ">
                             <Title>

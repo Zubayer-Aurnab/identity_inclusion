@@ -20,7 +20,7 @@ const Supporters = () => {
                     </div>
                     <div className="p-5 space-y-3">
                         <div className="flex justify-between  items-center">
-                            <h2 className="text-xl font-bold text-gray-900 line-clamp-1 font-header">{user.fullName}</h2>
+                            <h2 className="text-xl font-bold text-gray-900 line-clamp-1 font-header">{user?.name}</h2>
                             <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
                                 {user?.blood_group}
                             </span>

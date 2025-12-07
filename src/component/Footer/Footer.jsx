@@ -1,5 +1,4 @@
-import { ImLocation } from "react-icons/im";
-import { MdAddCall, MdAttachEmail } from "react-icons/md";
+
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_white_bg.png";
 import FacebookSvg from "./Components/SVGs/FacebookSvg";
@@ -9,8 +8,12 @@ import YoutubeSvg from "./Components/SVGs/YoutubeSvg";
 import MobileSvg from "./Components/SVGs/MobileSvg";
 import MailSvg from "./Components/SVGs/MailSvg";
 import LocatoinSvg from "./Components/SVGs/LocatoinSvg";
+import { useCompanyQuery } from "../../Redux/Apis/companyApi";
 
 const Footer = () => {
+    const { data, isLoading } = useCompanyQuery()
+    const companyData = data?.data[0]
+    console.log(companyData)
     return (
         <div className="">
             <div className=" bg-[#128289] md:pt-10">
@@ -22,18 +25,34 @@ const Footer = () => {
                         </div>
                         <div className="flex gap-4  justify-center items-center">
                             {/* facebook */}
-                            <Link className="" target="_blank" to={"https://www.facebook.com/identityinclusion"}>
+                            <Link
+                                className=""
+                                target="_blank"
+                                to={companyData?.facebook_link}
+                            >
                                 <FacebookSvg />
                             </Link>
                             {/* linked in */}
-                            <Link className="relative" target="_blank" to={"https://www.linkedin.com/company/identity-inclusion/"}>
+                            <Link
+                                className="relative"
+                                target="_blank"
+                                to={companyData?.linkedin_link}
+                            >
                                 <LinkedinSvg />
                             </Link>
                             {/* instagram */}
-                            <Link className="flex  items-center gap-1 text-xl text-white hover:underline " target="_blank" to={"https://www.instagram.com/identity_inclusion/"}>
+                            <Link
+                                className="flex items-center gap-1 text-xl text-white hover:underline "
+                                target="_blank"
+                                to={companyData?.instagram_link}
+                            >
                                 <InstagramSvg />
                             </Link>
-                            <Link className="flex  items-center gap-1 text-xl text-white hover:underline " target="_blank" to={"https://www.youtube.com/@identityinclusion773"}>
+                            <Link
+                                className="flex  items-center gap-1 text-xl text-white hover:underline "
+                                target="_blank"
+                                to={companyData?.youtube_link}
+                            >
                                 <YoutubeSvg />
                             </Link>
                         </div>
@@ -72,14 +91,19 @@ const Footer = () => {
                             <div className="space-y-4">
                                 <Link className="flex  items-center gap-1 font-text text-white " target="_blank" to={"tel:+8801746-632402"}>
                                     <MobileSvg />
-                                    01746-632402</Link>
+                                    {companyData?.phone}
+                                </Link>
                                 <Link className="flex  items-center gap-1 font-text text-white " >
                                     <MailSvg />
-                                    identityinclusion@gmail.com
+                                    {companyData?.email}
                                 </Link>
-                                <Link className="flex  items-center gap-1 font-text text-white hover:underline " target="_blank" to={"https://maps.app.goo.gl/1uhkB3gAB89x3UGE6"} >
+                                <Link
+                                    className="flex  items-center gap-1 font-text text-white hover:underline "
+                                    target="_blank"
+                                    to={companyData?.address_link}
+                                >
                                     <LocatoinSvg />
-                                    House-260, Road- 3 Baridhara , Dhaka
+                                    {companyData?.address}
                                 </Link>
 
 

@@ -1,7 +1,4 @@
 
-import img11 from '../../assets/marquee/img11.jpg';
-import img15 from '../../assets/marquee/img15.jpg';
-import img30 from '../../assets/marquee/img30.png';
 import Title from "../../component/Title/Title";
 import PsychoSoialSupportSlider from './Components/PsychoSoialSupportSlider';
 import Supporters from './Components/Supporters';
@@ -22,7 +19,7 @@ const Psycho_Social_Support = () => {
 
             </div>
             {/* image slider */}
-            <PsychoSoialSupportSlider/>
+            <PsychoSoialSupportSlider />
             <div>
                 <div className='my-16'>
                     <Title>

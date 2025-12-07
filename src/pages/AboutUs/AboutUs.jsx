@@ -1,27 +1,22 @@
 import Aos from 'aos';
-import Lottie from 'lottie-react';
 import { useEffect } from 'react';
 import { FaChevronRight } from "react-icons/fa6";
-
-
-import TeamMembers from '../../component/TeamMembers/TeamMembers';
-
-import './AboutUs.css';
-import Title from '../../component/Title/Title';
 import Team from '../../component/Team/Team';
-import MissionVision from './Components/MissionVision/MissionVision';
-import Company from './Components/Company/Company';
-import Ceo from './Components/Ceo/Ceo';
+import Title from '../../component/Title/Title';
+import './AboutUs.css';
 import Advisors from './Components/Advisors/Advisors';
+import Ceo from './Components/Ceo/Ceo';
+import Company from './Components/Company/Company';
+import MissionVision from './Components/MissionVision/MissionVision';
+
 const AboutUs = () => {
     useEffect(() => {
         Aos.init()
     }, [])
+
     return (
         <div>
-
             <div className="h-[45vh] md:h-[35vh] bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88]"></div>
-
             <div className="relative bottom-64  md:px-5 lg:px-0 lg:w-[80%] mx-auto  ">
                 <h1 className='px-2 md:px-0 text-3xl md:text-3xl lg:text-6xl  text-white font-medium mb-7 font-header'>About Identity Inclusion</h1>
                 <div className='flex items-center gap-1 text-white mb-2 font-text px-2  md:px-0' >

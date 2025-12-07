@@ -1,95 +1,95 @@
 import Aos from "aos";
 import { useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination, Zoom } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import img2 from '../../assets/marquee/img2.jpg';
-import img23 from '../../assets/marquee/img23.jpg';
-import img24 from '../../assets/marquee/img24.jpg';
-import img25 from '../../assets/marquee/img25.jpg';
-import img26 from '../../assets/marquee/img26.jpg';
 import Title from "../Title/Title";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useRecentActivitiesQuery } from "../../Redux/Apis/recentActivitiesApi";
+import dayjs from "dayjs";
 const RecentActivities = () => {
+    const { data, isLoading } = useRecentActivitiesQuery({})
+    const RecentActivities = data?.data || []
     useEffect(() => {
         Aos.init()
     }, [])
     return (
         <>
-            <div className="mb-10 " >
-                <div className="my-20 ">
-                    <Title>
-                        Recents Activities
-                    </Title>
-                </div>
+            {
+                isLoading ? "" :
+                    <div className="mb-10 " >
+                        <div className="my-20 ">
+                            <Title>
+                                Recents Activities
+                            </Title>
+                        </div>
 
-                <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
-                    spaceBetween={20}
-                    slidesPerView={1}
-                    loop={true}
-                    autoplay={{ delay: 5000 }}
-                    pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
-                    breakpoints={{
-                        640: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 3 },
-                        1280: { slidesPerView: 4 },
-                    }}
-                    className="py-6"
-                >
-                    {[1, 2, 3, 4, 5].map((_, i) => (
-                        <SwiperSlide key={i} className="h-full flex">
-                            <div className="bg-bg group transition-all duration-300 hover:bg-[#edfcff] w-full flex flex-col justify-between min-h-[500px] shadow-md rounded p-0">
-                                <img
-                                    className="h-52 w-full object-cover "
-                                    src={[img23, img24, img25, img26, img2][i]}
-                                    alt=""
-                                />
-                                <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-[#118097] transition-all duration-300">
-                                    <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
-                                        {[
-                                            "Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.Lorem ipsum dolor sit amet, consectetur adipisicing elitaa.",
-                                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil fugiat. Enim qui vel iusto assumenda similique, exercitationem excepturi porro?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, nihil",
-                                            "Lorem ipsum dolor sit amet, consectetur xercitationem excepturi porro?Lorem ipsum dolor sit amet, consectetur xercitationem excepturi porro?",
-                                            "Lorem ipsum dolor sit amet, consectetur adip?",
-                                            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. ?"
-                                        ][i]}
-                                    </h1>
-                                    <div className="flex items-center justify-between mt-auto pt-4">
-                                        <p className="text-xs font-bold text-header">
-                                            {
-                                                [
-                                                    "12 Aug 2025",
-                                                    "12 Aug 2025",
-                                                    "22 Aug 2025",
-                                                    "26 Aug 2025",
-                                                    "1 Sep 2025"
-                                                ][i]
-                                            }
-                                        </p>
-                                        <a
-                                            href="/"
-                                            className="p-2 rounded-full cursor-pointer"
-                                            style={{
-                                                color: "#118097",
-                                                backgroundColor: "#D4F1F7",
-                                                border: "1px solid"
-                                            }}
-                                        >
-                                            <FaArrowRight />
-                                        </a>
+                        <Swiper
+                            modules={[Navigation, Pagination, Autoplay]}
+                            spaceBetween={20}
+                            slidesPerView={1}
+                            loop={true}
+                            autoplay={{ delay: 5000 }}
+                            pagination={{ clickable: true, el: '.custom-swiper-pagination' }}
+                            breakpoints={{
+                                640: { slidesPerView: 1 },
+                                768: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                                1280: { slidesPerView: 4 },
+                            }}
+                            className="py-6"
+                        >
+                            {RecentActivities?.map((activiti, i) => (
+                                <SwiperSlide key={i} className="h-full flex">
+                                    <div className="bg-bg group transition-all duration-300 hover:bg-[#edfcff] w-full flex flex-col justify-between min-h-[500px] shadow-md rounded p-0">
+                                        <div className="w-full h-64 bg-gray-200  flex items-center justify-center overflow-hidden">
+                                            <img
+                                                src={activiti?.image}
+                                                alt=""
+                                                className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-[#118097] transition-all duration-300">
+                                            <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
+                                                {activiti?.image_text}
+                                            </h1>
+                                            <div className="flex items-center justify-between mt-auto pt-4">
+                                                <p className="text-xs font-bold text-header">
+                                                    {
+                                                        dayjs(activiti?.date).format("DD MMM YYYY")
+                                                    }
+                                                </p>
+
+                                                {
+                                                    activiti?.link && (
+                                                        <a
+                                                            target="_blank"
+                                                            href={activiti?.link}
+                                                            className="p-2 rounded-full transition-all duration-300 hover:-rotate-45"
+                                                            style={{
+                                                                color: "#118097",
+                                                                backgroundColor: "#D4F1F7",
+                                                                border: "1px solid #118097"
+                                                            }}
+                                                        >
+                                                            <FaArrowRight />
+                                                        </a>
+                                                    )
+                                                }
+
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-                {/* Custom Pagination Outside Cards */}
-                <div className="custom-swiper-pagination mt-6 text-center"></div>
-            </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                        {/* Custom Pagination Outside Cards */}
+                        <div className="custom-swiper-pagination mt-6 text-center"></div>
+                    </div>
+            }
+
         </>
     );
 };

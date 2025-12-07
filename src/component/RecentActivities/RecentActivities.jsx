@@ -44,11 +44,13 @@ const RecentActivities = () => {
                             {RecentActivities?.map((activiti, i) => (
                                 <SwiperSlide key={i} className="h-full flex">
                                     <div className="bg-bg group transition-all duration-300 hover:bg-[#edfcff] w-full flex flex-col justify-between min-h-[500px] shadow-md rounded p-0">
-                                        <img
-                                            className="h-52 w-full object-cover "
-                                            src={activiti?.image}
-                                            alt=""
-                                        />
+                                        <div className="w-full h-64 bg-gray-200  flex items-center justify-center overflow-hidden">
+                                            <img
+                                                src={activiti?.image}
+                                                alt=""
+                                                className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                                            />
+                                        </div>
                                         <div className="flex flex-col flex-grow px-4 py-4 border-b-4 border-transparent group-hover:border-[#118097] transition-all duration-300">
                                             <h1 className="font-text font-semibold text-lg md:text-lg mb-4">
                                                 {activiti?.image_text}
@@ -65,11 +67,11 @@ const RecentActivities = () => {
                                                         <a
                                                             target="_blank"
                                                             href={activiti?.link}
-                                                            className="p-2 rounded-full cursor-pointer"
+                                                            className="p-2 rounded-full transition-all duration-300 hover:-rotate-45"
                                                             style={{
                                                                 color: "#118097",
                                                                 backgroundColor: "#D4F1F7",
-                                                                border: "1px solid"
+                                                                border: "1px solid #118097"
                                                             }}
                                                         >
                                                             <FaArrowRight />

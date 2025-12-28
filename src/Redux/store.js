@@ -7,6 +7,7 @@ import { teamMembersApi } from './Apis/teamMembersApi';
 import { advisorsApi } from './Apis/advisorsApi';
 import { supportersApi } from './Apis/supportersApi';
 import { impactApi } from './Apis/impactApi';
+import { impactHighlightApi } from './Apis/impactHighlightApi';
 
 export const store = configureStore({
     reducer: {
@@ -18,6 +19,7 @@ export const store = configureStore({
         [advisorsApi.reducerPath]: advisorsApi.reducer,
         [supportersApi.reducerPath]: supportersApi.reducer,
         [impactApi.reducerPath]: impactApi.reducer,
+        [impactHighlightApi.reducerPath]: impactHighlightApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
@@ -29,4 +31,5 @@ export const store = configureStore({
             .concat(advisorsApi.middleware)
             .concat(supportersApi.middleware)
             .concat(impactApi.middleware)
+            .concat(impactHighlightApi.middleware)
 });

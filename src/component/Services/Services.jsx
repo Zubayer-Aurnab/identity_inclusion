@@ -7,7 +7,11 @@ import consultancy from '../../assets/service-Images/empathy_17427262.png';
 import advocacy from '../../assets/service-Images/self-awareness_12693111.png';
 import Card from "../Card/Card";
 import Title from "../Title/Title";
+import { useImpactHighlightQuery } from '../../Redux/Apis/impactHighlightApi';
 const Services = () => {
+    const { data, isLoading } = useImpactHighlightQuery({});
+    const HighLightData = data?.data;
+    console.log(HighLightData)
     useEffect(() => {
         Aos.init()
     }, [])
@@ -58,7 +62,7 @@ const Services = () => {
                         <div
                             data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
                             class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                            <div class="text-5xl font-bold text-blue-600 font-header">100+</div>
+                            <div class="text-5xl font-bold text-blue-600 font-header">{HighLightData?.psychosocial_supporters_trained || 0}+</div>
                             <p class="mt-3 text-gray-700 font-medium">Psychosocial Supporters Trained</p>
                         </div>
 
@@ -67,7 +71,7 @@ const Services = () => {
                             data-aos="fade-up" data-aos-duration="1000"
                             data-aos-delay="200"
                             class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                            <div class="text-5xl font-bold font-header text-orange-500">15+</div>
+                            <div class="text-5xl font-bold font-header text-orange-500">{HighLightData?.advocacy_provided || 0}+</div>
                             <p class="mt-3 text-gray-700 font-medium">Advocacy Provided</p>
                         </div>
 
@@ -76,7 +80,7 @@ const Services = () => {
                             data-aos="fade-up" data-aos-duration="1000"
                             data-aos-delay="300"
                             class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                            <div class="text-5xl font-bold text-yellow-500 font-header">10+</div>
+                            <div class="text-5xl font-bold text-yellow-500 font-header">{HighLightData?.institutional_consultancies || 0}+</div>
                             <p class="mt-3 text-gray-700 font-medium">Institutional Consultancies</p>
                         </div>
 
@@ -85,7 +89,7 @@ const Services = () => {
                             data-aos="fade-up" data-aos-duration="1000"
                             data-aos-delay="400"
                             class="bg-white backdrop-blur-md rounded-2xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-all duration-300">
-                            <div class="text-5xl font-bold text-green-600 font-header">8+</div>
+                            <div class="text-5xl font-bold text-green-600 font-header">{HighLightData?.organizations_empowered || 0}+</div>
                             <p class="mt-3 text-gray-700 font-medium">Organizations Empowered</p>
                         </div>
 

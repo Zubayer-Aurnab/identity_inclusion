@@ -27,7 +27,6 @@ const Impact = () => {
     }, [])
     return (
         <div className='px-4 lg:px-0 lg:w-4/5 mx-auto'>
-
             {
                 ImpactData?.map((impact, i) => (
                     <>

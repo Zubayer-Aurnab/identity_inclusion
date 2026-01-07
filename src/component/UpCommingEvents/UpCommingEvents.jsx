@@ -62,12 +62,7 @@ const UpCommingEvents = () => {
                                                     <a
                                                         target="_blank"
                                                         href={events?.link}
-                                                        className="p-2 rounded-full transition-all duration-300 hover:-rotate-45"
-                                                        style={{
-                                                            color: "#118097",
-                                                            backgroundColor: "#D4F1F7",
-                                                            border: "1px solid #118097"
-                                                        }}
+                                                        className="p-2 rounded-full transition-all duration-300 hover:-rotate-45 text-orange-500 bg-orange-200 border-orange-500 border-[1px]"
                                                     >
                                                         <FaArrowRight />
                                                     </a>

@@ -31,7 +31,7 @@ const Psycho_Social_Support = () => {
     // --- LOADER END ---
 
     return (
-        <div className="my-20 lg:mb-40 px-2 lg:px-0 lg:w-4/5 mx-auto">
+        <div className="my-40 lg:mb-40 px-2 lg:px-0 lg:w-4/5 mx-auto">
             <Title>
                 Psycho-Social Support
             </Title>

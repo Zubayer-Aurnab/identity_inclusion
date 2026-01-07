@@ -13,7 +13,7 @@ const Capacity = () => {
 
     // Skeleton Component for the Slider Cards
     const SkeletonCard = () => (
-        <div className="bg-gray-100 animate-pulse border border-gray-200 overflow-hidden flex flex-col h-full">
+        <div className="bg-gray-100 animate-pulse border border-gray-200 overflow-hidden flex flex-col h-full ">
             <div className="h-56 bg-gray-200" />
             <div className="p-5 flex-grow">
                 <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
@@ -23,7 +23,7 @@ const Capacity = () => {
     );
 
     return (
-        <div className="my-20 px-2 lg:px-0 lg:w-4/5 mx-auto ">
+        <div className="my-40 px-2 lg:px-0 lg:w-4/5 mx-auto ">
             <Title>Capacity Building</Title>
 
             {/* Description Skeleton/Content */}

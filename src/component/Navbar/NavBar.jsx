@@ -1,174 +1,121 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { ChevronDown, Menu, X, ArrowRight, HeartPulse, Users2, Megaphone, Landmark, GraduationCap } from "lucide-react";
 import logo from "../../assets/images/identity inclusion logo.png";
-import "./Nav.css";
 import Button from "../Button/Button";
-// import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import "./Nav.css";
 
 const NavBar = () => {
-    const activeClass = "text-[#118088] font-semibold border-b-2 border-[#118088] text-lg font-header ";
-    const normalClass = "font-semibold hover-effect border-b-2 border-transparent text-lg font-header ";
-    const mobileClass = "text-[#118088] font-semibold bg-white px-2 py-2 rounded-lg font-header  text-xl  ";
-    const dropDown = " hover-effect border-b-2 border-transparent text-lg ";
-    const [slider, setSlider] = useState(false)
-    // console.log(slider)
+    const [slider, setSlider] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+
+    const activeClass = "text-[#118088] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#118088] transition-all";
+    const normalClass = "text-gray-600 font-semibold hover:text-[#118088] transition-all";
+    const serviceLinkClass = "group flex items-start gap-3 p-3 rounded-xl hover:bg-teal-50 transition-all";
+
     useEffect(() => {
-        if (slider) {
-            document.body.classList.add('no-scroll');
-        } else {
-            document.body.classList.remove('no-scroll');
-        }
+        const handleScroll = () => setScrolled(window.scrollY > 20);
+        window.addEventListener("scroll", handleScroll);
+
+        if (slider) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = 'unset';
+
+        return () => window.removeEventListener("scroll", handleScroll);
     }, [slider]);
-    const handleCheckboxChange = () => {
-        setSlider(prev => !prev);
-    };
+
+    const serviceList = [
+        { title: "Psycho-Social Support", path: "/psycho-social-support", icon: <HeartPulse className="w-5 h-5" />, desc: "Moral & psychological care" },
+        { title: "Support Group Meeting", path: "/support-group-metting", icon: <Users2 className="w-5 h-5" />, desc: "Community-led healing" },
+        { title: "Advocacy & Awareness", path: "/advocacy", icon: <Megaphone className="w-5 h-5" />, desc: "Policy & social change" },
+        { title: "Consultancy", path: "/consultancy", icon: <Landmark className="w-5 h-5" />, desc: "Technical institutional support" },
+        { title: "Capacity Building", path: "/capacity", icon: <GraduationCap className="w-5 h-5" />, desc: "Workshops & training" },
+    ];
+
     return (
-        <div>
-            {/* for large devices */}
-            <div className=" hidden lg:flex px-20 justify-between items-center ">
-                <div className=" ">
-                    <img className="w-20" src={logo} alt="" />
-                </div>
-                <div className="flex  gap-8   justify-center ">
-                    <NavLink
-                        to={`/`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to={`/about`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        About us
-                    </NavLink>
+        <div className={`fixed top-0 w-full  z-[1000] transition-all duration-300 ${scrolled ? "bg-white/80 md:backdrop-blur-md shadow-sm py-2" : "bg-white py-2"}`}>
+            <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
 
-                    <NavLink
+                {/* Logo */}
+                <Link to="/" className="flex items-center">
+                    <img className={`transition-all duration-300 ${scrolled ? "w-14" : "w-16"}`} src={logo} alt="Logo" />
+                </Link>
 
-                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-header '}
-                    >
-                        Services
-                        <div className="absolute  w-max  bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header rounded-md">
-                            <Link to={"/psycho-social-support"} className={dropDown}>
-                                Psycho-Social Support
-                            </Link>
-                            <Link to={"/support-group-metting"} className={dropDown}>
-                                Support Group Meeting
-                            </Link>
-                            <Link to={"/advocacy"} className={dropDown}>
-                                Advocacy & Awareness
-                            </Link>
-                            <Link to={"/consultancy"} className={dropDown}>
-                                Consultancy
-                            </Link>
-                            <Link to={"/capacity"} className={dropDown}>
-                                Capacity Building
-                            </Link>
+                {/* Desktop Menu */}
+                <div className="hidden lg:flex items-center gap-10">
+                    <NavLink to="/" className={({ isActive }) => (isActive ? activeClass : normalClass)}>Home</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? activeClass : normalClass)}>About us</NavLink>
 
+                    {/* Desktop Services Dropdown */}
+                    <div className="relative group py-2">
+                        <button className="flex items-center gap-1 font-semibold text-gray-600 group-hover:text-[#118088] transition-all">
+                            Services <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" />
+                        </button>
+
+                        {/* Mega Dropdown Box */}
+                        <div className="absolute top-full -left-20 w-[450px] bg-white shadow-2xl rounded-2xl p-4 grid grid-cols-2 gap-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-3 group-hover:translate-y-0 transition-all duration-300 border border-gray-100">
+                            {serviceList.map((service, idx) => (
+                                <Link key={idx} to={service.path} className={serviceLinkClass}>
+                                    <div className="mt-1 p-2 bg-teal-50 text-[#118088] rounded-lg group-hover:bg-[#118088] group-hover:text-white transition-colors">
+                                        {service.icon}
+                                    </div>
+                                    <div>
+                                        <p className="font-bold text-sm text-gray-900 leading-none">{service.title}</p>
+                                        <p className="text-[11px] text-gray-500 mt-1">{service.desc}</p>
+                                    </div>
+                                </Link>
+                            ))}
                         </div>
-                    </NavLink>
+                    </div>
 
-                    <NavLink
-                        to={`/acknowledgment-impact`}
-                        className={({ isActive }) => (isActive ? activeClass : normalClass)}
-                    >
-                        Impact
-                    </NavLink>
-                    <NavLink
-                        target="_blank"
-                        to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}
-                        className={({ isActive }) => (isActive ? "" : "")}
-                    >
-                        <Button small>
-                            Get Involved.
-                        </Button>
-                    </NavLink>
-                </div>
-            </div >
-            {/* for small devices*/}
-            <div className="bg-white relative px-5 flex lg:hidden justify-between items-center py-1" >
-                <div >
-                    <img className="w-14" src={logo} alt="" />
-                </div>
-                <div onClick={handleCheckboxChange} className="">
-                    <label className="btn btn-circle bg-[#b5dbba] swap swap-rotate">
-                        {/* this hidden checkbox controls the state */}
-                        <input type="checkbox" checked={slider} onChange={handleCheckboxChange} />
+                    <NavLink to="/acknowledgment-impact" className={({ isActive }) => (isActive ? activeClass : normalClass)}>Impact</NavLink>
 
-                        {/* hamburger icon */}
-                        <svg className="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
-
-                        {/* close icon */}
-                        <svg className="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" /></svg>
-
-                    </label>
+                    <a href="https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl" target="_blank" rel="noreferrer">
+                        <Button small>Get Involved</Button>
+                    </a>
                 </div>
 
+                {/* Mobile Toggle */}
+                <button onClick={() => setSlider(!slider)} className="lg:hidden p-2 text-gray-700 bg-gray-100 rounded-full">
+                    {slider ? <X size={24} /> : <Menu size={24} />}
+                </button>
+            </div>
 
+            {/* Mobile Navigation Panel */}
+            <div className={`fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden transition-opacity duration-300   ${slider ? "opacity-100 visible" : "opacity-0 invisible"}`} onClick={() => setSlider(false)} />
 
-                <div className={`absolute float-end top-0   ${slider ? "left-0" : "-left-[700px]"}  w-[80%] md:w-[40%]  h-screen  pt-5 duration-500 bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88] shadow-2xl z-[999] flex flex-col p-4 py-3    space-y-5`}>
-                    <NavLink
-                        to={`/`}
-                        className={mobileClass}
-                        onClick={handleCheckboxChange}
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to={`/about`}
-                        className={mobileClass}
-                        onClick={handleCheckboxChange}
-                    >
-                        About us
-                    </NavLink>
+            <div className={`fixed  top-0 right-0 w-[80%] h-full bg-white z-[1001] lg:hidden transition-transform duration-500 flex flex-col p-8 ${slider ? "translate-x-0" : "translate-x-full"}`}>
+                <div className="flex justify-between items-center mb-10 ">
+                    <img className="w-14" src={logo} alt="Logo" />
+                    <button onClick={() => setSlider(false)}><X size={28} /></button>
+                </div>
 
-                    <NavLink
+                <div className="flex flex-col gap-5 ">
+                    <NavLink to="/" onClick={() => setSlider(false)} className="text-xl font-bold text-gray-800">Home</NavLink>
+                    <NavLink to="/about" onClick={() => setSlider(false)} className="text-xl font-bold text-gray-800">About us</NavLink>
 
-                        className={'font-semibold  border-b-2 border-transparent text-lg relative drop font-hea  text-[#118088]  bg-white px-2 py-2 rounded-lg  font-header   '}
-                    >
-                        Services
-                        <div className="absolute  w-72   bg-[#ffffe0] shadow-2xl flex flex-col gap-2 z-30 p-4 menu font-header">
-                            <Link onClick={handleCheckboxChange} to={"/psycho-social-support"} className={dropDown}>
-                                Psycho-Social Support
-                            </Link>
-                            <Link onClick={handleCheckboxChange} to={"/support-group-metting"} className={dropDown}>
-                                Support Group Meeting
-                            </Link>
-                            <Link onClick={handleCheckboxChange} to={"/advocacy"} className={dropDown}>
-                                Advocacy & Awareness
-                            </Link>
-                            <Link onClick={handleCheckboxChange} to={"/consultancy"} className={dropDown}>
-                                Consultancy
-                            </Link>
-                            <Link onClick={handleCheckboxChange} to={"/capacity"} className={dropDown}>
-                                Capacity Building
-                            </Link>
-
+                    <div className="space-y-4 pt-2">
+                        <p className="text-xs uppercase tracking-widest text-[#118088] font-black">Our Services</p>
+                        <div className="grid gap-3 pl-2">
+                            {serviceList.map((s, i) => (
+                                <Link key={i} to={s.path} onClick={() => setSlider(false)} className="flex items-center gap-3 text-gray-600 font-semibold text-sm hover:text-[#118088]">
+                                    <span className="p-1 bg-teal-50 rounded-md">{s.icon}</span> {s.title}
+                                </Link>
+                            ))}
                         </div>
-                    </NavLink>
+                    </div>
 
-                    <NavLink
-                        to={`/acknowledgment-impact`}
-                        className={mobileClass}
-                        onClick={handleCheckboxChange}
-                    >
-                        Impact
-                    </NavLink>
+                    <NavLink to="/acknowledgment-impact" onClick={() => setSlider(false)} className="text-xl font-bold text-gray-800">Impact</NavLink>
 
-                    <NavLink
-                        target="_blank"
-                        to={`https://forms.office.com/pages/responsepage.aspx?id=RGs3-wwf4UKnCAN5mvvhc9AkJPqCdx5Gvivm3nc38KpURjQyN1VEUFpVMzFXQjJFSzlGQkNKUlEwRS4u&route=shorturl`}
-                        className={({ isActive }) => (isActive ? "w-full" : " ")}
-                    >
-                        <Button small>
-                            Get Involved
-                        </Button>
-                    </NavLink>
+                    <div className="mt-10 pt-10 border-t">
+                        <a href="https://forms.office.com/..." target="_blank" rel="noreferrer">
+                            <button className="w-full bg-[#118088] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-teal-700/20">
+                                Get Involved <ArrowRight size={18} />
+                            </button>
+                        </a>
+                    </div>
                 </div>
-
-
-            </div >
-        </div >
+            </div>
+        </div>
     );
 };
 

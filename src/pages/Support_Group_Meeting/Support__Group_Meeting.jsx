@@ -45,7 +45,7 @@ const Support__Group_Meeting = () => {
     const images = imageData?.data ?? [];
 
     return (
-        <section className="bg-gray-50/50 py-16 lg:py-24">
+        <section className="bg-gray-50/50 py-16 lg:py-24 mt-20">
             <div className="container mx-auto px-4 lg:w-4/5">
                 <div className="mb-12">
                     <Title>Support Group Meeting</Title>

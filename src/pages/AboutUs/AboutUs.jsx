@@ -11,46 +11,91 @@ import MissionVision from './Components/MissionVision/MissionVision';
 
 const AboutUs = () => {
     useEffect(() => {
-        Aos.init()
-    }, [])
+        Aos.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
+
+    const navLinks = [
+        { name: "Mission & Vision", href: "#mission_vision" },
+        { name: "About The Founder", href: "#word_from_ceo" },
+        { name: "Our Team", href: "#our_team" },
+        { name: "Advisors", href: "#advisor" },
+    ];
 
     return (
-        <div>
-            <div className="h-[45vh] md:h-[35vh] bg-gradient-to-b from-[#c0e1bd] to-[#0d7f88]"></div>
-            <div className="relative bottom-64  md:px-5 lg:px-0 lg:w-[80%] mx-auto  ">
-                <h1 className='px-2 md:px-0 text-3xl md:text-3xl lg:text-6xl  text-white font-medium mb-7 font-header'>About Identity Inclusion</h1>
-                <div className='flex items-center gap-1 text-white mb-2 font-text px-2  md:px-0' >
-                    <a href='#mission_vision' className='hover-effect-about text-xs lg:text-base' >Mission & Vision</a>
-                    <p><FaChevronRight /></p>
-                    <a href='#word_from_ceo' className='hover-effect-about text-xs lg:text-base' >About The Founder</a>
-                    <p><FaChevronRight /></p>
-                    <a href='#our_team' className='hover-effect-about text-xs lg:text-base' >Our Team</a>
-                    <p><FaChevronRight /></p>
-                    <a href='#advisor' className='hover-effect-about text-xs lg:text-base' >Advisors</a>
+        <div className="bg-gray-50/50">
+            {/* Header Hero Section */}
+            <div className="relative h-[50vh] lg:h-[45vh] bg-[#118189] flex flex-col justify-center items-center overflow-hidden">
+                {/* Decorative background circle */}
+                <div className="absolute top-[-10%] right-[-5%] w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-[-10%] left-[-5%] w-96 h-96 bg-black/10 rounded-full blur-3xl"></div>
+
+                <div className="relative z-10 text-center px-4" data-aos="zoom-out">
+                    <h1 className='text-4xl md:text-5xl lg:text-7xl text-white font-bold mb-6 font-header tracking-tight'>
+                        About Identity Inclusion
+                    </h1>
+                    
+                    {/* Modern Pill Navigation */}
+                    <div className='flex flex-wrap justify-center items-center gap-2 md:gap-4'>
+                        {navLinks.map((link, index) => (
+                            <div key={link.href} className="flex items-center">
+                                <a 
+                                    href={link.href} 
+                                    className='text-white/90 bg-white/10 hover:bg-white hover:text-[#118189] px-4 py-1.5 rounded-full text-xs lg:text-sm font-medium transition-all duration-300 backdrop-blur-sm border border-white/20 shadow-sm'
+                                >
+                                    {link.name}
+                                </a>
+                                {index !== navLinks.length - 1 && (
+                                    <FaChevronRight className="text-white/40 ml-2 md:ml-4 hidden md:block" size={10} />
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className="h-5 bg-[#118189] rounded-t-xl shadow-2xl" ></div>
-                <div data-aos="fade-up"
-                    data-aos-duration="2000"
-                    className="bg-white shadow-md px-10  rounded-lg">
+            </div>
 
-                    {/* Identity Section section */}
-                    <Company />
-                    {/*Mission & Vision section */}
-                    <MissionVision />
-                    {/* ceo section */}
-                    <Ceo />
-                    {/* Team members */}
-                    <div className=' my-4 md:my-20'>
-                        <Title>Team Members</Title>
-                    </div>
-                    <div className='pb-10'>
-                        <Team />
-                    </div>
-                    {/* Advisor section */}
-                    <Advisors />
+            {/* Main Content Container */}
+            <div className="relative -mt-20 px-4 md:px-5 lg:px-0 lg:w-[85%] xl:w-[80%] mx-auto pb-20">
+                {/* The "Sheet" Look */}
+                <div 
+                    data-aos="fade-up"
+                    className="bg-white shadow-[0_20px_50px_rgba(0,0,0,0.1)] rounded-3xl overflow-hidden border border-gray-100"
+                >
+                    {/* Top Accent Bar */}
+                    <div className="h-2 bg-gradient-to-r from-[#118189] to-[#c0e1bd]" />
 
+                    <div className="px-6 md:px-12 lg:px-20 py-10 md:py-16">
+                        {/* Identity Section */}
+                        <div id="company" className="mb-20">
+                            <Company />
+                        </div>
+
+                        {/* Mission & Vision Section */}
+                        <div id="mission_vision" className="scroll-mt-20 mb-24">
+                            <MissionVision />
+                        </div>
+
+                        {/* Founder Section */}
+                        <div id="word_from_ceo" className="scroll-mt-20 mb-24">
+                            <Ceo />
+                        </div>
+
+                        {/* Team Section */}
+                        <div id="our_team" className="scroll-mt-20 mb-24">
+                            <div className='mb-12'>
+                                <Title>Our Professional Team</Title>
+                               
+                            </div>
+                            <Team />
+                        </div>
+
+                        {/* Advisor Section */}
+                        <div id="advisor" className="scroll-mt-20">
+                            <Advisors />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

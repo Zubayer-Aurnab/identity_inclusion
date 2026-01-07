@@ -31,7 +31,7 @@ const Impact = () => {
     const testimonialImages = [imp1, imp2, imp3];
 
     return (
-        <div className='overflow-hidden bg-white'>
+        <div className='overflow-hidden bg-white mt-20'>
             <div className='px-4 lg:px-0 lg:w-4/5 mx-auto py-12'>
                 {/* Impact Stories Section */}
                 <div className='space-y-24 lg:space-y-32'>
@@ -76,9 +76,7 @@ const Impact = () => {
                 <div className='mt-32 lg:mt-48'>
                     <div className='mb-16' data-aos="fade-up">
                         <Title>Our Work, In Their Words</Title>
-                        <p className='text-center text-gray-500 mt-4 max-w-2xl mx-auto'>
-                            Trusted by leading organizations to deliver meaningful change and inclusive solutions.
-                        </p>
+                        
                     </div>
 
                     <div className='relative pb-20 px-4 md:px-10' data-aos="fade-up" data-aos-delay="200">

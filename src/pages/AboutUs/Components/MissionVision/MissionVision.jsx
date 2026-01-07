@@ -2,51 +2,85 @@ import Lottie from 'lottie-react';
 import mission from '.././../../../../public/mission.json';
 import values from '.././../../../../public/values.json';
 import vision from '.././../../../../public/vision.json';
+import { useEffect } from 'react';
+import Aos from 'aos';
 
 const MissionVision = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            once: true,
+        });
+    }, []);
     return (
-        <div id="mission_vision" className='mt-'>
-            <div className="py-10 ">
-                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Mission */}
+        <div id="mission_vision" className="py-24 bg-white relative">
+            <div className="max-w-7xl mx-auto px-6">
+
+                {/* 01. Mission & Vision - Overlapping Section */}
+                <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-0 relative mb-32">
+
+                    {/* Mission Card */}
                     <div
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        className="p-6 border border-[#118088] bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        data-aos="fade-right"
+                        className="w-full lg:w-1/2 bg-[#118088] rounded-[3rem] p-10 lg:p-16 text-white relative z-20 shadow-2xl lg:-mr-12"
                     >
-                        <Lottie className="w-32 mb-4 " animationData={mission} />
-                        <h2 className="text-2xl font-bold font-header text-[#118088] mb-2 ">Mission</h2>
-                        <p className="text-gray-700 text-base font-text">
-                            Enable the full potential of excluded individuals by promoting best practices for inclusion through youth leadership and institutional change.
+                        <div className="flex items-center gap-6 mb-8">
+                            <div className="bg-white/20 p-3 rounded-2xl backdrop-blur-md">
+                                <Lottie className="w-16 h-16" animationData={mission} />
+                            </div>
+                            <h2 className="text-4xl font-bold font-header tracking-tight">Our Mission</h2>
+                        </div>
+                        <p className="text-teal-50 text-xl leading-relaxed font-text italic">
+                            "Enable the full potential of excluded individuals by promoting best practices for inclusion through youth leadership and institutional change."
                         </p>
                     </div>
 
-                    {/* Vision */}
+                    {/* Vision Card */}
                     <div
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        className="p-6 border border-[#118088] bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+                        data-aos="fade-left"
+                        data-aos-delay="200"
+                        className="w-full lg:w-[60%] bg-gray-50 border-2 border-dashed border-teal-100 rounded-[3rem] p-10 lg:p-16 lg:pl-24"
                     >
-                        <Lottie className="w-44 mb-4 " animationData={vision} />
-                        <h2 className="text-2xl font-bold font-header text-[#118088] mb-2">Vision</h2>
-                        <p className="text-gray-700 text-base font-text">
+                        <div className="flex items-center gap-6 mb-8">
+                            <div className="bg-[#118088]/10 p-3 rounded-2xl">
+                                <Lottie className="w-20 h-20" animationData={vision} />
+                            </div>
+                            <h2 className="text-3xl font-bold font-header text-gray-800">Our Vision</h2>
+                        </div>
+                        <p className="text-gray-600 text-lg leading-relaxed font-text">
                             To create inclusive societies that realize the full potential of excluded individuals through institutional and systemic change.
                         </p>
                     </div>
+                </div>
 
-                    {/* Values */}
-                    <div
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        className="p-6 border border-[#118088] bg-white rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
-                    >
-                        <Lottie className="w-32 mb-4  mt-10" animationData={values} />
-                        <h2 className="text-2xl font-bold font-header text-[#118088] mb-2">Values</h2>
-                        <p className="text-gray-700 text-base font-semibold font-text">Inclusion, Integrity, Dignity</p>
+                {/* 02. Values - Horizontal Ribbon Section */}
+                <div
+                    data-aos="zoom-in"
+                    className="relative bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 lg:p-12 overflow-hidden shadow-2xl"
+                >
+                    {/* Decorative Background Icon */}
+                    <div className="absolute right-10 top-1/2 -translate-y-1/2 opacity-10">
+                        <Lottie className="w-64" animationData={values} />
+                    </div>
+
+                    <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+                        <div className="text-center lg:text-left">
+                            <h2 className="text-teal-400 font-bold uppercase tracking-widest text-sm mb-2">Core Foundations</h2>
+                            <h3 className="text-white text-4xl font-header font-bold">Our Values</h3>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-4 lg:gap-12">
+                            {['Inclusion', 'Integrity', 'Dignity'].map((value, idx) => (
+                                <div key={idx} className="flex items-center gap-4 group">
+                                    <span className="text-teal-500 text-5xl font-black opacity-20 group-hover:opacity-100 transition-opacity">0{idx + 1}</span>
+                                    <span className="text-white text-2xl lg:text-3xl font-bold tracking-tight">{value}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     );
 };

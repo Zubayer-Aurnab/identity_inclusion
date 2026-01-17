@@ -1,7 +1,7 @@
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { Building2, HeartHandshake, Megaphone, Users, ArrowUpRight, Loader2 } from 'lucide-react';
+import { Building2, HeartHandshake, Megaphone, Users, ArrowUpRight, Loader2, LucideHandHelping } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useImpactHighlightQuery } from '../../Redux/Apis/impactHighlightApi';
 
@@ -31,7 +31,8 @@ const Services = () => {
         { label: "Supporters Trained", value: HighLightData?.psychosocial_supporters_trained, icon: <Users />, color: "text-blue-600" },
         { label: "Advocacy Sessions", value: HighLightData?.advocacy_provided, icon: <Megaphone />, color: "text-[#f97316]" },
         { label: "Consultancies", value: HighLightData?.institutional_consultancies, icon: <Building2 />, color: "text-teal-600" },
-        { label: "Orgs Empowered", value: HighLightData?.organizations_empowered, icon: <HeartHandshake />, color: "text-purple-600" }
+        { label: "Orgs Empowered", value: HighLightData?.organizations_empowered, icon: <HeartHandshake />, color: "text-purple-600" },
+        { label: "Beneficiaries", value: HighLightData?.beneficiaries + " M", icon: <LucideHandHelping />, color: "text-purple-600" }
     ];
 
     return (
@@ -51,8 +52,8 @@ const Services = () => {
                             <img src={service.image} alt="" className="w-full h-full object-contain" />
                         </div>
                         <h3 className="text-xl font-black text-gray-900 mb-3 font-header">{service.title}</h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow">{service.description}</p>
-                        <div className="flex items-center gap-2 text-gray-900 font-bold text-xs uppercase tracking-widest">
+                        <p className="text-gray-600 text-sm leading-relaxed mb-8 flex-grow font-text font-bold">{service.description}</p>
+                        <div className="flex items-center gap-2 text-gray-900 font-bold text-xs uppercase tracking-widest font-header">
                             Learn More <ArrowUpRight size={16} />
                         </div>
                     </Link>
@@ -85,15 +86,25 @@ const Services = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {/* Changed lg:grid-cols-4 to lg:grid-cols-5 to accommodate the new item */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                                 {stats.map((stat, idx) => (
-                                    <div key={idx} data-aos="zoom-in-up" className="relative p-8 rounded-3xl bg-white/5 border border-white/10 group">
-                                        <div className="mb-6 text-white/50 group-hover:text-white transition-all">{stat.icon}</div>
+                                    <div
+                                        key={idx}
+                                        data-aos="zoom-in-up"
+                                        className="relative p-6 rounded-3xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-colors"
+                                    >
+                                        <div className="mb-4 text-white/50 group-hover:text-white transition-all transform group-hover:scale-110 duration-300">
+                                            {stat.icon}
+                                        </div>
                                         <div className="space-y-1">
-                                            <h4 className="text-5xl font-black text-white font-header tracking-tighter">
-                                                {stat.value || 0}<span className="text-[#f97316] text-3xl ml-1">+</span>
+                                            <h4 className="text-4xl font-black text-white font-header tracking-tighter">
+                                                {stat.value || 0}
+                                                <span className="text-[#f97316] text-2xl ml-0.5">+</span>
                                             </h4>
-                                            <p className="text-gray-400 font-bold text-sm uppercase tracking-wider">{stat.label}</p>
+                                            <p className="text-gray-400 font-bold text-[10px] xl:text-xs uppercase tracking-wider leading-tight">
+                                                {stat.label}
+                                            </p>
                                         </div>
                                     </div>
                                 ))}

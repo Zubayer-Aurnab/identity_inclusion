@@ -13,6 +13,7 @@ import UnderDev from "../component/underDev/UnderDev";
 import Impact from "../pages/Impact/Impact";
 import Support__Group_Meeting from "../pages/Support_Group_Meeting/Support__Group_Meeting";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import GetInvolbe from "../pages/GetInvolbe/GetInvolbe";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <ContactUs />
+            },
+            {
+                path: "/get-involbe",
+                element: <GetInvolbe />
             },
 
             // services

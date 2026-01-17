@@ -22,7 +22,7 @@ const RecentActivities = () => {
     if (isLoading) return null;
 
     return (
-        <section className="py-24 bg-[#fafcfe] overflow-hidden mt-10">
+        <section className="py-6 bg-[#fafcfe] overflow-hidden ">
             <div className="container mx-auto px-6">
 
                 {/* Header with Side Action */}

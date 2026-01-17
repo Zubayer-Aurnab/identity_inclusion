@@ -8,19 +8,19 @@ const Ceo = () => {
     return (
         <div id="word_from_ceo" className="py-16 scroll-mt-24">
             <div className="flex flex-col lg:flex-row gap-12 items-start">
-                
+
                 {/* Left Side: Profile Aesthetic */}
-                <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-start text-center lg:text-left">
-                    <div className="relative">
+                <div className="w-full lg:w-1/3 flex flex-col items-center lg:items-center text-center lg:text-left ">
+                    <div className="relative ">
                         {/* Decorative background shape */}
                         <div className="absolute -inset-4 bg-teal-50 rounded-full -z-10 scale-95"></div>
-                        
+
                         <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl">
-                            <img 
-                                loading="lazy" 
-                                src={CeoData?.image} 
-                                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out" 
-                                alt={CeoData?.name} 
+                            <img
+                                loading="lazy"
+                                src={CeoData?.image}
+                                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+                                alt={CeoData?.name}
                             />
                         </div>
 
@@ -30,7 +30,7 @@ const Ceo = () => {
                         </div>
                     </div>
 
-                    <div className="mt-8">
+                    <div className="mt-8 ">
                         <h3 className="text-2xl md:text-3xl font-bold font-header text-gray-900 leading-tight">
                             {CeoData?.name}
                         </h3>
@@ -42,17 +42,17 @@ const Ceo = () => {
                 </div>
 
                 {/* Right Side: Message Content */}
-                <div className="w-full lg:w-2/3 relative">
+                <div className="w-full lg:w-2/3 relative ">
                     {/* Large Background Quote Symbol for Texture */}
                     <span className="absolute -top-10 -left-6 text-[12rem] leading-none font-serif text-gray-100 -z-10 opacity-50 select-none">
                         “
                     </span>
 
                     <div className="relative">
-                        <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-700 text-justify font-text italic">
+                        <p className="text-lg md:text-xl lg:text-xl leading-relaxed text-gray-700 text-justify font-text italic">
                             {CeoData?.description}
                         </p>
-                        
+
                         {/* Professional Closing */}
                         {/* <div className="mt-10 pt-6 border-t border-gray-100">
                             <p className="font-header text-gray-400 text-sm uppercase tracking-[0.3em]">

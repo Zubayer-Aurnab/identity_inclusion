@@ -22,7 +22,7 @@ const UpCommingEvents = () => {
     if (isLoading) return null;
 
     return (
-        <section className="py-24 bg-[#fffcf5] overflow-hidden my-10">
+        <section className="py-24 bg-[#fffcf5] overflow-hidden ">
             <div className="container mx-auto px-6">
 
                 {/* Header with Side Action */}

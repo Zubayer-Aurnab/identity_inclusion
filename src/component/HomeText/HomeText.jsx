@@ -3,13 +3,20 @@ import Button from "../Button/Button";
 import img14 from '../../assets/marquee/img14.jpg';
 import img2 from '../../assets/images/award.jpeg';
 import img3 from '../../assets/marquee/img29.jpg';
+import { useGetPortfolioQuery } from "../../Redux/Apis/portfolioApi ";
 
 const HomeText = () => {
+    const { data, isLoading } = useGetPortfolioQuery();
+
+    if (isLoading) return <p>Loading...</p>;
+
+    const pdfUrl = `https://server.identityinclusion.com/storage/${data?.data?.pdf_path}`;
+
     return (
-        <section className="relative py-20 lg:py-32 bg-white overflow-hidden">
+        <section className="relative p-4 bg-white overflow-hidden">
             <div className="container mx-auto px-6 lg:px-16">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
-                    
+
                     {/* Left Side: Creative Image Collage */}
                     <div className="flex-1 relative w-full max-w-[500px] lg:max-w-none" data-aos="zoom-in-right">
                         {/* Main Large Image (Circle) */}
@@ -46,7 +53,7 @@ const HomeText = () => {
                         <div className="relative">
                             {/* Stylish Quote Mark Background */}
                             <span className="absolute -top-6 -left-4 text-6xl text-teal-100 font-serif opacity-50">“</span>
-                            
+
                             <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-text text-justify relative z-10">
                                 <span className="text-gray-900 font-bold">Identity Inclusion</span> is a development consulting firm that aims to resolve and rectify the approach our institutions and society has towards marginalized communities. What started as a project to help those with psychosocial disabilities has grown into a movement to bridge the knowledge gap and end societal exclusion.
                             </p>
@@ -57,12 +64,17 @@ const HomeText = () => {
                         </p>
 
                         <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4">
-                            <Link 
-                                target="_blank" 
-                                to="https://drive.google.com/file/d/15KOwwRroT5jSrIjrbL16oLwH0IVTsEzJ/view?usp=sharing"
-                            >
-                                <Button small className="hover:shadow-lg transition-all">Portfolio</Button>
-                            </Link>
+                            {
+                                data?.data?.pdf_path && <>
+                                    <Link
+                                        target="_blank"
+                                        to={pdfUrl || '/'}
+                                    >
+                                        <Button small className="hover:shadow-lg transition-all">Portfolio</Button>
+                                    </Link>
+                                </>
+                            }
+
                             <Link to="/about">
                                 <Button small outline className="hover:bg-gray-50 transition-all">Learn More</Button>
                             </Link>

@@ -68,22 +68,22 @@ const AboutUs = () => {
 
                     <div className="px-6 md:px-12 lg:px-20 py-10 md:py-16">
                         {/* Identity Section */}
-                        <div id="company" className="mb-20">
+                        <div id="company" className="">
                             <Company />
                         </div>
 
                         {/* Mission & Vision Section */}
-                        <div id="mission_vision" className="scroll-mt-20 mb-24">
+                        <div id="mission_vision" className="scroll-mt-20 ">
                             <MissionVision />
                         </div>
 
                         {/* Founder Section */}
-                        <div id="word_from_ceo" className="scroll-mt-20 mb-24">
+                        <div id="word_from_ceo" className="scroll-mt-20 ">
                             <Ceo />
                         </div>
 
                         {/* Team Section */}
-                        <div id="our_team" className="scroll-mt-20 mb-24">
+                        <div id="our_team" className="scroll-mt-20 ">
                             <div className='mb-12'>
                                 <Title>Our Professional Team</Title>
                                

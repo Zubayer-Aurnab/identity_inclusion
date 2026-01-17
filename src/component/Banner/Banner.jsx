@@ -17,19 +17,19 @@ const Banner = () => {
 
     const tags = [
         { text: "Psycho-Social Support", pos: "top-[5%] -left-10", delay: 600, color: "text-[#f97316]" },
-        { text: "Support Group Meeting", pos: "top-[30%] -right-20", delay: 800, color: "text-[#118088]" },
+        { text: "Support Group Meeting", pos: "top-[30%] -right-1", delay: 800, color: "text-[#118088]" },
         { text: "Advocacy & Awareness", pos: "top-[40%] -left-16", delay: 1000, color: "text-[#118088]" },
         { text: "Consultancy", pos: "bottom-[15%] right-0", delay: 1200, color: "text-[#118088]" },
         { text: "Capacity Building", pos: "bottom-[10%] -left-10", delay: 1400, color: "text-[#f97316]" },
     ];
 
     return (
-        <section className="relative w-full min-h-[90vh] bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden py-20 lg:py-0">
+        <section className="relative w-full min-h-[90vh] bg-[#fdfdfd] flex flex-col items-center justify-center overflow-hidden py-20 lg:py-0 ">
 
-            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+            <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2  items-center relative z-10">
 
                 {/* Text Content */}
-                <div className="text-center lg:text-left">
+                <div className="text-center lg:text-left ">
                     <div data-aos="fade-up">
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-header font-black text-gray-900 tracking-tight leading-none">
                             IDENTITY <br />
@@ -55,7 +55,7 @@ const Banner = () => {
                 </div>
 
                 {/* Image Section with Curved Tags */}
-                <div className="flex justify-center lg:justify-end" data-aos="zoom-in">
+                <div className="flex justify-center lg:justify-left  " data-aos="zoom-in">
                     <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px]">
 
                         {/* Animated Border Ring */}
@@ -70,7 +70,7 @@ const Banner = () => {
                                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                                 className="w-full h-full"
                             >
-                                {[banner, imge3, imge1].map((img, index) => (
+                                {[imge3, imge1].map((img, index) => (
                                     <SwiperSlide key={index}>
                                         <img
                                             className="w-full h-full object-cover"
@@ -92,7 +92,7 @@ const Banner = () => {
                                 data-aos-delay={tag.delay}
                             >
                                 <div className="bg-white/90 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-50 whitespace-nowrap">
-                                    <p className={`${tag.color} font-bold text-sm tracking-wide`}>{tag.text}</p>
+                                    <p className={`${tag.color} font-bold text- tracking-wide`}>{tag.text}</p>
                                 </div>
                             </div>
                         ))}

@@ -14,6 +14,8 @@ import { supportGroupMeetingApi } from './Apis/supportGroupMeetingApi';
 import { advocacyApi } from './Apis/advocacyApi';
 import { consultancyApi } from './Apis/consultancyApi';
 import { capacityApi } from './Apis/capacityApi';
+import { getInvolbeApi } from './Apis/getInvolbeApi';
+import { portfolioApi } from './Apis/portfolioApi ';
 
 export const store = configureStore({
     reducer: {
@@ -32,6 +34,8 @@ export const store = configureStore({
         [advocacyApi.reducerPath]: advocacyApi.reducer,
         [consultancyApi.reducerPath]: consultancyApi.reducer,
         [capacityApi.reducerPath]: capacityApi.reducer,
+        [getInvolbeApi.reducerPath]: getInvolbeApi.reducer,
+        [portfolioApi.reducerPath]: portfolioApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware()
@@ -50,4 +54,6 @@ export const store = configureStore({
             .concat(advocacyApi.middleware)
             .concat(consultancyApi.middleware)
             .concat(capacityApi.middleware)
+            .concat(getInvolbeApi.middleware)
+            .concat(portfolioApi.middleware)
 });

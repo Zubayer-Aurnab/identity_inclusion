@@ -7,8 +7,8 @@ import { Autoplay, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import imge1 from '../../assets/images/award.jpeg';
-import banner from '../../assets/images/banner.png';
 import imge3 from '../../assets/images/brac.png';
+import imge2 from '../../assets/images/p.jpg';
 
 const Banner = () => {
     useEffect(() => {
@@ -17,7 +17,7 @@ const Banner = () => {
 
     const tags = [
         { text: "Psycho-Social Support", pos: "top-[5%] -left-10", delay: 600, color: "text-[#f97316]" },
-        { text: "Support Group Meeting", pos: "top-[30%] -right-1", delay: 800, color: "text-[#118088]" },
+        { text: "Support Group Meeting", pos: "top-[30%] -right-10", delay: 800, color: "text-[#118088]" },
         { text: "Advocacy & Awareness", pos: "top-[40%] -left-16", delay: 1000, color: "text-[#118088]" },
         { text: "Consultancy", pos: "bottom-[15%] right-0", delay: 1200, color: "text-[#118088]" },
         { text: "Capacity Building", pos: "bottom-[10%] -left-10", delay: 1400, color: "text-[#f97316]" },
@@ -70,7 +70,7 @@ const Banner = () => {
                                 autoplay={{ delay: 5000, disableOnInteraction: false }}
                                 className="w-full h-full"
                             >
-                                {[imge3, imge1].map((img, index) => (
+                                {[imge1, imge2, imge3].map((img, index) => (
                                     <SwiperSlide key={index}>
                                         <img
                                             className="w-full h-full object-cover"

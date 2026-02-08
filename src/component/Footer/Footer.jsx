@@ -42,7 +42,7 @@ const Footer = () => {
                         </div>
 
                         <p className="text-slate-400 text-lg leading-relaxed font-medium">
-                            Breaking barriers and fostering belonging through professional support and advocacy.
+                            Youth for a Diverse and Inclusive Society
                         </p>
 
                         <div className="flex gap-3">
@@ -51,7 +51,7 @@ const Footer = () => {
                                     key={idx}
                                     to={social.to}
                                     target="_blank"
-                                    className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-2xl text-slate-300 hover:bg-[#118088] hover:text-white hover:border-[#118088] transition-all duration-500 hover:-translate-y-1 shadow-lg"
+                                    className="w-12 h-12 flex items-center justify-center text-slate-300 transition-all duration-500 hover:-translate-y-1 shadow-lg"
                                 >
                                     <div className="w-5 h-5 fill-current">
                                         {social.icon}
@@ -95,69 +95,104 @@ const Footer = () => {
                             Connect
                         </h3>
 
-                        <div className="space-y-6">
-                            {/* Contact Grid */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                            {/* Contact List */}
+                            <div className="grid grid-cols-1 gap-3">
+                                {/* Phone Item */}
                                 <Link
                                     to={`tel:${companyData?.phone}`}
-                                    className="group flex flex-col items-center text-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-[#118088]/50 transition-all duration-500 hover:bg-white/[0.02]"
+                                    className="group flex items-center gap-5 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#118088]/40 transition-all duration-500 hover:bg-white/[0.05]"
                                 >
-                                    <div className="">
+                                    {/* Centered Icon - No Background */}
+                                    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#118088] group-hover:text-white group-hover:scale-110 transition-all duration-300">
                                         <MobileSvg />
                                     </div>
-                                    <div className="space-y-1">
-                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-[0.2em]">Call Us</p>
-                                        <p className="font-bold text-sm text-slate-200 group-hover:text-white transition-colors">
+                                    <div className="flex flex-col min-w-0">
+                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Call Us</p>
+                                        <p className="font-bold text-slate-200 group-hover:text-white transition-colors whitespace-nowrap">
                                             {companyData?.phone}
                                         </p>
                                     </div>
                                 </Link>
 
+                                {/* Email Item */}
                                 <Link
                                     to={`mailto:${companyData?.email}`}
-                                    className="group flex flex-col items-center text-center gap-4 p-6 rounded-3xl bg-white/5 border border-white/5 hover:border-[#118088]/50 transition-all duration-500 hover:bg-white/[0.02]"
+                                    className="group flex items-center gap-5 p-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:border-[#118088]/40 transition-all duration-500 hover:bg-white/[0.05]"
                                 >
-                                    <div className="">
+                                    {/* Centered Icon - No Background */}
+                                    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#118088] group-hover:text-white group-hover:scale-110 transition-all duration-300">
                                         <MailSvg />
                                     </div>
-                                    <div className="space-y-1">
-                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-[0.2em]">Email Us</p>
-                                        <p className="font-bold text-sm text-slate-200 group-hover:text-white transition-colors break-all">
+                                    <div className="flex flex-col min-w-0">
+                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Email Us</p>
+                                        <p className="font-bold text-slate-200 group-hover:text-white transition-colors whitespace-nowrap">
                                             {companyData?.email}
                                         </p>
                                     </div>
                                 </Link>
+
+                                {/* Location Item */}
+                                <Link
+                                    to={companyData?.address_link}
+                                    target="_blank"
+                                    className="group flex items-center gap-5 p-4 rounded-2xl bg-gradient-to-r from-white/[0.04] to-transparent border border-white/5 hover:border-[#118088]/40 transition-all duration-500 hover:bg-white/[0.05]"
+                                >
+                                    {/* Centered Icon - No Background */}
+                                    <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center text-[#118088] group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                                        <LocatoinSvg />
+                                    </div>
+                                    <div className="flex flex-col min-w-0">
+                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Our Location</p>
+                                        <p className="font-bold text-slate-200 group-hover:text-white transition-colors text-sm whitespace-nowrap">
+                                            {companyData?.address}
+                                        </p>
+                                    </div>
+                                </Link>
                             </div>
-
-                            {/* Location Card - Updated to Centered Style */}
-                            <Link
-                                to={companyData?.address_link}
-                                target="_blank"
-                                className="group flex flex-col items-center text-center gap-4 p-4 rounded-[2.5rem] bg-gradient-to-b from-white/5 to-transparent border border-white/10 hover:border-[#118088]/40 transition-all duration-500 hover:bg-white/[0.02]"
-                            >
-                                <div className="">
-                                    <LocatoinSvg />
-                                </div>
-                                <div className="max-w-xs">
-                                    <p className="text-[10px] font-black uppercase text-slate-500 tracking-[0.2em] mb-2">Our Location</p>
-                                    <p className="text-slate-300 font-bold text-sm leading-relaxed group-hover:text-white transition-colors">
-                                        {companyData?.address}
-                                    </p>
-                                </div>
-
-
-                            </Link>
                         </div>
                     </div>
                 </div>
 
                 {/* --- BOTTOM STRIP --- */}
-                <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-slate-500 text-sm font-bold">
-                        © {new Date().getFullYear()} <span className="text-[#118088]">Identity Inclusion</span>. All rights reserved.
-                    </p>
-                    <div className="flex gap-10 hidden">
-                        <Link to="/privacy" className="text-xs font-black uppercase tracking-widest text-slate-600 hover:text-[#d4f1f7] transition-colors">Develop by Zubayer Aurnab</Link>
+                <div className="mt-5 pt-4 border-t border-slate-100/50 flex flex-col md:flex-row justify-between items-center gap-8">
+
+                    {/* Brand Section */}
+                    <div className="flex items-center gap-4 font-header">
+                        <div className="h-1.5 w-1.5 rounded-full bg-[#118088]" />
+                        <p className="text-[11px] uppercase tracking-[0.15em] font-medium text-slate-400">
+                            © {new Date().getFullYear()}
+                            <span className=" font-bold ml-1">Identity Inclusion</span>
+                            <span className="mx-2 opacity-30 font-header">|</span>
+                            All rights reserved
+                        </p>
+                    </div>
+
+                    {/* Personal Branding Section */}
+                    <div className="group flex items-center gap-6">
+                        <Link
+                            to="https://wa.me/8801943233153"
+                            target="_blank"
+                            className="relative text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 transition-all duration-300 hover:text-[#118088]"
+                        >
+                            <span className="opacity-50 font-medium">Developed by</span>
+                            <span className="ml-1 text-[#118088] group-hover:text-[#118088]">Zubayer Aurnab</span>
+
+                            {/* Animated underline */}
+                            <span className="absolute -bottom-1 left-0 h-[1px] w-0 bg-[#118088] transition-all duration-500 group-hover:w-full" />
+                        </Link>
+
+                        {/* Floating WhatsApp Badge */}
+                        <a
+                            href="https://wa.me/8801943233153"
+                            className="flex items-center gap-2 rounded-full bg-slate-50 px-3 py-1 border border-slate-100 hover:bg-white transition-colors"
+                        >
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#118088] opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#118088]"></span>
+                            </span>
+                            <span className="text-[10px] font-bold text-slate-600">WHATSAPP</span>
+                        </a>
                     </div>
                 </div>
             </div>

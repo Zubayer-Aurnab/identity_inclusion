@@ -26,9 +26,8 @@ const NavBar = () => {
         { title: "Capacity Building", path: "/capacity", icon: <GraduationCap size={20} />, color: "bg-emerald-50 text-emerald-600" },
     ];
 
-    const navLinkClass = ({ isActive }) => 
-        `relative px-6 py-2.5 rounded-full text-[15px] font-semibold transition-all duration-300 flex items-center gap-1 ${
-            isActive ? "text-[#118088]" : "text-slate-600 hover:text-slate-900"
+    const navLinkClass = ({ isActive }) =>
+        `relative px-6 py-2.5 rounded-full text-[15px] font-semibold transition-all duration-300 flex items-center gap-1 ${isActive ? "text-[#118088]" : "text-slate-600 hover:text-slate-900"
         }`;
 
     return (
@@ -36,8 +35,8 @@ const NavBar = () => {
             <div className={`
                 mx-auto max-w-7xl transition-all duration-500 ease-in-out pointer-events-auto
                 flex items-center justify-between px-4 py-2
-                ${scrolled 
-                    ? "bg-white/80 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-[2rem]" 
+                ${scrolled
+                    ? "bg-white/80 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-[2rem]"
                     : "bg-transparent"}
             `}>
 
@@ -56,12 +55,15 @@ const NavBar = () => {
                         Home
                         {pathname === "/" && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#118088] rounded-full" />}
                     </NavLink>
-
+                    <NavLink to="/about" className={navLinkClass}>
+                        About
+                        {pathname === "/about" && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#118088] rounded-full" />}
+                    </NavLink>
                     <div className="group relative">
                         <button className="px-6 py-2.5 rounded-full text-[15px] font-semibold text-slate-600 group-hover:text-[#118088] flex items-center gap-1.5 transition-colors">
                             Services <ChevronDown size={16} className="group-hover:rotate-180 transition-transform duration-300" />
                         </button>
-                        
+
                         {/* Mega Dropdown */}
                         <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300">
                             <div className="w-[450px] bg-white rounded-[1.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 p-4 grid grid-cols-1 gap-2">
@@ -79,11 +81,8 @@ const NavBar = () => {
                         </div>
                     </div>
 
-                    <NavLink to="/about" className={navLinkClass}>
-                        About
-                        {pathname === "/about" && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#118088] rounded-full" />}
-                    </NavLink>
-                    
+
+
                     <NavLink to="/acknowledgment-impact" className={navLinkClass}>
                         Impact
                         {pathname === "/acknowledgment-impact" && <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#118088] rounded-full" />}
@@ -123,9 +122,9 @@ const NavBar = () => {
                     <div className="flex flex-col gap-6">
                         <div className="flex flex-col gap-2">
                             <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2">Main Menu</p>
-                            <NavLink to="/" onClick={() => setSlider(false)} className={({isActive}) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>Home</NavLink>
-                            <NavLink to="/about" onClick={() => setSlider(false)} className={({isActive}) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>About</NavLink>
-                            <NavLink to="/acknowledgment-impact" onClick={() => setSlider(false)} className={({isActive}) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>Impact</NavLink>
+                            <NavLink to="/" onClick={() => setSlider(false)} className={({ isActive }) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>Home</NavLink>
+                            <NavLink to="/about" onClick={() => setSlider(false)} className={({ isActive }) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>About</NavLink>
+                            <NavLink to="/acknowledgment-impact" onClick={() => setSlider(false)} className={({ isActive }) => `text-2xl font-bold ${isActive ? 'text-[#118088]' : 'text-slate-800'}`}>Impact</NavLink>
                         </div>
 
                         <div className="mt-4 pt-6 border-t border-slate-100">

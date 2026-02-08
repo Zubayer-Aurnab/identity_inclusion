@@ -5,59 +5,71 @@ const Team = () => {
     const TeamMembersData = data?.data || [];
 
     const Skeleton = () => (
-        <div className="bg-gray-100 rounded-2xl h-[450px] animate-pulse" />
+        <div className="bg-gray-100 rounded-[2.5rem] h-[550px] animate-pulse" />
     );
 
     return (
-        <div id='our_team' className="max-w-7xl mx-auto px-4 py-20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                {isLoading ? (
-                    [1, 2, 3].map((n) => <Skeleton key={n} />)
-                ) : (
-                    TeamMembersData?.map((member, index) => (
-                        <div 
-                            key={index} 
-                            className="group relative bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-2 "
-                        >
-                            {/* Image Container */}
-                            <div className="relative h-[400px] overflow-hidden">
-                                <img
-                                    src={member.image}
-                                    alt={member.name}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                {/* Modern Gradient Overlay */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-                                
-                                {/* Overlay Content (Always visible on bottom) */}
-                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <p className="text-[#2DD4BF] font-bold text-xs font-text uppercase tracking-[0.2em] mb-1">
-                                        {member.designation}
-                                    </p>
-                                    <h3 className="text-2xl font-semibold tracking-tight font-header">
-                                        {member.name}
-                                    </h3>
-                                </div>
-                            </div>
+        <section id='our_team' className="">
+            <div className="max-w-7xl mx-auto px-6">
 
-                            {/* Hover Details Panel */}
-                            <div className="absolute inset-0 bg-[#118088]/95 p-8 flex flex-col justify-center translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                                <div className="mb-4">
-                                    <h3 className="text-white text-2xl font-bold font-text">{member.name}</h3>
-                                    <p className="text-teal-200 text-sm font-medium">{member.title}</p>
+                {/* Minimalist Header */}
+                {/* <div className="max-w-3xl mb-16">
+                    <h2 className="text-[#118088] font-bold text-sm uppercase tracking-[0.25em] mb-4">
+                        Leadership
+                    </h2>
+                    <h1 className="text-5xl font-extrabold text-slate-900 tracking-tight">
+                        Built by the best in the industry.
+                    </h1>
+                </div> */}
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {isLoading ? (
+                        [1, 2, 3].map((n) => <Skeleton key={n} />)
+                    ) : (
+                        TeamMembersData?.map((member, index) => (
+                            <div
+                                key={index}
+                                className="group bg-white p-4 rounded-[2.5rem] border border-slate-100 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-500 hover:shadow-[0_20px_50px_-12px_rgba(17,128,136,0.15)] hover:-translate-y-2"
+                            >
+                                {/* Photo Section */}
+                                <div className="relative h-[320px] rounded-[2rem] overflow-hidden mb-6">
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
+                                        className="w-full h-full object-contain grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                                    />
+                                    {/* Subtle internal shadow for depth */}
+                                    <div className="absolute inset-0 shadow-[inset_0_0_40px_rgba(0,0,0,0.1)]" />
                                 </div>
-                                <div className="w-12 h-[2px] bg-white/30 mb-4" />
-                                <p className="text-white/90 text-lg leading-relaxed line-clamp-6 mb-6 font-text">
-                                    {member.description}
-                                </p>
-                                
-                                
+
+                                {/* Content Section (Fully Visible) */}
+                                <div className="px-4 pb-4">
+                                    <div className="flex justify-between items-start mb-4">
+                                        <div>
+                                            <h3 className="font-header text-2xl font-bold text-slate-900 leading-tight">
+                                                {member.name}
+                                            </h3>
+                                            <p className="text-[#118088] font-semibold text-xs uppercase tracking-wider mt-1 font-header">
+                                                {member.designation}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="w-full h-[1px] bg-slate-100 mb-4" />
+
+                                    <p className="text-slate-500 text-md leading-relaxed font-header font-semibold">
+                                        {member.description}
+                                    </p>
+
+                                    {/* Static "Contact/Profile" indicator */}
+
+                                </div>
                             </div>
-                        </div>
-                    ))
-                )}
+                        ))
+                    )}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

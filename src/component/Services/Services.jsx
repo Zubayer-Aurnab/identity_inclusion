@@ -32,7 +32,7 @@ const Services = () => {
         { label: "Advocacy Sessions", value: HighLightData?.advocacy_provided, icon: <Megaphone />, color: "text-[#f97316]" },
         { label: "Consultancies", value: HighLightData?.institutional_consultancies, icon: <Building2 />, color: "text-teal-600" },
         { label: "Orgs Empowered", value: HighLightData?.organizations_empowered, icon: <HeartHandshake />, color: "text-purple-600" },
-        { label: "Beneficiaries", value: HighLightData?.beneficiaries + " M", icon: <LucideHandHelping />, color: "text-purple-600" }
+        { label: "Beneficiaries", value: HighLightData?.beneficiaries + " M ", icon: <LucideHandHelping />, color: "text-purple-600" }
     ];
 
     return (
@@ -116,7 +116,7 @@ const Services = () => {
 
                                             {/* Subtext: Better contrast and alignment */}
                                             <p className="mt-2 text-gray-400 font-bold text-sm md:text-base uppercase tracking-widest flex items-center gap-2">
-                                                Beneficiaries
+                                                people reached
                                                 <span className="block h-2 w-2 rounded-full bg-teal-500/50" />
                                             </p>
                                         </div>

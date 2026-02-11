@@ -110,7 +110,7 @@ const Footer = () => {
                                     <div className="flex flex-col min-w-0">
                                         <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest">Call Us</p>
                                         <p className="font-bold text-slate-200 group-hover:text-white transition-colors whitespace-nowrap">
-                                            {companyData?.phone}
+                                           +88{companyData?.phone}
                                         </p>
                                     </div>
                                 </Link>

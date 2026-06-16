@@ -10,15 +10,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules'; // Removed Autoplay
 
-import imp1 from '../../assets/impact/brac.jpg';
-import imp2 from '../../assets/impact/Practical-Action.jpg';
-import imp3 from '../../assets/impact/UCEP.png';
 import Title from '../../component/Title/Title';
 import { useImpactQuery } from '../../Redux/Apis/impactApi';
+import { useGetImageSliderQuery } from '../../Redux/Apis/imageSliderApi';
 
 const Impact = () => {
     const { data } = useImpactQuery({});
     const ImpactData = data?.data?.slice().reverse() || [];
+    const { data: testimonialData, isLoading: testimonialLoading } = useGetImageSliderQuery({ type: "testimonial" });
+    const testimonialImages = testimonialData?.data || [];
 
     useEffect(() => {
         Aos.init({
@@ -27,8 +27,6 @@ const Impact = () => {
             easing: 'ease-in-out',
         });
     }, []);
-
-    const testimonialImages = [imp1, imp2, imp3];
 
     return (
         <div className='overflow-hidden bg-white mt-20'>
@@ -73,78 +71,90 @@ const Impact = () => {
                 </div>
 
                 {/* Testimonials Section */}
-                <div className='mt-32 lg:mt-48'>
-                    <div className='mb-16' data-aos="fade-up">
-                        <Title>Our Work, In Their Words</Title>
-                        
+                {(testimonialLoading || testimonialImages.length > 0) && (
+                    <div className='mt-32 lg:mt-48'>
+                        <div className='mb-16' data-aos="fade-up">
+                            <Title>Our Work, In Their Words</Title>
+                        </div>
+
+                        <div className='relative pb-20 px-4 md:px-10' data-aos="fade-up" data-aos-delay="200">
+                            {testimonialLoading ? (
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 py-10">
+                                    {[1, 2].map((n) => (
+                                        <div key={n} className="bg-gray-100 animate-pulse rounded-3xl h-[300px] md:h-[450px] lg:h-[500px]" />
+                                    ))}
+                                </div>
+                            ) : (
+                                <>
+                                    <Swiper
+                                        modules={[Navigation, Pagination]}
+                                        spaceBetween={30}
+                                        slidesPerView={1}
+                                        loop={testimonialImages.length > 1}
+                                        navigation={{
+                                            nextEl: '.impact-swiper-next',
+                                            prevEl: '.impact-swiper-prev',
+                                        }}
+                                        pagination={{
+                                            clickable: true,
+                                            el: '.impact-custom-pagination'
+                                        }}
+                                        breakpoints={{
+                                            768: { slidesPerView: 1 },
+                                            1024: { slidesPerView: 2 },
+                                        }}
+                                        className="pb-16"
+                                    >
+                                        {testimonialImages.map((img) => (
+                                            <SwiperSlide key={img.id} className="h-full">
+                                                <div className='p-4 h-full'>
+                                                    <div className='bg-white border border-gray-100 rounded-3xl p-4 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full flex items-center justify-center group'>
+                                                        <div className='relative w-full overflow-hidden rounded-2xl'>
+                                                            <img
+                                                                loading="lazy"
+                                                                className='w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-[1.02]'
+                                                                src={img.image_url}
+                                                                alt={img?.image_text || 'Testimonial'}
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </SwiperSlide>
+                                        ))}
+                                    </Swiper>
+
+                                    {testimonialImages.length > 0 && (
+                                        <>
+                                            <button className="impact-swiper-prev absolute top-1/2 left-0 md:-left-4 z-20 -translate-y-1/2 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-[#118088] hover:bg-[#118088] hover:text-white transition-all duration-300">
+                                                <ChevronLeft size={28} />
+                                            </button>
+                                            <button className="impact-swiper-next absolute top-1/2 right-0 md:-right-4 z-20 -translate-y-1/2 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-[#118088] hover:bg-[#118088] hover:text-white transition-all duration-300">
+                                                <ChevronRight size={28} />
+                                            </button>
+                                        </>
+                                    )}
+
+                                    <div className="impact-custom-pagination flex justify-center gap-3 mt-8"></div>
+
+                                    <style jsx global>{`
+                                        .impact-custom-pagination .swiper-pagination-bullet {
+                                            width: 12px;
+                                            height: 12px;
+                                            background: #cbd5e1;
+                                            opacity: 1;
+                                            transition: all 0.3s ease;
+                                            border-radius: 4px;
+                                        }
+                                        .impact-custom-pagination .swiper-pagination-bullet-active {
+                                            background: #118088 !important;
+                                            width: 30px;
+                                        }
+                                    `}</style>
+                                </>
+                            )}
+                        </div>
                     </div>
-
-                    <div className='relative pb-20 px-4 md:px-10' data-aos="fade-up" data-aos-delay="200">
-                        <Swiper
-                            modules={[Navigation, Pagination]}
-                            spaceBetween={30}
-                            slidesPerView={1}
-                            loop={true}
-                            // Autoplay removed for manual sliding
-                            navigation={{
-                                nextEl: '.impact-swiper-next',
-                                prevEl: '.impact-swiper-prev',
-                            }}
-                            pagination={{
-                                clickable: true,
-                                el: '.impact-custom-pagination'
-                            }}
-                            breakpoints={{
-                                768: { slidesPerView: 1 },
-                                1024: { slidesPerView: 2 },
-                            }}
-                            className="pb-16"
-                        >
-                            {testimonialImages.map((img, i) => (
-                                <SwiperSlide key={i} className="h-full">
-                                    <div className='p-4 h-full'>
-                                        <div className='bg-white border border-gray-100 rounded-3xl p-4 shadow-xl hover:shadow-2xl transition-shadow duration-300 h-full flex items-center justify-center group'>
-                                            <div className='relative w-full overflow-hidden rounded-2xl'>
-                                                <img
-                                                    loading="lazy"
-                                                    className='w-full h-[300px] md:h-[450px] lg:h-[500px] object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-[1.02]'
-                                                    src={img}
-                                                    alt={`Testimonial ${i + 1}`}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-
-                        {/* Navigation Buttons */}
-                        <button className="impact-swiper-prev absolute top-1/2 left-0 md:-left-4 z-20 -translate-y-1/2 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-[#118088] hover:bg-[#118088] hover:text-white transition-all duration-300">
-                            <ChevronLeft size={28} />
-                        </button>
-                        <button className="impact-swiper-next absolute top-1/2 right-0 md:-right-4 z-20 -translate-y-1/2 bg-white p-3 rounded-full shadow-xl border border-gray-100 text-[#118088] hover:bg-[#118088] hover:text-white transition-all duration-300">
-                            <ChevronRight size={28} />
-                        </button>
-
-                        {/* Custom Modern Pagination */}
-                        <div className="impact-custom-pagination flex justify-center gap-3 mt-8"></div>
-
-                        <style jsx global>{`
-                            .impact-custom-pagination .swiper-pagination-bullet {
-                                width: 12px;
-                                height: 12px;
-                                background: #cbd5e1;
-                                opacity: 1;
-                                transition: all 0.3s ease;
-                                border-radius: 4px;
-                            }
-                            .impact-custom-pagination .swiper-pagination-bullet-active {
-                                background: #118088 !important;
-                                width: 30px;
-                            }
-                        `}</style>
-                    </div>
-                </div>
+                )}
             </div>
         </div >
     );

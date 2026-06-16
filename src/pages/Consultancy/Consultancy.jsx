@@ -21,7 +21,7 @@ const Consultancy = () => {
                     <div className="h-6 bg-gray-200 rounded w-full"></div>
                     <div className="h-6 bg-gray-200 rounded w-5/6"></div>
                 </div>
-                <div className="w-full h-[50vh] bg-gray-100 rounded-md"></div>
+                <div className="w-full min-h-[280px] sm:min-h-[360px] md:min-h-[420px] bg-gray-100 rounded-2xl border border-gray-100"></div>
             </div>
         );
     }
@@ -56,17 +56,19 @@ const Consultancy = () => {
                     {images.map((img, i) => (
                         <SwiperSlide key={img.id || i}>
                             <div className="w-full">
-                                <img 
-                                    loading="lazy" 
-                                    className="w-full h-[50vh] object-cover rounded-md shadow-sm" 
-                                    src={img.image_url} 
-                                    alt={img.image_text || "Consultancy"} 
-                                />
+                                <div className="flex items-center justify-center w-full min-h-[280px] sm:min-h-[360px] md:min-h-[420px] lg:min-h-[480px] bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-2xl border border-gray-100 p-6 sm:p-8 md:p-10 shadow-sm">
+                                    <img
+                                        loading="lazy"
+                                        className="max-w-full max-h-[50vh] sm:max-h-[55vh] md:max-h-[60vh] w-auto h-auto object-contain"
+                                        src={img.image_url}
+                                        alt={img.image_text || "Consultancy"}
+                                    />
+                                </div>
                                 {img.image_text && (
-                                    <div className="mt-4 px-2">
-                                        <h1 className="font-text font-semibold text-sm md:text-base text-gray-700">
+                                    <div className="mt-5 px-2 text-center">
+                                        <p className="font-text font-semibold text-sm md:text-base text-gray-700">
                                             {img.image_text}
-                                        </h1>
+                                        </p>
                                     </div>
                                 )}
                             </div>
